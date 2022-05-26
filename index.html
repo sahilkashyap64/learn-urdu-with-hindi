@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Urdu Letters</title>
+  <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'><link rel="stylesheet" href="./style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@400;500&display=swap" rel="stylesheet">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<header>
+    <div class="container text-center">
+
+        <!-- Logo -->
+        <div class="logo">
+			  <h1><b>Urdu letters</b></h1>
+        </div>
+
+        <h1>urdu letter mnemonics</h1>
+
+    </div>
+</header>
+
+<div class="container">
+	<div class="row" id="cardcontainer">
+
+	</div>
+    <ul></ul>
+</div>
+<!-- <div class="container"><table class="table table-bordered">
+    <tbody>
+    <tr>
+    <th><span style="color: #0000ff;"><strong>वर्ण</strong></span></th>
+    <th><span style="color: #0000ff;"><strong>वर्ण</strong></span></th>
+    <th><span style="color: #0000ff;"><strong>प्रासंगिक रूप</strong></span></th>
+    </tr>
+    <tr>
+    <td>अलिफ़</td>
+    <td>ا</td>
+    <td>‍ا</td>
+    </tr>
+    <tr>
+    <td>बे</td>
+    <td>ب</td>
+    <td>ب‍ ‍ب‍ ‍ب</td>
+    </tr>
+    <tr>
+    <td>पे</td>
+    <td>پ</td>
+    <td>پ‍ ‍پ‍ ‍پ</td>
+    </tr>
+    <tr>
+    <td>ते</td>
+    <td>ت</td>
+    <td>ت‍ ‍ت‍ ‍ت</td>
+    </tr>
+    <tr>
+    <td>टे</td>
+    <td>ٹ</td>
+    <td>ٹ‍ ـٹ‍ ٹ</td>
+    </tr>
+    <tr>
+    <td>से</td>
+    <td>ث</td>
+    <td>ث‍ ‍ث‍ ‍ث</td>
+    </tr>
+    <tr>
+    <td>जीम़</td>
+    <td>ج</td>
+    <td>ج‍ ‍ج‍ ‍ج</td>
+    </tr>
+    <tr>
+    <td>चे</td>
+    <td>چ</td>
+    <td>چ‍ ‍چ‍ ‍چ</td>
+    </tr>
+    <tr>
+    <td>बड़ी हे</td>
+    <td>ح</td>
+    <td>ح‍ ‍ح‍ ‍ح</td>
+    </tr>
+    <tr>
+    <td>ख़े</td>
+    <td>خ</td>
+    <td>خ‍ ‍خ‍ ‍خ</td>
+    </tr>
+    <tr>
+    <td>द़ाल</td>
+    <td>د</td>
+    <td>د</td>
+    </tr>
+    <tr>
+    <td>डाल</td>
+    <td>ڈ</td>
+    <td>د</td>
+    </tr>
+    <tr>
+    <td>ज़ाल</td>
+    <td>ذ</td>
+    <td>ذ ـذ ذ</td>
+    </tr>
+    <tr>
+    <td>रे</td>
+    <td>ر</td>
+    <td>ر</td>
+    </tr>
+    <tr>
+    <td>ड़े</td>
+    <td>ڑ</td>
+    <td>ڑ ـڑ ڑ</td>
+    </tr>
+    <tr>
+    <td>जे़</td>
+    <td>ز</td>
+    <td>ز</td>
+    </tr>
+    <tr>
+    <td>झ़े</td>
+    <td>ژ</td>
+    <td>ژ</td>
+    </tr>
+    <tr>
+    <td>सीन</td>
+    <td>س</td>
+    <td>س‍ ‍س‍ ‍س</td>
+    </tr>
+    <tr>
+    <td>शीन</td>
+    <td>ش</td>
+    <td>ش‍ ‍ش‍ ‍ش</td>
+    </tr>
+    <tr>
+    <td>सुआद</td>
+    <td>ص</td>
+    <td>ص‍ ‍ص‍ ‍ص</td>
+    </tr>
+    <tr>
+    <td>ज़ुआद</td>
+    <td>ض</td>
+    <td>ض‍ ‍ض‍ ‍ض</td>
+    </tr>
+    <tr>
+    <td>तोए</td>
+    <td>ط</td>
+    <td>ط‍ ‍ط‍ ‍ط</td>
+    </tr>
+    <tr>
+    <td>ज़ोे</td>
+    <td>ظ</td>
+    <td>ظ‍ ‍ظ‍ ‍ظ</td>
+    </tr>
+    <tr>
+    <td>ऐन</td>
+    <td>ع</td>
+    <td>ع‍ ‍ع‍ ‍ع</td>
+    </tr>
+    <tr>
+    <td>गै़न</td>
+    <td>غ</td>
+    <td>غ‍ ‍غ‍ ‍غ</td>
+    </tr>
+    <tr>
+    <td>फे़</td>
+    <td>ف</td>
+    <td>ف‍ ‍ف‍ ‍ف</td>
+    </tr>
+    <tr>
+    <td>क़ाफ</td>
+    <td>ق</td>
+    <td>ق‍ ‍ق‍ ‍ق</td>
+    </tr>
+    <tr>
+    <td>काफ</td>
+    <td>ك</td>
+    <td>ك‍ ‍ك‍ ‍ك</td>
+    </tr>
+    <tr>
+    <td>काफ़</td>
+    <td>ک</td>
+    <td>ک‍ ‍ک‍ ‍ک</td>
+    </tr>
+    <tr>
+    <td>गाफ़</td>
+    <td>گ</td>
+    <td>گ‍ ‍گ‍ ‍گ</td>
+    </tr>
+    <tr>
+    <td>लाम</td>
+    <td>ل</td>
+    <td>ل‍ ‍ل‍ ‍ل</td>
+    </tr>
+    <tr>
+    <td>मीम</td>
+    <td>م</td>
+    <td>م‍ ‍م‍ ‍م</td>
+    </tr>
+    <tr>
+    <td>नून</td>
+    <td>ن</td>
+    <td>ن‍ ‍ن‍ ‍ن</td>
+    </tr>
+    <tr>
+    <td>वाओ</td>
+    <td>و</td>
+    <td>و</td>
+    </tr>
+    <tr>
+    <td>छोटी हे</td>
+    <td>ﮩ</td>
+    <td>ہ ﮩ ﮨ</td>
+    </tr>
+    <tr>
+    <td>दो चश्मी हे</td>
+    <td>ه</td>
+    <td>ه‍ ‍ه‍ ‍ه</td>
+    </tr>
+    <tr>
+    <td>हमज़ा</td>
+    <td>ء</td>
+    <td>On the top of some vowels</td>
+    </tr>
+    <tr>
+    <td>ये</td>
+    <td>ي</td>
+    <td>ي‍ ‍ي‍ ‍ي</td>
+    </tr>
+    <tr>
+    <td>छोटी ये</td>
+    <td>ی</td>
+    <td>ی‍ ‍ی‍ ‍ی</td>
+    </tr>
+    <tr>
+    <td>बड़ी ये</td>
+    <td>ے</td>
+    <td>ے‍ ـے‍ ے</td>
+    </tr>
+    </tbody>
+    </table></div> -->
+<!-- partial -->
+  
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+</body>
+</html>
+<script>
+//    let urducard={hindi:'अ',urdu:'ا',english:'Alif',start:'a',mid:'b',end:'c'};
+var urdu = ['ا','ب','ی','پ','ن','ت','ث','ش','س','ک','گ','ح'];
+var hindi = ['अ',
+'ब','य','प',
+'न','त','स', 'श', 'स',
+'क','ग','ह'];
+var english = ['Alif',
+'Bey','Chhoti yeh','Pe',
+'Noon','Tey','say', 'sHeen','seen',
+'Kaaf','Gaaf','Hay'];
+
+
+var data = {
+    //alif byap
+    ا : {hindi: "अ",englishalpha:"a", english: "Alif",firstur:"اب",firsten:"ba",secondur:"باب",seconden:"bab",thirdur:"با",thirden:"ab"},
+    ب : {hindi: "ब",englishalpha:"b", english: "Bey",firstur:"بب",firsten:"bb",secondur:"ببب",seconden:"bbb",thirdur:"اب",thirden:"ba"},
+    ی : {hindi: "य",englishalpha:"ye", english: "Chhoti yeh",firstur:"بب",firsten:"bb",secondur:"ببب",seconden:"bbb",thirdur:"اب",thirden:"ba"},
+    پ : {hindi: "प",englishalpha:"p", english: "Pe",firstur:"بب",firsten:"bb",secondur:"ببب",seconden:"bbb",thirdur:"اب",thirden:"ba"},
+    //nitish
+    ن : {hindi: "न",englishalpha:"n", english: "Noon",firstur:"بب",firsten:"bb",secondur:"ببب",seconden:"bbb",thirdur:"اب",thirden:"ba"},
+    ت : {hindi: "त",englishalpha:"T", english: "Tey",firstur:"بت",firsten:"bt",secondur:"بتب",seconden:"btb",thirdur:"یا",thirden:"ta"},
+    ث : {hindi: "स",englishalpha:"S", english: "say",firstur:"بث",firsten:"sb",secondur:"بثب",seconden:"bsb",thirdur:"یا",thirden:"sa"},
+    ش : {hindi: "श",englishalpha:"Sh", english: "sHeen",firstur:"بش",firsten:"shb",secondur:"اشب",seconden:"bsha",thirdur:"یا",thirden:"sha"},
+    س : {hindi: "स",englishalpha:"S", english: "seen",firstur:"سب",firsten:"bs",secondur:"بسب",seconden:"bsb",thirdur:"اس",thirden:"sa"},
+    //kaga
+    ک : {hindi: "क",englishalpha:"K", english: "Kaaf",firstur:"کان",firsten:"nak",secondur:"ہیکت",seconden:"takiya",thirdur:"ناک",thirden:"kaan"},
+    گ : {hindi: "ग",englishalpha:"g", english: "Gaaf",firstur:"ناگ",firsten:"naag",secondur:"نگان",seconden:"nagin",thirdur:"اناگ",thirden:"gana"},
+    //hockey khelo janch 
+    ح : {hindi: "ह",englishalpha:"H", english: "Hay",firstur:"ریح",firsten:"riih",secondur:"بحب",seconden:"bahab",thirdur:"اح",thirden:"ha"},
+    خ : {hindi: "ख",englishalpha:"KH/X", english: "KHay",firstur:"خیرات",firsten:"tarikh",secondur:"رخآ",seconden:"akhir",thirdur:"اخ",thirden:"kha"},
+    ج : {hindi: "ज",englishalpha:"J", english: "Jeem",firstur:"اناج",firsten:"anaj",secondur:"انجب",seconden:"bajna",thirdur:"اج",thirden:"ja"},
+    چ : {hindi: "च",englishalpha:"ch", english: "Chay",firstur:"بیچ",firsten:"bich",secondur:"بچت",seconden:"bacht",thirdur:"اچ",thirden:"cha"},
+    //diwar
+    د : {hindi: "द",englishalpha:"D", english: "daal",firstur:"دب",firsten:"bad",secondur:"دادا",seconden:"dada",thirdur:"رد",thirden:"dar"},
+    و : {hindi: "व/ओ",englishalpha:"V/oo", english: "VAO",firstur:"ور",firsten:"roo",secondur:"روا",seconden:"oor",thirdur:"راو",thirden:"vaar"},
+    ر : {hindi: "र",englishalpha:"R", english: "Ray",firstur:"روا",firsten:"oor",secondur:"روا",seconden:"oor",thirdur:"زار",thirden:"raj"},
+    
+    //toye
+    ط : {hindi: "तोए",englishalpha:"toye", english: "toye",firstur:"ط‍",firsten:"?",secondur:"ط‍",seconden:"?",thirdur:"ط",thirden:"?"},
+    //toye+te
+    ٹ : {hindi: "ट",englishalpha:"ṭ", english: "ṭ",firstur:"ٹا",firsten:"?",secondur:"بٹب",seconden:"?",thirdur:"بٹ",thirden:"?"},
+    //toye+dal h द
+    ڈ : {hindi: "ड",englishalpha:"ddal", english: "dd",firstur:"ڈا",firsten:"?",secondur:"بڈب",seconden:"?",thirdur:"بڈ",thirden:"?"},
+    //toye+rey h र
+    ڑ : {hindi: "ड़",englishalpha:"Aṛ", english: "ṛ",firstur:"ڑا",firsten:"?",secondur:"بڑب",seconden:"?",thirdur:"بڑ",thirden:"?"},
+
+    //h and dochasmi he ka jado
+    ء : {hindi: "ह",englishalpha:"H", english: "HAMZA",firstur:"ؤآ",firsten:"aaoo",secondur:"دائر",seconden:"Daair",thirdur:"?",thirden:"?"},
+    ھ : {hindi: "ह",englishalpha:"H", english: "do-cashmī hē",firstur:"ھـ",firsten:"?",secondur:"ـھـ",seconden:"?",thirdur:"ـھ",thirden:"?"},
+    // क+ dochasmi he
+    کھ : {hindi: "ख",englishalpha:"KH", english: "KhA",firstur:"کھـ",firsten:"?",secondur:"ـکھـ",seconden:"?",thirdur:"ـکھ",thirden:"?"},
+    // ग+ dochasmi he
+    گھ : {hindi: "घ",englishalpha:"gh", english: "ghA",firstur:"گھـ",firsten:"?",secondur:"ـگھـ",seconden:"?",thirdur:"ـگھ",thirden:"?"},
+    // च+ dochasmi he
+    جھ : {hindi: "झ",englishalpha:"jh", english: "jh",firstur:"جھـ",firsten:"?",secondur:"ـجھـ",seconden:"?",thirdur:"ـجھ",thirden:"?"},
+    // ज+ dochasmi he
+    چھ : {hindi: "छ",englishalpha:"ch", english: "Cha",firstur:"چھـ",firsten:"?",secondur:"ـچھـ",seconden:"?",thirdur:"ـچھ",thirden:"?"},
+    
+    
+    //ट+ dochasmi he
+    ٹھ : {hindi: "ठ",englishalpha:"ṭh", english: "ṭh",firstur:"ٹھـ",firsten:"?",secondur:"ـٹھـ",seconden:"?",thirdur:"ـٹھ",thirden:"?"},
+    //ड+ dochasmi he
+    ڈھ : {hindi: "ढ",englishalpha:"ḍh", english: "ḍh",firstur:"ڈھ",firsten:"?",secondur:"ڈھ",seconden:"?",thirdur:"ڈھ",thirden:"?"},
+
+    // त+ dochasmi he
+    تھ : {hindi: "थ",englishalpha:"th", english: "th",firstur:"تھـ",firsten:"?",secondur:"ـتھـ",seconden:"?",thirdur:"ـتھ",thirden:"?"},
+    // द+ dochasmi he
+    دھ : {hindi: "ध",englishalpha:"dh", english: "dh",firstur:"دھ",firsten:"?",secondur:"دھ",seconden:"?",thirdur:"دھ",thirden:"?"},
+    // प+ dochasmi he
+    پھ : {hindi: "फ",englishalpha:"ph", english: "ph",firstur:"پھـ",firsten:"?",secondur:"ـپھـ",seconden:"?",thirdur:"ـپھ",thirden:"?"},
+    // ब+ dochasmi he
+    بھ : {hindi: "भ",englishalpha:"bh", english: "bh",firstur:"بھـ",firsten:"?",secondur:"ـبھـ",seconden:"?",thirdur:"ـبھ",thirden:"?"},
+
+
+
+    //ma la
+    م : {hindi: "म",englishalpha:"m", english: "mim",firstur:"مـ",firsten:"?",secondur:"ـ‍م‍ـ",seconden:"?",thirdur:"ـ‍م",thirden:"?"},
+    ل : {hindi: "ल",englishalpha:"l", english: "lām",firstur:"لـ",firsten:"?",secondur:"ـلـ",seconden:"?",thirdur:"ـل",thirden:"?"},
+    
+};
+
+function createList(parent, array) {
+//     for(let key in array){
+//        console.log(array[key]);
+//  }
+console.log(array);
+}
+
+function getRandomInt(max) {
+  return Math.floor(Math.random() * Math.floor(max));
+}
+function generateCard() {
+    const cardContainer = document.getElementById('cardcontainer');
+Object.entries(data).forEach(item =>
+cardContainer.innerHTML += `<div class="col-md-4">
+
+<div class="profile-card-4 text-center">
+    <div class="row">
+        <div class="col-xs-6">
+            <div class="profile-overview">
+                <p>&nbsp;</p>
+                <h4>${item[1].hindi}</h4></div>
+        </div>
+        <div class="col-xs-6">
+            <div class="profile-overview">
+                <p>&nbsp;</p>
+                <h4>${item[1].englishalpha}</h4></div>
+        </div>
+    </div>
+    <div class="profile-content">
+        <div >
+            <p style=" font-size: 600%;">${item[0]}</p>
+            <p>${item[1].english}</p>
+        </div>
+       <!-- <div class="profile-description">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor.</div> -->
+        <div class="row">
+            <div class="col-xs-4">
+                <div class="profile-overview">
+                    
+                    <h4>${item[1].firstur}</h4><p>${item[1].firsten}</p></div>
+            </div>
+            <div class="col-xs-4">
+                <div class="profile-overview">
+                    
+                    <h4>${item[1].secondur}</h4><p>${item[1].seconden}</p></div>
+            </div>
+            <div class="col-xs-4">
+                <div class="profile-overview">
+                    
+                    <h4>${item[1].thirdur}</h4><p>${item[1].thirden}</p></div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>`
+
+//    console.log(`${item[0]} 
+//    ${item[1].hindi} 
+//    ${item[1].english}
+//    ${item[1].firstur}
+//    ${item[1].firsten}
+//    ${item[1].secondur}
+//    ${item[1].seconden}
+//    ${item[1].thirdur}
+//    ${item[1].thirden}
+   
+   
+//    `)
+);
+}
+
+$(document).ready(function () {
+    const cardContainer = document.getElementById('cardcontainer');
+generateCard();
+});
+
+</script>
