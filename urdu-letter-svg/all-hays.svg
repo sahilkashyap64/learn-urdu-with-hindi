@@ -1,0 +1,16 @@
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 379 373" width="379" height="373">
+  <!-- svg-source:excalidraw -->
+  
+  <defs>
+    <style>
+      @font-face {
+        font-family: "Virgil";
+        src: url("https://excalidraw.com/Virgil.woff2");
+      }
+      @font-face {
+        font-family: "Cascadia";
+        src: url("https://excalidraw.com/Cascadia.woff2");
+      }
+    </style>
+  </defs>
+  <rect x="0" y="0" width="379" height="373" fill="#ffffff"></rect><g stroke-linecap="round" transform="translate(10 10) rotate(0 179.5 176.5)"><path d="M0 0 C120.6 0, 241.21 0, 359 0 M0 0 C140 0, 280.01 0, 359 0 M359 0 C359 127.06, 359 254.12, 359 353 M359 0 C359 109.59, 359 219.18, 359 353 M359 353 C281.93 353, 204.86 353, 0 353 M359 353 C242.88 353, 126.76 353, 0 353 M0 353 C0 269.01, 0 185.03, 0 0 M0 353 C0 242.57, 0 132.14, 0 0" stroke="#000000" stroke-width="1" fill="none"></path></g><g transform="translate(107 36) rotate(0 81 12.5)"><text x="0" y="18" font-family="Virgil, Segoe UI Emoji" font-size="20px" fill="#000000" text-anchor="start" style="white-space: pre;" direction="ltr">All the h sounds</text></g><g transform="translate(44.66666666666663 88.33333333333326) rotate(0 113.5 63.5)"><text x="0" y="18.4" font-family="Virgil, Segoe UI Emoji" font-size="20px" fill="#000000" text-anchor="start" style="white-space: pre;" direction="ltr">  (hay)  حا ح</text><text x="0" y="43.8" font-family="Virgil, Segoe UI Emoji" font-size="20px" fill="#000000" text-anchor="start" style="white-space: pre;" direction="ltr">ہ (gol he)</text><text x="0" y="69.19999999999999" font-family="Virgil, Segoe UI Emoji" font-size="20px" fill="#000000" text-anchor="start" style="white-space: pre;" direction="ltr">ھ (do chasmi)</text><text x="0" y="94.6" font-family="Virgil, Segoe UI Emoji" font-size="20px" fill="#000000" text-anchor="start" style="white-space: pre;" direction="ltr">ــــہــــ (ECG sign)</text><text x="0" y="120" font-family="Virgil, Segoe UI Emoji" font-size="20px" fill="#000000" text-anchor="start" style="white-space: pre;" direction="ltr"> ہــــ (comma like he)</text></g></svg>
