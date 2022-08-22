@@ -123,8 +123,20 @@
     </section> -->
     <section>
       <h3 class="mt-4">Barhakadhi in urdu <strong>diractics marks</strong> on the letter </h3>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="English">
+        <label class="form-check-label" for="inlineRadio1">English</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="Hindi">
+        <label class="form-check-label" for="inlineRadio2">Hindi</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="Urdu" >
+        <label class="form-check-label" for="inlineRadio3">Urdu</label>
+      </div>
       <div class="container-fluid">
-        <div class="row" id="results-table">
+        <div class=" table-responsive" id="results-table">
          
       </div>
  
@@ -205,6 +217,108 @@ let data = [
 	["श्र", "श्रा", "श्रि", "श्री", "श्रु", "श्रू", "श्रे", "श्रै", "श्रो", "श्रौ", "श्रं", "श्रः"]
 ];
 
+ function combos(v,c){
+     let arrO=[]
+     c.map(consonant => {
+      let arr=[];
+         v.map(vowel => {
+           arr.push(`${consonant}${vowel}`);
+        });
+        arrO.push(arr);
+      });
+ 
+      return arrO;
+   }
+   
+   function hindiBarakhadhi(){
+    let consonants=[
+    'क',  'ख', 'ग', 'घ', 'च',
+  'छ',  'ज',  'झ',  'ट', 'ठ', 'ड', 'ढ',
+  'ण',  'त',  'थ',  'द', 'ध', 'न', 'प',
+  'फ',  'ब',  'भ',  'म', 'य', 'र', 'ल',
+  'ळ',  'व',  'श',  'स', 'ष', 'ह', 'क्ष',
+  'त्र', 'ज्ञ', 'श्र'
+];
+let head=[
+	["अ", "आ", "इ", "ई", "उ", "ऊ", "ए", "ऐ", "ओ", "औ", "अं", "अः"],
+	["–", "ा", "ि", "ी", "ु", "ू", "े", "ै", "ो", "ौ", "ं", "ः"]];
+let vowels=["", "ा", "ि", "ी", "ु", "ू", "े", "ै", "ो", "ौ", "ं", "ः"];
+
+let allletters=combos(vowels,consonants);
+let allleterswithhead= [...head,...allletters];
+   return allleterswithhead;
+   }
+   function engBarakhadhi(){
+
+let head=[["a", "aa", "i", "ee", "u", "oo", "e", "ai", "o", "au", "an", "ah"],
+	["–", "aa", "i", "ee", "u", "oo", "e", "ai", "o", "au", "n", "h"]];
+    let vowels=["", "aa", "i", "ee", "u", "oo", "e", "ai", "o", "au", "n", "h"];
+    let consonants=[
+    'ka', 'kh', 'ga',  'gh',
+  'ch', 'chh', 'ja', 'jh', 'ta',  'th',
+  'da', 'dh',  'na', 'ta', 'th',  'da',
+  'dh', 'na',  'pa', 'ph', 'ba',  'bh',
+  'ma', 'ya',  'ra', 'la', 'la',  'va',
+  'sh', 'sa',  'sh', 'ha', 'ksh', 'tr',
+  'gy', 'shr'
+];
+
+let allletters=combos(vowels,consonants);
+let allleterswithhead= [...head,...allletters];
+   return allleterswithhead;
+   }
+   function urduBarakhadhi(){
+
+let head=[
+	["अ", "आ", "इ", "ई", "उ", "ऊ", "ए", "ऐ", "ओ", "औ", "अं", "अः"],
+	["–", "ा", "ि", "ी", "ु", "ू", "े", "ै", "ो", "ौ", "ं", "ः"]];
+    let consonants= ['ا', 'ب', 'پ', 'ت', 'ٹ', 'ث', 'ج', 'چ', 'ح', 'خ', 'د', 'ڈ', 'ذ', 'ر', 'ڑ', 'ز', 'ژ', 'س', 'ش', 'ص', 'ض', 'ط', 'ظ', 'ع', 'غ', 'ف', 'ق', 'ک', 'گ', 'ل', 'م', 'ن', 'و',  'ں'];
+   let vowels= ["َ", "ا", "ِ", "ِی", "ُ", "وٗ", "ے", "َے", "ُو", "ٗو", "َن", "َہ"];
+  
+   let allletters=combos(vowels,consonants);
+   return allletters;
+   }
+// let urdu = [
+// 	["اَ", "آ", "اِ", "ای", "اُ", "اوٗ", "اِے", "اَے", "اُو", "اَو", "اَن", "اَہ"],
+// 	["َ", "ا", "ِ", "ِی", "ُ", "وٗ", "ے", "َے", "ُو", "ٗو", "َن", "َہ"],
+// 	["کَ", "کا", "کِ", "کِی", "کُ", "کوٗ", "کِے", "کَے", "کُو", "کَو", "کَن", "کَہ"],
+// 	["کھ", "کھا", "کھِ", "کھِی", "کھُ", "کھوٗ", "کھے", "کھَے", "کھوُ", "کھَو", "کھَن", "کھہ"],
+// 	["ग", "गा", "गि", "गी", "गु", "गू", "गे", "गै", "गो", "गौ", "गं", "गः"],
+// 	["घ", "घा", "घि", "घी", "घु", "घू", "घे", "घै", "घो", "घौ", "घं", "घः"],
+// 	["च", "चा", "चि", "ची", "चु", "चू", "चे", "चै", "चो", "चौ", "चं", "चः"],
+// 	["छ", "छा", "छि", "छी", "छु", "छू", "छे", "छै", "छो", "छौ", "छं", "छः"],
+// 	["ज", "जा", "जि", "जी", "जु", "जू", "जे", "जै", "जो", "जौ", "जं", "जः"],
+// 	["झ", "झा", "झि", "झी", "झु", "झू", "झे", "झै", "झो", "झौ", "झं", "झः"],
+// 	["ट", "टा", "टि", "टी", "टु", "टू", "टे", "टै", "टो", "टौ", "टं", "टः"],
+// 	["ठ", "ठा", "ठि", "ठी", "ठु", "ठू", "ठे", "ठै", "ठो", "ठौ", "ठं", "ठः"],
+// 	["ड", "डा", "डि", "डी", "डु", "डू", "डे", "डै", "डो", "डौ", "डं", "डः"],
+// 	["ढ", "ढा", "ढि", "ढी", "ढु", "ढू", "ढे", "ढै", "ढो", "ढौ", "ढं", "ढः"],
+// 	["ण", "णा", "णि", "णी", "णु", "णू", "णे", "णै", "णो", "णौ", "णं", "णः"],
+// 	["त", "ता", "ति", "ती", "तु", "तू", "ते", "तै", "तो", "तौ", "तं", "तः"],
+// 	["थ", "था", "थि", "थी", "थु", "थू", "थे", "थै", "थो", "थौ", "थं", "थः"],
+// 	["द", "दा", "दि", "दी", "दु", "दू", "दे", "दै", "दो", "दौ", "दं", "दः"],
+// 	["ध", "धा", "धि", "धी", "धु", "धू", "धे", "धै", "धो", "धौ", "धं", "धः"],
+// 	["न", "ना", "नि", "नी", "नु", "नू", "ने", "नै", "नो", "नौ", "नं", "नः"],
+// 	["प", "पा", "पि", "पी", "पु", "पू", "पे", "पै", "पो", "पौ", "पं", "पः"],
+// 	["फ", "फा", "फि", "फी", "फु", "फू", "फे", "फै", "फो", "फौ", "फं", "फः"],
+// 	["ब", "बा", "बि", "बी", "बु", "बू", "बे", "बै", "बो", "बौ", "बं", "बः"],
+// 	["भ", "भा", "भि", "भी", "भु", "भू", "भे", "भै", "भो", "भौ", "भं", "भः"],
+// 	["म", "मा", "मि", "मी", "मु", "मू", "मे", "मै", "मो", "मौ", "मं", "मः"],
+// 	["य", "या", "यि", "यी", "यु", "यू", "ये", "यै", "यो", "यौ", "यं", "यः"],
+// 	["र", "रा", "रि", "री", "रु", "रू", "रे", "रै", "रो", "रौ", "रं", "रः"],
+// 	["ल", "ला", "लि", "ली", "लु", "लू", "ले", "लै", "लो", "लौ", "लं", "लः"],
+// 	["ळ", "ळा", "ळि", "ळी", "ळु", "ळू", "ळे", "ळै", "ळो", "ळौ", "ळं", "ळः"],
+// 	["व", "वा", "वि", "वी", "वु", "वू", "वे", "वै", "वो", "वौ", "वं", "वः"],
+// 	["श", "शा", "शि", "शी", "शु", "शू", "शे", "शै", "शो", "शौ", "शं", "शः"],
+// 	["स", "सा", "सि", "सी", "सु", "सू", "से", "सै", "सो", "सौ", "सं", "सः"],
+// 	["ष", "षा", "षि", "षी", "षु", "षू", "षे", "षै", "षो", "षौ", "षं", "षः"],
+// 	["ह", "हा", "हि", "ही", "हु", "हू", "हे", "है", "हो", "हौ", "हं", "हः"],
+// 	["क्ष", "क्षा", "क्षि", "क्षी", "क्षु", "क्षू", "क्षे", "क्षै", "क्षो", "क्षौ", "क्षं", "क्षः"],
+// 	["त्र", "त्रा", "त्रि", "त्री", "त्रु", "त्रू", "त्रे", "त्रै", "त्रो", "त्रौ", "त्रं", "त्रः"],
+// 	["ज्ञ", "ज्ञा", "ज्ञि", "ज्ञी", "ज्ञु", "ज्ञू", "ज्ञे", "ज्ञै", "ज्ञो", "ज्ञौ", "ज्ञं", "ज्ञः"],
+// 	["श्र", "श्रा", "श्रि", "श्री", "श्रु", "श्रू", "श्रे", "श्रै", "श्रो", "श्रौ", "श्रं", "श्रः"]
+// ];
+
 function getCells(data, type) {
   return data.map(cell => `<${type}>${cell}</${type}>`).join('');
 }
@@ -223,54 +337,51 @@ function createTable(data) {
   // some headings, but also to create the rows
   // in the tbody.
   return `
-    <table class="table">
+  
+    <table class="table ">
       <thead class="thead-dark">${getCells(headings, 'th')}</thead>
       <tbody>${createBody(rows)}</tbody>
     </table>
+    
   `;
 }
 
-let english = [
-	["a", "aa", "i", "ee", "u", "oo", "e", "ai", "o", "au", "an", "ah"],
-	["–", "aa", "i", "ee", "u", "oo", "e", "ai", "o", "au", "n", "h"],
-	["ka", "ka", "ki", "kee", "ku", "koo", "ke", "kai", "ko", "kau", "kan", "kah"],
-	["kh", "kha", "khi", "khee", "khu", "khoo", "khe", "khai", "kho", "khau", "khan", "khah"],
-	["ga", "ga", "gi", "gee", "gu", "goo", "ge", "gai", "go", "gau", "gan", "gah"],
-	["gh", "gha", "ghi", "ghee", "ghu", "ghoo", "ghe", "ghai", "gho", "ghau", "ghan", "ghah"],
-	["ch", "cha", "chi", "chee", "chu", "choo", "che", "chai", "cho", "chau", "chan", "chah"],
-	["chh", "chha", "chhi", "chhee", "chhu", "chhoo", "chhe", "chhai", "chho", "chhau", "chhan", "chhah"],
-	["ja", "ja", "ji", "jee", "ju", "joo", "je", "jai", "jo", "jau", "jan", "jah"],
-	["jh", "jha", "jhi", "jhee", "jhu", "jhoo", "jhe", "jhai", "jho", "jhau", "jhan", "jhah"],
-	["ta", "ta", "ti", "tee", "tu", "too", "te", "tai", "to", "tau", "tan", "tah"],
-	["th", "tha", "thi", "thee", "thu", "thoo", "the", "thai", "tho", "thau", "than", "thah"],
-	["da", "da", "di", "dee", "du", "doo", "de", "dai", "do", "dau", "dan", "dah"],
-	["dh", "dha", "dhi", "dhee", "dhu", "dhoo", "dhe", "dhai", "dho", "dhau", "dhan", "dhah"],
-	["na", "na", "ni", "nee", "nu", "noo", "ne", "nai", "no", "nau", "nan", "nah"],
-	["ta", "ta", "ti", "tee", "tu", "too", "te", "tai", "to", "tau", "tan", "tah"],
-	["th", "tha", "thi", "thee", "thu", "thoo", "the", "thai", "tho", "thau", "than", "thah"],
-	["da", "da", "di", "dee", "du", "doo", "de", "dai", "do", "dau", "dan", "dah"],
-	["dh", "dha", "dhi", "dhee", "dhu", "dhoo", "dhe", "dhai", "dho", "dhau", "dhan", "dhah"],
-	["na", "na", "ni", "nee", "nu", "noo", "ne", "nai", "no", "nau", "nan", "nah"],
-	["pa", "pa", "pi", "pee", "pu", "poo", "pe", "pai", "po", "pau", "pan", "pah"],
-	["ph", "pha", "phi", "phee", "phu", "phoo", "phe", "phai", "pho", "phau", "phan", "phah"],
-	["ba", "ba", "bi", "bee", "bu", "boo", "be", "bai", "bo", "bau", "ban", "bah"],
-	["bh", "bha", "bhi", "bhee", "bhu", "bhoo", "bhe", "bhai", "bho", "bhau", "bhan", "bhah"],
-	["ma", "ma", "mi", "mee", "mu", "moo", "me", "mai", "mo", "mau", "man", "mah"],
-	["ya", "ya", "yi", "yee", "yu", "yoo", "ye", "yai", "yo", "yau", "yan", "yah"],
-	["ra", "ra", "ri", "ree", "ru", "roo", "re", "rai", "ro", "rau", "ran", "rah"],
-	["la", "la", "li", "lee", "lu", "loo", "le", "lai", "lo", "lau", "lan", "lah"],
-	["la", "la", "li", "lee", "lu", "loo", "le", "lai", "lo", "lau", "lan", "lah"],
-	["va", "va", "vi", "vee", "vu", "voo", "ve", "vai", "vo", "vau", "van", "vah"],
-	["sh", "sha", "shi", "shee", "shu", "shoo", "she", "shai", "sho", "shau", "shan", "shah"],
-	["sa", "sa", "si", "see", "su", "soo", "se", "sai", "so", "sau", "san", "sah"],
-	["sh", "sha", "shi", "shee", "shu", "shoo", "she", "shai", "sho", "shau", "shan", "shah"],
-	["ha", "ha", "hi", "hee", "hu", "hoo", "he", "hai", "ho", "hau", "han", "hah"],
-	["ksh", "ksha", "kshi", "kshee", "kshu", "kshoo", "kshe", "kshai", "ksho", "kshau", "kshan", "kshah"],
-	["tr", "tra", "tri", "tree", "tru", "troo", "tre", "trai", "tro", "trau", "tran", "trah"],
-	["gy", "gya", "gyi", "gyee", "gyu", "gyoo", "gye", "gyai", "gyo", "gyau", "gyan", "gyah"],
-	["shr", "shra", "shri", "shree", "shru", "shroo", "shre", "shrai", "shro", "shrau", "shran", "shrah"]
-];
+
+let hindiletters=hindiBarakhadhi();
+let urduletters=urduBarakhadhi();
+let engletters=engBarakhadhi();
 // Bang it altogether
-document.querySelector('#results-table').insertAdjacentHTML('beforeend', createTable(data));
+
+document.querySelector('#results-table').insertAdjacentHTML('beforeend', createTable(hindiletters));
+if (document.querySelector('input[name="inlineRadioOptions"]')) {
+  document.querySelectorAll('input[name="inlineRadioOptions"]').forEach((elem) => {
+    elem.addEventListener("change", function(event) {
+      var item = event.target.value;
+      console.log(item);
+
+    let insertedContent = document.querySelector(".table");
+    if(insertedContent) {
+  document.querySelector('#results-table').removeChild(insertedContent);
+}
+      switch(item){
+  case "English":
+
+document.querySelector('#results-table').insertAdjacentHTML('beforeend', createTable(engletters));
+break;
+
+case "Hindi":
+  document.querySelector('#results-table').insertAdjacentHTML('beforeend', createTable(hindiletters));
+
+break;
+case "Urdu":
+  document.querySelector('#results-table').insertAdjacentHTML('beforeend', createTable(urduletters));
+break;
+default:document.querySelector('#results-table').insertAdjacentHTML('beforeend', createTable(hindiletters));
+
+}
+    });
+  });
+}
+
 
 </script>
