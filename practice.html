@@ -13,7 +13,7 @@
   <title>Cover Template for Bootstrap</title>
 
   <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/cover/">
-
+  <meta name="referrer" content="no-referrer">
   <!-- Bootstrap core CSS -->
   <link href="./bootstrap.min.css" rel="stylesheet">
 
@@ -142,8 +142,11 @@
  
       </div>
     </section>
-
-
+<p onclick="playTTS('नून गुना','hi')">Sahil hindi</p>
+<p onclick="playTTS('انڈیا کی امریکی ڈرونز کی خریداری کی وجہ','ur')">Sahil urdu</p>
+<p onclick="playTTS('بھارت میں نایاب نسل کے بلیک پینتھر کی ویڈیو وائرل','ur')">Sahil urdu2</p>
+<p onclick="playTTS('Are heavy elements equally distributed throughout the Solar System?','en')">Sahil english</p>
+    <audio controls id="tts-audio"></audio>
 
 
     <footer class="mastfoot mt-auto">
@@ -272,7 +275,7 @@ let allleterswithhead= [...head,...allletters];
 let head=[
 	["अ", "आ", "इ", "ई", "उ", "ऊ", "ए", "ऐ", "ओ", "औ", "अं", "अः"],
 	["–", "ा", "ि", "ी", "ु", "ू", "े", "ै", "ो", "ौ", "ं", "ः"]];
-    let consonants= ['ا', 'ب', 'پ', 'ت', 'ٹ', 'ث', 'ج', 'چ', 'ح', 'خ', 'د', 'ڈ', 'ذ', 'ر', 'ڑ', 'ز', 'ژ', 'س', 'ش', 'ص', 'ض', 'ط', 'ظ', 'ع', 'غ', 'ف', 'ق', 'ک', 'گ', 'ل', 'م', 'ن', 'و',  'ں'];
+    let consonants= ['ک', 'گ','کھ','ا', 'ب', 'پ', 'ت', 'ٹ', 'ث', 'ج', 'چ', 'ح', 'خ', 'د', 'ڈ', 'ذ', 'ر', 'ڑ', 'ز', 'ژ', 'س', 'ش', 'ص', 'ض', 'ط', 'ظ', 'ع', 'غ', 'ف', 'ق',  'ل', 'م', 'ن', 'و',  'ں'];
    let vowels= ["َ", "ا", "ِ", "ِی", "ُ", "وٗ", "ے", "َے", "ُو", "ٗو", "َن", "َہ"];
   
    let allletters=combos(vowels,consonants);
@@ -318,6 +321,47 @@ let head=[
 // 	["ज्ञ", "ज्ञा", "ज्ञि", "ज्ञी", "ज्ञु", "ज्ञू", "ज्ञे", "ज्ञै", "ज्ञो", "ज्ञौ", "ज्ञं", "ज्ञः"],
 // 	["श्र", "श्रा", "श्रि", "श्री", "श्रु", "श्रू", "श्रे", "श्रै", "श्रो", "श्रौ", "श्रं", "श्रः"]
 // ];
+// [
+//      ['f',"ا"]
+//     , ["बे", "ب"]
+//     , ["पे", "پ"]
+//     , ["ते", "ت"]
+//     , ["टे", "ٹ"]
+//     , ["से", "ث"]
+//     , ["जीम", "ج"]
+//     , ["चे", "چ"]
+//     , ["हे", "ح"]
+//     , ["खे", "خ",]
+//     , ["दाल", "د",]
+//     , ["डाल", "ڈ",]
+//     , ["ज़ाल", "ذ",]
+//     , ["रे", "ر",]
+//     , ["ड़े", "ڑ",]
+//     , ["ज़े", "ز",]
+//     , ["झे", "ژ",]
+//     , ["सीन", "س",]
+//     , ["शीन", "ش",]
+//     , ["स्वाद/साद", "ص",]
+//     , ["ज़वाद/ज़ाद", "ض",]
+//     , ["तोए", "ط",]
+//     , ["ज़ोए", "ظ",]
+//     , ["ऐन", "ع",]
+//     , ["गेन", "غ",]
+//     , ["फ़े", "ف",]
+//     , ["क़ाफ़", "ق",]
+//     , ["काफ़", "ک",]
+//     , ["गाफ़", "گ",]
+//     , ["लाम", "ل",]
+//     , ["मीम", "م",]
+//     , ["नून", "ن",]
+//     , ["वाव", "و",]
+//     , ["हे", "ہ",]
+//     , ["दो चश्मी हे", "ھ"]
+//     , ["छोटी ये", "ی"]
+//     , ["बड़ी ये", "ے"]
+//     , ["हम्ज़ा", "ء"]
+//     , ["नून गुना", "ں"]
+// ]
 
 function getCells(data, type) {
   return data.map(cell => `<${type}>${cell}</${type}>`).join('');
@@ -382,6 +426,17 @@ default:document.querySelector('#results-table').insertAdjacentHTML('beforeend',
     });
   });
 }
+const playTTS = (text, lang) => {
+   // Get the audio element
+   const audioEl = document.getElementById('tts-audio');
 
+   const url= `https://translate.google.com/translate_tts?ie=UTF-8&tl=${lang}&client=tw-ob&q=${text}`;
+console.log(url);
+   // add the sound to the audio element
+   audioEl.src = url;
+
+   //For auto playing the sound
+   audioEl.play();
+};
 
 </script>
