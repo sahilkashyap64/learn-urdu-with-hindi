@@ -6,12 +6,9 @@
     <style>
       @font-face {
         font-family: "Virgil";
-        src: url("https://excalidraw.com/Virgil.woff2");
+        src: url("../Virgil.woff2");;
       }
-      @font-face {
-        font-family: "Cascadia";
-        src: url("https://excalidraw.com/Cascadia.woff2");
-      }
+      
     </style>
   </defs>
   <rect x="0" y="0" width="379" height="373" fill="#ffffff"></rect>
