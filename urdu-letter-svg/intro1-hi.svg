@@ -1,0 +1,16 @@
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 379 373" width="379" height="373">
+  <!-- svg-source:excalidraw -->
+  
+  <defs>
+    <style>
+      @font-face {
+        font-family: "Virgil";
+        src: url("https://excalidraw.com/Virgil.woff2");
+      }
+      @font-face {
+        font-family: "Cascadia";
+        src: url("https://excalidraw.com/Cascadia.woff2");
+      }
+    </style>
+  </defs>
+  <rect x="0" y="0" width="379" height="373" fill="#ffffff"></rect><g stroke-linecap="round" transform="translate(10 10) rotate(0 179.5 176.5)"><path d="M-0.08 0.99 C75.17 -2.38, 148.47 -1.5, 358.81 0.93 M-0.57 -0.35 C96.97 -0.56, 192.76 0.33, 358.49 0.32 M358.29 0.72 C357.11 133.05, 357.8 267.73, 359.45 353.9 M358.39 0.03 C358.69 84.11, 358.88 167.63, 358.55 353.09 M357.86 352.05 C261.51 354.98, 164.62 355.18, -0.95 353.94 M358.68 353.35 C287.16 351.95, 215.92 352.7, -0.21 353.21 M0.47 353.01 C-1.57 253.79, -0.64 152.75, 0.96 0.41 M0.61 352.67 C-0.9 231.77, -0.67 110.92, -0.33 0.35" stroke="#000000" stroke-width="1" fill="none"></path></g><g transform="translate(107 36.00000000000023) rotate(0 61 13.5)"><text x="0" y="20" font-family="Virgil, Segoe UI Emoji" font-size="20px" fill="#000000" text-anchor="start" style="white-space: pre;" direction="ltr">उर्दू के 3 नियम</text></g><g transform="translate(46.66666666666674 85.01382927992381) rotate(0 158 118)"><text x="0" y="21.5" font-family="Virgil, Segoe UI Emoji" font-size="22.384358607534587px" fill="#000000" text-anchor="start" style="white-space: pre;" direction="ltr">1. उर्दू दाएँ से बाएं पढ़ी/लिखी जाती </text><text x="0" y="51" font-family="Virgil, Segoe UI Emoji" font-size="22.384358607534587px" fill="#000000" text-anchor="start" style="white-space: pre;" direction="ltr">है।</text><text x="0" y="80.5" font-family="Virgil, Segoe UI Emoji" font-size="22.384358607534587px" fill="#000000" text-anchor="start" style="white-space: pre;" direction="ltr"></text><text x="0" y="110" font-family="Virgil, Segoe UI Emoji" font-size="22.384358607534587px" fill="#000000" text-anchor="start" style="white-space: pre;" direction="ltr">2. एक उर्दू अक्षर के</text><text x="0" y="139.5" font-family="Virgil, Segoe UI Emoji" font-size="22.384358607534587px" fill="#000000" text-anchor="start" style="white-space: pre;" direction="ltr">आमतौर पर 3 आकार होते हैं।</text><text x="0" y="169" font-family="Virgil, Segoe UI Emoji" font-size="22.384358607534587px" fill="#000000" text-anchor="start" style="white-space: pre;" direction="ltr"></text><text x="0" y="198.5" font-family="Virgil, Segoe UI Emoji" font-size="22.384358607534587px" fill="#000000" text-anchor="start" style="white-space: pre;" direction="ltr">3. कभी-कभी कुछ स्वर</text><text x="0" y="228" font-family="Virgil, Segoe UI Emoji" font-size="22.384358607534587px" fill="#000000" text-anchor="start" style="white-space: pre;" direction="ltr">छोड़ दिया जाते है।</text></g></svg>
