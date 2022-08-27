@@ -73,7 +73,7 @@
           </div>
           <div class="col-sm">
 
-            <object data="./urdu-letter-svg-compressed/intro3.svg" alt="intro3" style="width:100%; height: 100%;"
+            <object id="intro3" data="./urdu-letter-svg-compressed/intro3.svg" alt="intro3" style="width:100%; height: 100%;"
               type="image/svg+xml"></object>
 
           </div>
@@ -653,13 +653,27 @@
 <script>
 
 document.addEventListener("DOMContentLoaded", () => {
-  var intro1 = document.getElementById('intro1').contentDocument;
-  var intro1Text = intro1.querySelector("svg > text");
+//   var intro1 = document.getElementById('intro1').contentDocument;
+//   var intro1Text = intro1.querySelector("svg > text");
 
-  const element = document.getElementById("myBtn");
-  element.addEventListener("click", function() {
-  console.log("Hello World");
-  intro1Text.textContent = "उर्दू के 3 नियम";
-});
+//   const element = document.getElementById("myBtn");
+//   element.addEventListener("click", function() {
+//   console.log("Hello World");
+//   intro1Text.textContent = "उर्दू के 3 नियम";
+// });
+let intro1 = document.getElementById('intro1');
+    let intro2 = document.getElementById('intro2');
+    let intro3 = document.getElementById('intro3');
+    let path="./urdu-letter-svg/";
+    // var intro1Text = intro1.querySelector("svg > text");
+  console.log("intro1",intro1)
+    const element = document.getElementById("myBtn");
+    element.addEventListener("click", function() {
+    console.log("Hello World");
+    
+    intro1.data = path+"intro1-hi.svg"
+    intro2.data = path+"intro2-hi.svg"
+    intro3.data = path+"intro3-hi.svg"
+  });
 });
 </script>
