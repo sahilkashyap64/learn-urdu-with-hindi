@@ -17,7 +17,12 @@
     <!-- Font Awesome JS -->
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
-
+<!-- <style>
+*{
+  box-sizing: border-box;
+  background:rgb(0 100 0/ 0.1) !important;
+  outline: 1px solid limegreen !important;
+}</style> -->
 </head>
 
 <body>
@@ -26,11 +31,21 @@
         <!-- Sidebar Holder -->
         <nav id="sidebar">
             <div class="sidebar-header">
-                <h3>Bootstrap Sidebar</h3>
+                <h3>Urdu</h3>
             </div>
 
             <ul class="list-unstyled components">
-                <p>Dummy Heading</p>
+              
+              <li class="text-center">
+                <span>Dark mode</span>
+                <div class="w-100 d-flex justify-content-center"> <label class="custom-control teleport-switch">
+                  <span class="teleport-switch-control-description">Off</span>
+                  <input type="checkbox" class="teleport-switch-control-input">
+                  <span class="teleport-switch-control-indicator"></span>
+                  <span class="teleport-switch-control-description">On</span>
+                  </label></div>
+               
+                </li>
                 <li class="active">
                     <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Home</a>
                     <ul class="collapse list-unstyled" id="homeSubmenu">
@@ -81,7 +96,7 @@
         <!-- Page Content Holder -->
         <div id="content">
 
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <nav class="navbar navbar-expand-lg ">
                 <div class="container-fluid">
 
                     <button type="button" id="sidebarCollapse" class="navbar-btn">
@@ -682,7 +697,7 @@
         
               </div>
             </section>
-            <h2>Collapsible Sidebar Using Bootstrap 4</h2>
+            <!-- <h2>Collapsible Sidebar Using Bootstrap 4</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 
@@ -699,7 +714,7 @@
             <div class="line"></div>
 
             <h3>Lorem Ipsum Dolor</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p> -->
         </div>
     </div>
 
@@ -721,6 +736,16 @@
 </body>
 
 </html>
+<style>
+  
+  /* .wrapper {
+    filter: invert(93%) hue-rotate(180deg) !important;
+  } */
+ 
+  .dark-mode{
+    filter: invert(100%) hue-rotate(180deg);
+  }
+</style>
 <script>
 
   document.addEventListener("DOMContentLoaded", () => {
@@ -760,6 +785,77 @@
     all_hays.data = path+"all-hays-hi.svg"
     all_j.data = path+"all-j-hi.svg"
   });
+
+  const cbDarkMode = document.getElementsByClassName('teleport-switch-control-input')[0];
+    cbDarkMode.addEventListener('change', function(){
+      // let element=document.querySelector("#sidebar");
+      // let navbar=document.querySelector("#content > nav");
+      let content=document.querySelector("#content");
+      
+      // console.log("element",element);
+      // element.classList.toggle("navbar-dark");
+      // navbar.classList.toggle("navbar-dark");
+      // element.classList.toggle("bg-dark");
+      // navbar.classList.toggle("bg-dark");
+      content.classList.toggle("dark-mode");
+    });
   });
   </script>
 <!-- https://bootstrapious.com/p/bootstrap-sidebar -->
+<style>
+.custom-control.teleport-switch {
+--color: #4cd964;
+padding-left: 0; }
+.custom-control.teleport-switch .teleport-switch-control-input {
+display: none; }
+.custom-control.teleport-switch .teleport-switch-control-input:checked ~ .teleport-switch-control-indicator {
+border-color: var(--color); }
+.custom-control.teleport-switch .teleport-switch-control-input:checked ~ .teleport-switch-control-indicator::after {
+left: -14px; }
+.custom-control.teleport-switch .teleport-switch-control-input:checked ~ .teleport-switch-control-indicator::before {
+right: 2px;
+background-color: var(--color); }
+.custom-control.teleport-switch .teleport-switch-control-input:disabled ~ .teleport-switch-control-indicator {
+opacity: .4; }
+.custom-control.teleport-switch .teleport-switch-control-indicator {
+display: inline-block;
+position: relative;
+margin: 0 10px;
+top: 4px;
+width: 32px;
+height: 20px;
+background: #fff;
+border-radius: 16px;
+-webkit-transition: .3s;
+-o-transition: .3s;
+transition: .3s;
+border: 2px solid #ccc;
+overflow: hidden; }
+.custom-control.teleport-switch .teleport-switch-control-indicator::after {
+content: '';
+display: block;
+position: absolute;
+width: 12px;
+height: 12px;
+border-radius: 50%;
+-webkit-transition: .3s;
+-o-transition: .3s;
+transition: .3s;
+top: 2px;
+left: 2px;
+background: #ccc; }
+.custom-control.teleport-switch .teleport-switch-control-indicator::before {
+content: '';
+display: block;
+position: absolute;
+width: 12px;
+height: 12px;
+border-radius: 50%;
+-webkit-transition: .3s;
+-o-transition: .3s;
+transition: .3s;
+top: 2px;
+right: -14px;
+background: #ccc; }
+
+</style>
