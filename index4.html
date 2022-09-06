@@ -369,8 +369,16 @@
   }
   function generateCard() {
     const cardContainer = document.getElementById('urdu-container');
-    Object.entries(data).forEach(item =>
-      cardContainer.innerHTML += `<div class="element other-nonmetal ${item[1].gridcordinates}">
+    let grid=usingGeneratorToChunkArrayForGrid();
+    grid.forEach( function(childArray,parentIndex, the_parent_array) {
+      let x_prime = childArray.length;
+  childArray.forEach(function(item,childIndex,the_child_array){
+  // console.log("i",item);
+  // console.log("parentIndex",parentIndex+1);
+  // console.log("childIndex",childIndex+1);   
+  // console.log(`c${x_prime-childIndex}  r${parentIndex+1}`);
+        // console.log("reverse",x_prime-childIndex);
+        cardContainer.innerHTML += `<div class="element other-nonmetal c${x_prime-childIndex}  r${parentIndex+1}">
         <input class="activate" type="radio" name="elements">
         <input class="deactivate" type="radio" name="elements">
         <div class="overlay"></div>
@@ -394,23 +402,15 @@
           </ul>
         </div>
       </div>`
-      //    console.log(`${item[0]} 
-      //    ${item[1].hindi} 
-      //    ${item[1].english}
-      //    ${item[1].firstur}
-      //    ${item[1].firsten}
-      //    ${item[1].secondur}
-      //    ${item[1].seconden}
-      //    ${item[1].thirdur}
-      //    ${item[1].thirden}`)
-    );
+
+  });
+ });
+    
   }
 
   function usingGeneratorToChunkArrayForGrid(){
   
 let ObjToArray=Object.entries(data);
-// console.log(f.length);
-// console.log([...chunks(ObjToArray, 10)])
 return [...chunks(ObjToArray, 10)];
   }
 // genertor function to chunk the array
