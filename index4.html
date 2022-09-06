@@ -13,7 +13,28 @@
   <!-- partial:index.partial.html -->
   <!-- ELEMENT MIXIN TEMPLATE-->
   <!-- PLACEHOLDER MIXIN TEMPLATE-->
+  
   <div class="wrapper">
+    <input class="category-toggle" type="radio" id="alkali-metals" name="categories"/>
+    <input class="category-cancel" type="radio" id="cancel" name="categories"/>
+    <input class="category-toggle" type="radio" id="alkaline-earth-metals" name="categories"/>
+    <input class="category-cancel" type="radio" id="cancel" name="categories"/>
+    <input class="category-toggle" type="radio" id="lanthanoids" name="categories"/>
+    <input class="category-cancel" type="radio" id="cancel" name="categories"/>
+    <input class="category-toggle" type="radio" id="actinoids" name="categories"/>
+    <input class="category-cancel" type="radio" id="cancel" name="categories"/>
+    <input class="category-toggle" type="radio" id="transition-metals" name="categories"/>
+    <input class="category-cancel" type="radio" id="cancel" name="categories"/>
+    <input class="category-toggle" type="radio" id="post-transition-metals" name="categories"/>
+    <input class="category-cancel" type="radio" id="cancel" name="categories"/>
+    <input class="category-toggle" type="radio" id="metalloids" name="categories"/>
+    <input class="category-cancel" type="radio" id="cancel" name="categories"/>
+    <input class="category-toggle" type="radio" id="other-nonmetals" name="categories"/>
+    <input class="category-cancel" type="radio" id="cancel" name="categories"/>
+    <input class="category-toggle" type="radio" id="noble-gasses" name="categories"/>
+    <input class="category-cancel" type="radio" id="cancel" name="categories"/>
+    <input class="category-toggle" type="radio" id="unknown" name="categories"/>
+    <input class="category-cancel" type="radio" id="cancel" name="categories"/>
     <div class="urdu-table" id="urdu-container">
       <!-- <div class="element lanthanoid c2 r9">
         <input class="activate" type="radio" name="elements">
@@ -214,6 +235,20 @@
         <div class="square">do chasmi he</div>
       </div>
       <div class="gap c1 r5"></div> -->
+      <div class="key">
+        <div class="row">
+          <label class="alkali-metal" for="alkali-metals">Alkali Metals</label>
+          <label class="alkaline-earth-metal" for="alkaline-earth-metals">Alkaline Earth Metals</label>
+          <label class="lanthanoid" for="lanthanoids">Lanthanoids</label>
+          <label class="actinoid" for="actinoids">Aktinoids</label>
+          <label class="transition-metal" for="transition-metals">Transition Metals</label>
+          <label class="post-transition-metal" for="post-transition-metals">Post-Transition Metals</label>
+          <label class="metalloid" for="metalloids">Metalloids</label>
+          <label class="other-nonmetal" for="other-nonmetals">Other Nonmetals</label>
+          <label class="noble-gas" for="noble-gasses">Noble Gasses</label>
+          <label class="unknown" for="unknown">Unknown</label>
+        </div>
+      </div>
     </div>
   </div>
   <section class="col">ahjsajh</section>
@@ -286,74 +321,189 @@
     padding: 2px;
     text-align: center;
   }
+  .key {
+  position: relative;
+  z-index: 1;
+  grid-row: 1;
+  grid-column-start: 2;
+  grid-column-end: 10;
+  font-size: 0.8vw;
+  line-height: 1.5;
+  display: flex;
+  align-items: center;
+  pointer-events: none;
+  user-select: none;
+}
+.key .row {
+  position: relative;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+.key .row label {
+  opacity: 0.85;
+  cursor: pointer;
+  transition: 120ms;
+  pointer-events: all;
+}
+.key .row label:hover {
+  opacity: 1 !important;
+}
+
+.alkali-metal {
+    color: #ecbe59;
+  }
+  
+  .alkaline-earth-metal {
+    color: #dee955;
+  }
+  
+  .lanthanoid {
+    color: #ec77a3;
+  }
+  
+  .actinoid {
+    color: #c686cc;
+  }
+  
+  .transition-metal {
+    color: #fd8572;
+  }
+  
+  .post-transition-metal {
+    color: #4cddf3;
+  }
+  
+  .metalloid {
+    color: #3aefb6;
+  }
+  
+  .other-nonmetal {
+    color: #52ee61;
+  }
+  
+  .noble-gas {
+    color: #759fff;
+  }
+  
+  .unknown {
+    color: #cccccc;
+  }
+  
+#alkali-metals:checked ~ .urdu-table .element:not(.alkali-metal),
+#alkaline-earth-metals:checked ~ .urdu-table .element:not(.alkaline-earth-metal),
+#lanthanoids:checked ~ .urdu-table .element:not(.lanthanoid),
+#actinoids:checked ~ .urdu-table .element:not(.actinoid),
+#transition-metals:checked ~ .urdu-table .element:not(.transition-metal),
+#post-transition-metals:checked ~ .urdu-table .element:not(.post-transition-metal),
+#metalloids:checked ~ .urdu-table .element:not(.metalloid),
+#other-nonmetals:checked ~ .urdu-table .element:not(.other-nonmetal),
+#noble-gasses:checked ~ .urdu-table .element:not(.noble-gas),
+#unknown:checked ~ .urdu-table .element:not(.unknown),
+#alkali-metals:checked ~ .urdu-table .placeholder,
+#alkaline-earth-metals:checked ~ .urdu-table .placeholder,
+#lanthanoids:checked ~ .urdu-table .placeholder:not(.lanthanoid),
+#actinoids:checked ~ .urdu-table .placeholder:not(.actinoid),
+#transition-metals:checked ~ .urdu-table .placeholder,
+#post-transition-metals:checked ~ .urdu-table .placeholder,
+#metalloids:checked ~ .urdu-table .placeholder,
+#other-nonmetals:checked ~ .urdu-table .placeholder,
+#noble-gasses:checked ~ .urdu-table .placeholder,
+#unknown:checked ~ .urdu-table .placeholder {
+  opacity: 0.15;
+  pointer-events: none;
+}
+
+#alkali-metals:checked ~ .urdu-table .key label:not(.alkali-metal),
+#alkaline-earth-metals:checked ~ .urdu-table .key label:not(.alkaline-earth-metal),
+#lanthanoids:checked ~ .urdu-table .key label:not(.lanthanoid),
+#actinoids:checked ~ .urdu-table .key label:not(.actinoid),
+#transition-metals:checked ~ .urdu-table .key label:not(.transition-metal),
+#post-transition-metals:checked ~ .urdu-table .key label:not(.post-transition-metal),
+#metalloids:checked ~ .urdu-table .key label:not(.metalloid),
+#other-nonmetals:checked ~ .urdu-table .key label:not(.other-nonmetal),
+#noble-gasses:checked ~ .urdu-table .key label:not(.noble-gas),
+#unknown:checked ~ .urdu-table .key label:not(.unknown) {
+  opacity: 0.65;
+}
+
+.category-toggle:not(#lanthanoids):not(#actinoids):checked ~ .urdu-table .gap {
+  opacity: 0.5;
+}
+
+.category-toggle:checked ~ .category-cancel {
+  visibility: visible;
+  pointer-events: all;
+  cursor: pointer;
+}
 </style>
 <script>
   var data = {
     //alif byap
-    ا: { hindi: "अ", englishalpha: "a", english: "Alif", firstur: "اب", firsten: "ba", secondur: "باب", seconden: "bab", thirdur: "لا/بابا", thirden: "baba/la", gridcordinates: "c10 r1" },
-    ب: { hindi: "ब", englishalpha: "b", english: "Bey", firstur: "بب", firsten: "bb", secondur: "ببب", seconden: "bbb", thirdur: "اب", thirden: "ba", gridcordinates: "c9 r1" },
-    ی: { hindi: "य", englishalpha: "ye", english: "Chhoti yeh", firstur: "بب", firsten: "bb", secondur: "ببب", seconden: "bbb", thirdur: "اب", thirden: "ba", gridcordinates: "c8 r1" },
-    پ: { hindi: "प", englishalpha: "p", english: "Pe", firstur: "بب", firsten: "bb", secondur: "ببب", seconden: "bbb", thirdur: "اب", thirden: "pa", gridcordinates: "c7 r1" },
+    ا: { hindi: "अ", englishalpha: "a", english: "Alif", firstur: "اب", firsten: "ba", secondur: "باب", seconden: "bab", thirdur: "لا/بابا", thirden: "baba/la", gridcordinates: "c10 r1",grouped:'alkali-metal' },
+    ب: { hindi: "ब", englishalpha: "b", english: "Bey", firstur: "بب", firsten: "bb", secondur: "ببب", seconden: "bbb", thirdur: "اب", thirden: "ba", gridcordinates: "c9 r1",grouped:"alkaline-earth-metal" },
+    ی: { hindi: "य", englishalpha: "ye", english: "Chhoti yeh", firstur: "بب", firsten: "bb", secondur: "ببب", seconden: "bbb", thirdur: "اب", thirden: "ba", gridcordinates: "c8 r1", grouped:"alkaline-earth-metal"},
+    پ: { hindi: "प", englishalpha: "p", english: "Pe", firstur: "بب", firsten: "bb", secondur: "ببب", seconden: "bbb", thirdur: "اب", thirden: "pa", gridcordinates: "c7 r1" ,grouped:"alkaline-earth-metal"},
     //nitish
-    ن: { hindi: "न", englishalpha: "n", english: "Noon", firstur: "بب", firsten: "bb", secondur: "ببب", seconden: "bbb", thirdur: "اب", thirden: "ba", gridcordinates: "c6 r1" },
-    ت: { hindi: "त", englishalpha: "T", english: "Tey", firstur: "بت", firsten: "bt", secondur: "بتب", seconden: "btb", thirdur: "یا", thirden: "ta", gridcordinates: "c5 r1" },
-    ث: { hindi: "स", englishalpha: "S", english: "say", firstur: "بث", firsten: "sb", secondur: "بثب", seconden: "bsb", thirdur: "یا", thirden: "sa", gridcordinates: "c4 r1" },
-    ش: { hindi: "श", englishalpha: "Sh", english: "sHeen", firstur: "بش", firsten: "shb", secondur: "اشب", seconden: "bsha", thirdur: "یا", thirden: "sha", gridcordinates: "c3 r1" },
-    س: { hindi: "स", englishalpha: "S", english: "seen", firstur: "سب", firsten: "bs", secondur: "بسب", seconden: "bsb", thirdur: "اس", thirden: "sa", gridcordinates: "c2 r1" },
+    ن: { hindi: "न", englishalpha: "n", english: "Noon", firstur: "بب", firsten: "bb", secondur: "ببب", seconden: "bbb", thirdur: "اب", thirden: "ba", gridcordinates: "c6 r1",grouped:"lanthanoid" },
+    ت: { hindi: "त", englishalpha: "T", english: "Tey", firstur: "بت", firsten: "bt", secondur: "بتب", seconden: "btb", thirdur: "یا", thirden: "ta", gridcordinates: "c5 r1",grouped:"lanthanoid" },
+    ث: { hindi: "स", englishalpha: "S", english: "say", firstur: "بث", firsten: "sb", secondur: "بثب", seconden: "bsb", thirdur: "یا", thirden: "sa", gridcordinates: "c4 r1",grouped:"lanthanoid" },
+    ش: { hindi: "श", englishalpha: "Sh", english: "sHeen", firstur: "بش", firsten: "shb", secondur: "اشب", seconden: "bsha", thirdur: "یا", thirden: "sha", gridcordinates: "c3 r1",grouped:"lanthanoid" },
+    س: { hindi: "स", englishalpha: "S", english: "seen", firstur: "سب", firsten: "bs", secondur: "بسب", seconden: "bsb", thirdur: "اس", thirden: "sa", gridcordinates: "c2 r1",grouped:"lanthanoid" },
     //kaga
-    ک: { hindi: "क", englishalpha: "K", english: "Kaaf", firstur: "کان", firsten: "nak", secondur: "ہیکت", seconden: "takiya", thirdur: "ناک", thirden: "kaan", gridcordinates: "c1 r1" },
-    گ: { hindi: "ग", englishalpha: "g", english: "Gaaf", firstur: "ناگ", firsten: "naag", secondur: "نگان", seconden: "nagin", thirdur: "اناگ", thirden: "gana", gridcordinates: "c10 r2" },
+    ک: { hindi: "क", englishalpha: "K", english: "Kaaf", firstur: "کان", firsten: "nak", secondur: "ہیکت", seconden: "takiya", thirdur: "ناک", thirden: "kaan", gridcordinates: "c1 r1",grouped:"actinoid" },
+    گ: { hindi: "ग", englishalpha: "g", english: "Gaaf", firstur: "ناگ", firsten: "naag", secondur: "نگان", seconden: "nagin", thirdur: "اناگ", thirden: "gana", gridcordinates: "c10 r2",grouped:"actinoid" },
     //hockey khelo janch 
-    ح: { hindi: "ह", englishalpha: "H", english: "Hay", firstur: "ریح", firsten: "riih", secondur: "بحب", seconden: "bahab", thirdur: "اح", thirden: "ha", gridcordinates: "c9 r2" },
-    خ: { hindi: "ख", englishalpha: "KH/X", english: "KHay", firstur: "خیرات", firsten: "tarikh", secondur: "رخآ", seconden: "akhir", thirdur: "اخ", thirden: "kha", gridcordinates: "c8 r2" },
-    ج: { hindi: "ज", englishalpha: "J", english: "Jeem", firstur: "اناج", firsten: "anaj", secondur: "انجب", seconden: "bajna", thirdur: "اج", thirden: "ja", gridcordinates: "c7 r2" },
-    چ: { hindi: "च", englishalpha: "ch", english: "Chay", firstur: "بیچ", firsten: "bich", secondur: "بچت", seconden: "bacht", thirdur: "اچ", thirden: "cha", gridcordinates: "c6 r2" },
+    ح: { hindi: "ह", englishalpha: "H", english: "Hay", firstur: "ریح", firsten: "riih", secondur: "بحب", seconden: "bahab", thirdur: "اح", thirden: "ha", gridcordinates: "c9 r2",grouped:"transition-metal" },
+    خ: { hindi: "ख", englishalpha: "KH/X", english: "KHay", firstur: "خیرات", firsten: "tarikh", secondur: "رخآ", seconden: "akhir", thirdur: "اخ", thirden: "kha", gridcordinates: "c8 r2",grouped:"transition-metal" },
+    ج: { hindi: "ज", englishalpha: "J", english: "Jeem", firstur: "اناج", firsten: "anaj", secondur: "انجب", seconden: "bajna", thirdur: "اج", thirden: "ja", gridcordinates: "c7 r2",grouped:"transition-metal" },
+    چ: { hindi: "च", englishalpha: "ch", english: "Chay", firstur: "بیچ", firsten: "bich", secondur: "بچت", seconden: "bacht", thirdur: "اچ", thirden: "cha", gridcordinates: "c6 r2",grouped:"transition-metal" },
     //diwar
-    د: { hindi: "द", englishalpha: "D", english: "daal", firstur: "دب", firsten: "bad", secondur: "دادا", seconden: "dada", thirdur: "رد", thirden: "dar", gridcordinates: "c5 r2" },
-    و: { hindi: "व/ओ", englishalpha: "V/oo", english: "VAO", firstur: "ور", firsten: "roo", secondur: "روا", seconden: "oor", thirdur: "راو", thirden: "vaar", gridcordinates: "c4 r2" },
-    ر: { hindi: "र", englishalpha: "R", english: "Ray", firstur: "روا", firsten: "oor", secondur: "روا", seconden: "oor", thirdur: "زار", thirden: "raj", gridcordinates: "c3 r2" },
+    د: { hindi: "द", englishalpha: "D", english: "daal", firstur: "دب", firsten: "bad", secondur: "دادا", seconden: "dada", thirdur: "رد", thirden: "dar", gridcordinates: "c5 r2",grouped:"post-transition-metal" },
+    و: { hindi: "व/ओ", englishalpha: "V/oo", english: "VAO", firstur: "ور", firsten: "roo", secondur: "روا", seconden: "oor", thirdur: "راو", thirden: "vaar", gridcordinates: "c4 r2",grouped:"post-transition-metal" },
+    ر: { hindi: "र", englishalpha: "R", english: "Ray", firstur: "روا", firsten: "oor", secondur: "روا", seconden: "oor", thirdur: "زار", thirden: "raj", gridcordinates: "c3 r2",grouped:"post-transition-metal" },
 
     //toye
-    ط: { hindi: "तोए", englishalpha: "toye", english: "toye", firstur: "ط‍", firsten: "?", secondur: "ط‍", seconden: "?", thirdur: "ط", thirden: "?", gridcordinates: "c2 r2" },
+    ط: { hindi: "तोए", englishalpha: "toye", english: "toye", firstur: "ط‍", firsten: "?", secondur: "ط‍", seconden: "?", thirdur: "ط", thirden: "?", gridcordinates: "c2 r2",grouped:"metalloid" },
     //toye+te
-    ٹ: { hindi: "ट", englishalpha: "ṭ", english: "ṭ", firstur: "ٹا", firsten: "?", secondur: "بٹب", seconden: "?", thirdur: "بٹ", thirden: "?", gridcordinates: "c1 r2" },
+    ٹ: { hindi: "ट", englishalpha: "ṭ", english: "ṭ", firstur: "ٹا", firsten: "?", secondur: "بٹب", seconden: "?", thirdur: "بٹ", thirden: "?", gridcordinates: "c1 r2",grouped:"metalloid" },
     //toye+dal h द
-    ڈ: { hindi: "ड", englishalpha: "ddal", english: "dd", firstur: "ڈا", firsten: "?", secondur: "بڈب", seconden: "?", thirdur: "بڈ", thirden: "?", gridcordinates: "c10 r3" },
+    ڈ: { hindi: "ड", englishalpha: "ddal", english: "dd", firstur: "ڈا", firsten: "?", secondur: "بڈب", seconden: "?", thirdur: "بڈ", thirden: "?", gridcordinates: "c10 r3",grouped:"metalloid" },
     //toye+rey h र
-    ڑ: { hindi: "ड़", englishalpha: "Aṛ", english: "ṛ", firstur: "ڑا", firsten: "?", secondur: "بڑب", seconden: "?", thirdur: "بڑ", thirden: "?", gridcordinates: "c9 r3" },
+    ڑ: { hindi: "ड़", englishalpha: "Aṛ", english: "ṛ", firstur: "ڑا", firsten: "?", secondur: "بڑب", seconden: "?", thirdur: "بڑ", thirden: "?", gridcordinates: "c9 r3",grouped:"metalloid" },
 
     //h and dochasmi he ka jado
-    ء: { hindi: "ह", englishalpha: "H", english: "HAMZA", firstur: "ؤآ", firsten: "aaoo", secondur: "دائر", seconden: "Daair", thirdur: "?", thirden: "?", gridcordinates: "c8 r3" },
-    ھ: { hindi: "ह", englishalpha: "H", english: "do-cashmī hē", firstur: "ھـ", firsten: "?", secondur: "ـھـ", seconden: "?", thirdur: "ـھ", thirden: "?", gridcordinates: "c7 r3" },
+    ء: { hindi: "ह", englishalpha: "H", english: "HAMZA", firstur: "ؤآ", firsten: "aaoo", secondur: "دائر", seconden: "Daair", thirdur: "?", thirden: "?", gridcordinates: "c8 r3",grouped:"other-nonmetal" },
+    ھ: { hindi: "ह", englishalpha: "H", english: "do-cashmī hē", firstur: "ھـ", firsten: "?", secondur: "ـھـ", seconden: "?", thirdur: "ـھ", thirden: "?", gridcordinates: "c7 r3",grouped:"other-nonmetal" },
     // क+ dochasmi he
-    کھ: { hindi: "ख", englishalpha: "KH", english: "KhA", firstur: "کھـ", firsten: "?", secondur: "ـکھـ", seconden: "?", thirdur: "ـکھ", thirden: "?", gridcordinates: "c6 r3" },
+    کھ: { hindi: "ख", englishalpha: "KH", english: "KhA", firstur: "کھـ", firsten: "?", secondur: "ـکھـ", seconden: "?", thirdur: "ـکھ", thirden: "?", gridcordinates: "c6 r3",grouped:"other-nonmetal" },
     // ग+ dochasmi he
-    گھ: { hindi: "घ", englishalpha: "gh", english: "ghA", firstur: "گھـ", firsten: "?", secondur: "ـگھـ", seconden: "?", thirdur: "ـگھ", thirden: "?", gridcordinates: "c5 r3" },
+    گھ: { hindi: "घ", englishalpha: "gh", english: "ghA", firstur: "گھـ", firsten: "?", secondur: "ـگھـ", seconden: "?", thirdur: "ـگھ", thirden: "?", gridcordinates: "c5 r3",grouped:"other-nonmetal" },
     // च+ dochasmi he
-    جھ: { hindi: "झ", englishalpha: "jh", english: "jh", firstur: "جھـ", firsten: "?", secondur: "ـجھـ", seconden: "?", thirdur: "ـجھ", thirden: "?", gridcordinates: "c4 r3" },
+    جھ: { hindi: "झ", englishalpha: "jh", english: "jh", firstur: "جھـ", firsten: "?", secondur: "ـجھـ", seconden: "?", thirdur: "ـجھ", thirden: "?", gridcordinates: "c4 r3",grouped:"other-nonmetal" },
     // ज+ dochasmi he
-    چھ: { hindi: "छ", englishalpha: "ch", english: "Cha", firstur: "چھـ", firsten: "?", secondur: "ـچھـ", seconden: "?", thirdur: "ـچھ", thirden: "?", gridcordinates: "c3 r3" },
+    چھ: { hindi: "छ", englishalpha: "ch", english: "Cha", firstur: "چھـ", firsten: "?", secondur: "ـچھـ", seconden: "?", thirdur: "ـچھ", thirden: "?", gridcordinates: "c3 r3",grouped:"other-nonmetal" },
 
 
     //ट+ dochasmi he
-    ٹھ: { hindi: "ठ", englishalpha: "ṭh", english: "ṭh", firstur: "ٹھـ", firsten: "?", secondur: "ـٹھـ", seconden: "?", thirdur: "ـٹھ", thirden: "?", gridcordinates: "c2 r3" },
+    ٹھ: { hindi: "ठ", englishalpha: "ṭh", english: "ṭh", firstur: "ٹھـ", firsten: "?", secondur: "ـٹھـ", seconden: "?", thirdur: "ـٹھ", thirden: "?", gridcordinates: "c2 r3",grouped:"other-nonmetal" },
     //ड+ dochasmi he
-    ڈھ: { hindi: "ढ", englishalpha: "ḍh", english: "ḍh", firstur: "ڈھ", firsten: "?", secondur: "ڈھ", seconden: "?", thirdur: "ڈھ", thirden: "?", gridcordinates: "c1 r3" },
+    ڈھ: { hindi: "ढ", englishalpha: "ḍh", english: "ḍh", firstur: "ڈھ", firsten: "?", secondur: "ڈھ", seconden: "?", thirdur: "ڈھ", thirden: "?", gridcordinates: "c1 r3",grouped:"other-nonmetal" },
 
     // त+ dochasmi he
-    تھ: { hindi: "थ", englishalpha: "th", english: "th", firstur: "تھـ", firsten: "?", secondur: "ـتھـ", seconden: "?", thirdur: "ـتھ", thirden: "?", gridcordinates: "c10 r4" },
+    تھ: { hindi: "थ", englishalpha: "th", english: "th", firstur: "تھـ", firsten: "?", secondur: "ـتھـ", seconden: "?", thirdur: "ـتھ", thirden: "?", gridcordinates: "c10 r4",grouped:"other-nonmetal" },
     // द+ dochasmi he
-    دھ: { hindi: "ध", englishalpha: "dh", english: "dh", firstur: "دھ", firsten: "?", secondur: "دھ", seconden: "?", thirdur: "دھ", thirden: "?", gridcordinates: "c9 r4" },
+    دھ: { hindi: "ध", englishalpha: "dh", english: "dh", firstur: "دھ", firsten: "?", secondur: "دھ", seconden: "?", thirdur: "دھ", thirden: "?", gridcordinates: "c9 r4",grouped:"other-nonmetal" },
     // प+ dochasmi he
-    پھ: { hindi: "फ", englishalpha: "ph", english: "ph", firstur: "پھـ", firsten: "?", secondur: "ـپھـ", seconden: "?", thirdur: "ـپھ", thirden: "?", gridcordinates: "c8 r4" },
+    پھ: { hindi: "फ", englishalpha: "ph", english: "ph", firstur: "پھـ", firsten: "?", secondur: "ـپھـ", seconden: "?", thirdur: "ـپھ", thirden: "?", gridcordinates: "c8 r4",grouped:"other-nonmetal" },
     // ब+ dochasmi he
-    بھ: { hindi: "भ", englishalpha: "bh", english: "bh", firstur: "بھـ", firsten: "?", secondur: "ـبھـ", seconden: "?", thirdur: "ـبھ", thirden: "?", gridcordinates: "c7 r4" },
+    بھ: { hindi: "भ", englishalpha: "bh", english: "bh", firstur: "بھـ", firsten: "?", secondur: "ـبھـ", seconden: "?", thirdur: "ـبھ", thirden: "?", gridcordinates: "c7 r4",grouped:"other-nonmetal" },
 
 
 
     //ma la
-    م: { hindi: "म", englishalpha: "m", english: "mim", firstur: "مـ", firsten: "?", secondur: "ـ‍م‍ـ", seconden: "?", thirdur: "ـ‍م", thirden: "?", gridcordinates: "c6 r4" },
-    ل: { hindi: "ल", englishalpha: "l", english: "lām", firstur: "لـ", firsten: "?", secondur: "ـلـ", seconden: "?", thirdur: "ـل", thirden: "?", gridcordinates: "c5 r4" },
+    م: { hindi: "म", englishalpha: "m", english: "mim", firstur: "مـ", firsten: "?", secondur: "ـ‍م‍ـ", seconden: "?", thirdur: "ـ‍م", thirden: "?", gridcordinates: "c6 r4",grouped:"noble-gasses" },
+    ل: { hindi: "ल", englishalpha: "l", english: "lām", firstur: "لـ", firsten: "?", secondur: "ـلـ", seconden: "?", thirdur: "ـل", thirden: "?", gridcordinates: "c5 r4",grouped:"noble-gasses" },
 
   };
 
@@ -378,7 +528,7 @@
   // console.log("childIndex",childIndex+1);   
   // console.log(`c${x_prime-childIndex}  r${parentIndex+1}`);
         // console.log("reverse",x_prime-childIndex);
-        cardContainer.innerHTML += `<div class="element other-nonmetal c${x_prime-childIndex}  r${parentIndex+1}">
+        cardContainer.innerHTML += `<div class="element ${item[1].grouped} c${x_prime-childIndex}  r${parentIndex+2}">
         <input class="activate" type="radio" name="elements">
         <input class="deactivate" type="radio" name="elements">
         <div class="overlay"></div>
