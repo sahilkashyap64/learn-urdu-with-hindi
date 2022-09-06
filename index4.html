@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Periodic Table of Elements - HTML/CSS</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+
+<body>
+  <!-- partial:index.partial.html -->
+  <!-- ELEMENT MIXIN TEMPLATE-->
+  <!-- PLACEHOLDER MIXIN TEMPLATE-->
+  <div class="wrapper">
+    <div class="urdu-table" id="urdu-container">
+      <!-- <div class="element lanthanoid c2 r9">
+        <input class="activate" type="radio" name="elements">
+        <input class="deactivate" type="radio" name="elements">
+        <div class="overlay"></div>
+        <div class="square">
+
+          <div class="atomic-number">57</div>
+          <div class="label">
+            <div class="symbol">La</div>
+            <div class="name">Lanthanum</div>
+          </div>
+          <div class="atomic-mass">138.91</div>
+          <ul class="atomic-weight">
+            <li>2</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="element lanthanoid c3 r9">
+        <input class="activate" type="radio" name="elements" />
+        <input class="deactivate" type="radio" name="elements" />
+        <div class="overlay"></div>
+        <div class="square">
+
+          <div class="atomic-number">58</div>
+          <div class="label">
+            <div class="symbol">Ce</div>
+            <div class="name">Cerium</div>
+          </div>
+          <div class="atomic-mass">140.12</div>
+          <ul class="atomic-weight">
+            <li>2</li>
+            <li>8</li>
+            <li>18</li>
+            <li>19</li>
+            <li>9</li>
+            <li>2</li>
+          </ul>
+        </div>
+      </div>
+      <div class="element lanthanoid c4 r9">
+        <input class="activate" type="radio" name="elements" />
+        <input class="deactivate" type="radio" name="elements" />
+        <div class="overlay"></div>
+        <div class="square">
+
+          <div class="atomic-number">59</div>
+          <div class="label">
+            <div class="symbol">Pr</div>
+            <div class="name">Praseodymium</div>
+          </div>
+          <div class="atomic-mass">140.91</div>
+          <ul class="atomic-weight">
+            <li>2</li>
+            <li>8</li>
+            <li>18</li>
+            <li>21</li>
+            <li>8</li>
+            <li>2</li>
+          </ul>
+        </div>
+      </div>
+      <div class="element lanthanoid c5 r9">
+        <input class="activate" type="radio" name="elements" />
+        <input class="deactivate" type="radio" name="elements" />
+        <div class="overlay"></div>
+        <div class="square">
+
+          <div class="atomic-number">60</div>
+          <div class="label">
+            <div class="symbol">Nd</div>
+            <div class="name">Neodymium</div>
+          </div>
+          <div class="atomic-mass">144.24</div>
+          <ul class="atomic-weight">
+            <li>2</li>
+            <li>8</li>
+            <li>18</li>
+            <li>22</li>
+            <li>8</li>
+            <li>2</li>
+          </ul>
+        </div>
+      </div>
+      <div class="element lanthanoid c6 r9">
+        <input class="activate" type="radio" name="elements" />
+        <input class="deactivate" type="radio" name="elements" />
+        <div class="overlay"></div>
+        <div class="square">
+
+          <div class="atomic-number">61</div>
+          <div class="label">
+            <div class="symbol">Pm</div>
+            <div class="name">Promethium</div>
+          </div>
+          <div class="atomic-mass">144.24</div>
+          <ul class="atomic-weight">
+            <li>2</li>
+            <li>8</li>
+            <li>18</li>
+            <li>23</li>
+            <li>8</li>
+            <li>2</li>
+          </ul>
+        </div>
+      </div>
+      <div class="element lanthanoid c7 r9">
+        <input class="activate" type="radio" name="elements" />
+        <input class="deactivate" type="radio" name="elements" />
+        <div class="overlay"></div>
+        <div class="square">
+
+          <div class="atomic-number">62</div>
+          <div class="label">
+            <div class="symbol">Sm</div>
+            <div class="name">Samarium</div>
+          </div>
+          <div class="atomic-mass">150.36</div>
+          <ul class="atomic-weight">
+            <li>2</li>
+            <li>8</li>
+            <li>18</li>
+            <li>24</li>
+            <li>8</li>
+            <li>2</li>
+          </ul>
+        </div>
+      </div>
+      <div class="element lanthanoid c8 r9">
+        <input class="activate" type="radio" name="elements" />
+        <input class="deactivate" type="radio" name="elements" />
+        <div class="overlay"></div>
+        <div class="square">
+
+          <div class="atomic-number">63</div>
+          <div class="label">
+            <div class="symbol">Eu</div>
+            <div class="name">Europium</div>
+          </div>
+          <div class="atomic-mass">151.96</div>
+          <ul class="atomic-weight">
+            <li>2</li>
+            <li>8</li>
+            <li>18</li>
+            <li>25</li>
+            <li>8</li>
+            <li>2</li>
+          </ul>
+        </div>
+      </div>
+      <div class="element lanthanoid c9 r9">
+        <input class="activate" type="radio" name="elements" />
+        <input class="deactivate" type="radio" name="elements" />
+        <div class="overlay"></div>
+        <div class="square">
+
+          <div class="atomic-number">63</div>
+          <div class="label">
+            <div class="symbol">Eu</div>
+            <div class="name">Europium</div>
+          </div>
+          <div class="atomic-mass">151.96</div>
+          <ul class="atomic-weight">
+            <li>2</li>
+            <li>8</li>
+            <li>18</li>
+            <li>25</li>
+            <li>8</li>
+            <li>2</li>
+          </ul>
+        </div>
+      </div>
+      <div class="element lanthanoid c9 r10">
+        <input class="activate" type="radio" name="elements" />
+        <input class="deactivate" type="radio" name="elements" />
+        <div class="overlay"></div>
+        <div class="square">
+
+          <div class="atomic-number">63</div>
+          <div class="label">
+            <div class="symbol">Eu</div>
+            <div class="name">Europium</div>
+          </div>
+          <div class="atomic-mass">151.96</div>
+          <ul class="atomic-weight">
+            <li>2</li>
+            <li>8</li>
+            <li>18</li>
+            <li>25</li>
+            <li>8</li>
+            <li>2</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="placeholder lanthanoid c1 r4">
+        <div class="square">do chasmi he</div>
+      </div>
+      <div class="gap c1 r5"></div> -->
+    </div>
+  </div>
+  <section class="col">ahjsajh</section>
+  <!-- partial -->
+  <script src="./script.js"></script>
+
+  <!-- jQuery CDN - Slim version (=without AJAX) -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+
+</body>
+
+</html>
+<style>
+  .urdu-table {
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: repeat(10, 1fr);
+  }
+
+  .element .atomic-mass-left {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    padding: 2px;
+    text-align: center;
+  }
+
+  .element .atomic-mass-left-upper {
+    position: absolute;
+    left: 0;
+    bottom: 10px;
+    padding: 2px;
+    text-align: center;
+  }
+
+  .element .atomic-mass {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 2px;
+    text-align: center;
+  }
+
+  .element .atomic-mass-center-upper {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 10px;
+    padding: 2px;
+    text-align: center;
+  }
+
+  .element .atomic-mass-right {
+    position: absolute;
+
+    right: 0;
+    bottom: 0;
+    padding: 2px;
+    text-align: center;
+  }
+
+  .element .atomic-mass-right-upper {
+    position: absolute;
+
+    right: 0;
+    bottom: 10px;
+    padding: 2px;
+    text-align: center;
+  }
+</style>
+<script>
+  var data = {
+    //alif byap
+    ا: { hindi: "अ", englishalpha: "a", english: "Alif", firstur: "اب", firsten: "ba", secondur: "باب", seconden: "bab", thirdur: "لا/بابا", thirden: "baba/la", gridcordinates: "c10 r1" },
+    ب: { hindi: "ब", englishalpha: "b", english: "Bey", firstur: "بب", firsten: "bb", secondur: "ببب", seconden: "bbb", thirdur: "اب", thirden: "ba", gridcordinates: "c9 r1" },
+    ی: { hindi: "य", englishalpha: "ye", english: "Chhoti yeh", firstur: "بب", firsten: "bb", secondur: "ببب", seconden: "bbb", thirdur: "اب", thirden: "ba", gridcordinates: "c8 r1" },
+    پ: { hindi: "प", englishalpha: "p", english: "Pe", firstur: "بب", firsten: "bb", secondur: "ببب", seconden: "bbb", thirdur: "اب", thirden: "pa", gridcordinates: "c7 r1" },
+    //nitish
+    ن: { hindi: "न", englishalpha: "n", english: "Noon", firstur: "بب", firsten: "bb", secondur: "ببب", seconden: "bbb", thirdur: "اب", thirden: "ba", gridcordinates: "c6 r1" },
+    ت: { hindi: "त", englishalpha: "T", english: "Tey", firstur: "بت", firsten: "bt", secondur: "بتب", seconden: "btb", thirdur: "یا", thirden: "ta", gridcordinates: "c5 r1" },
+    ث: { hindi: "स", englishalpha: "S", english: "say", firstur: "بث", firsten: "sb", secondur: "بثب", seconden: "bsb", thirdur: "یا", thirden: "sa", gridcordinates: "c4 r1" },
+    ش: { hindi: "श", englishalpha: "Sh", english: "sHeen", firstur: "بش", firsten: "shb", secondur: "اشب", seconden: "bsha", thirdur: "یا", thirden: "sha", gridcordinates: "c3 r1" },
+    س: { hindi: "स", englishalpha: "S", english: "seen", firstur: "سب", firsten: "bs", secondur: "بسب", seconden: "bsb", thirdur: "اس", thirden: "sa", gridcordinates: "c2 r1" },
+    //kaga
+    ک: { hindi: "क", englishalpha: "K", english: "Kaaf", firstur: "کان", firsten: "nak", secondur: "ہیکت", seconden: "takiya", thirdur: "ناک", thirden: "kaan", gridcordinates: "c1 r1" },
+    گ: { hindi: "ग", englishalpha: "g", english: "Gaaf", firstur: "ناگ", firsten: "naag", secondur: "نگان", seconden: "nagin", thirdur: "اناگ", thirden: "gana", gridcordinates: "c10 r2" },
+    //hockey khelo janch 
+    ح: { hindi: "ह", englishalpha: "H", english: "Hay", firstur: "ریح", firsten: "riih", secondur: "بحب", seconden: "bahab", thirdur: "اح", thirden: "ha", gridcordinates: "c9 r2" },
+    خ: { hindi: "ख", englishalpha: "KH/X", english: "KHay", firstur: "خیرات", firsten: "tarikh", secondur: "رخآ", seconden: "akhir", thirdur: "اخ", thirden: "kha", gridcordinates: "c8 r2" },
+    ج: { hindi: "ज", englishalpha: "J", english: "Jeem", firstur: "اناج", firsten: "anaj", secondur: "انجب", seconden: "bajna", thirdur: "اج", thirden: "ja", gridcordinates: "c7 r2" },
+    چ: { hindi: "च", englishalpha: "ch", english: "Chay", firstur: "بیچ", firsten: "bich", secondur: "بچت", seconden: "bacht", thirdur: "اچ", thirden: "cha", gridcordinates: "c6 r2" },
+    //diwar
+    د: { hindi: "द", englishalpha: "D", english: "daal", firstur: "دب", firsten: "bad", secondur: "دادا", seconden: "dada", thirdur: "رد", thirden: "dar", gridcordinates: "c5 r2" },
+    و: { hindi: "व/ओ", englishalpha: "V/oo", english: "VAO", firstur: "ور", firsten: "roo", secondur: "روا", seconden: "oor", thirdur: "راو", thirden: "vaar", gridcordinates: "c4 r2" },
+    ر: { hindi: "र", englishalpha: "R", english: "Ray", firstur: "روا", firsten: "oor", secondur: "روا", seconden: "oor", thirdur: "زار", thirden: "raj", gridcordinates: "c3 r2" },
+
+    //toye
+    ط: { hindi: "तोए", englishalpha: "toye", english: "toye", firstur: "ط‍", firsten: "?", secondur: "ط‍", seconden: "?", thirdur: "ط", thirden: "?", gridcordinates: "c2 r2" },
+    //toye+te
+    ٹ: { hindi: "ट", englishalpha: "ṭ", english: "ṭ", firstur: "ٹا", firsten: "?", secondur: "بٹب", seconden: "?", thirdur: "بٹ", thirden: "?", gridcordinates: "c1 r2" },
+    //toye+dal h द
+    ڈ: { hindi: "ड", englishalpha: "ddal", english: "dd", firstur: "ڈا", firsten: "?", secondur: "بڈب", seconden: "?", thirdur: "بڈ", thirden: "?", gridcordinates: "c10 r3" },
+    //toye+rey h र
+    ڑ: { hindi: "ड़", englishalpha: "Aṛ", english: "ṛ", firstur: "ڑا", firsten: "?", secondur: "بڑب", seconden: "?", thirdur: "بڑ", thirden: "?", gridcordinates: "c9 r3" },
+
+    //h and dochasmi he ka jado
+    ء: { hindi: "ह", englishalpha: "H", english: "HAMZA", firstur: "ؤآ", firsten: "aaoo", secondur: "دائر", seconden: "Daair", thirdur: "?", thirden: "?", gridcordinates: "c8 r3" },
+    ھ: { hindi: "ह", englishalpha: "H", english: "do-cashmī hē", firstur: "ھـ", firsten: "?", secondur: "ـھـ", seconden: "?", thirdur: "ـھ", thirden: "?", gridcordinates: "c7 r3" },
+    // क+ dochasmi he
+    کھ: { hindi: "ख", englishalpha: "KH", english: "KhA", firstur: "کھـ", firsten: "?", secondur: "ـکھـ", seconden: "?", thirdur: "ـکھ", thirden: "?", gridcordinates: "c6 r3" },
+    // ग+ dochasmi he
+    گھ: { hindi: "घ", englishalpha: "gh", english: "ghA", firstur: "گھـ", firsten: "?", secondur: "ـگھـ", seconden: "?", thirdur: "ـگھ", thirden: "?", gridcordinates: "c5 r3" },
+    // च+ dochasmi he
+    جھ: { hindi: "झ", englishalpha: "jh", english: "jh", firstur: "جھـ", firsten: "?", secondur: "ـجھـ", seconden: "?", thirdur: "ـجھ", thirden: "?", gridcordinates: "c4 r3" },
+    // ज+ dochasmi he
+    چھ: { hindi: "छ", englishalpha: "ch", english: "Cha", firstur: "چھـ", firsten: "?", secondur: "ـچھـ", seconden: "?", thirdur: "ـچھ", thirden: "?", gridcordinates: "c3 r3" },
+
+
+    //ट+ dochasmi he
+    ٹھ: { hindi: "ठ", englishalpha: "ṭh", english: "ṭh", firstur: "ٹھـ", firsten: "?", secondur: "ـٹھـ", seconden: "?", thirdur: "ـٹھ", thirden: "?", gridcordinates: "c2 r3" },
+    //ड+ dochasmi he
+    ڈھ: { hindi: "ढ", englishalpha: "ḍh", english: "ḍh", firstur: "ڈھ", firsten: "?", secondur: "ڈھ", seconden: "?", thirdur: "ڈھ", thirden: "?", gridcordinates: "c1 r3" },
+
+    // त+ dochasmi he
+    تھ: { hindi: "थ", englishalpha: "th", english: "th", firstur: "تھـ", firsten: "?", secondur: "ـتھـ", seconden: "?", thirdur: "ـتھ", thirden: "?", gridcordinates: "c10 r4" },
+    // द+ dochasmi he
+    دھ: { hindi: "ध", englishalpha: "dh", english: "dh", firstur: "دھ", firsten: "?", secondur: "دھ", seconden: "?", thirdur: "دھ", thirden: "?", gridcordinates: "c9 r4" },
+    // प+ dochasmi he
+    پھ: { hindi: "फ", englishalpha: "ph", english: "ph", firstur: "پھـ", firsten: "?", secondur: "ـپھـ", seconden: "?", thirdur: "ـپھ", thirden: "?", gridcordinates: "c8 r4" },
+    // ब+ dochasmi he
+    بھ: { hindi: "भ", englishalpha: "bh", english: "bh", firstur: "بھـ", firsten: "?", secondur: "ـبھـ", seconden: "?", thirdur: "ـبھ", thirden: "?", gridcordinates: "c7 r4" },
+
+
+
+    //ma la
+    م: { hindi: "म", englishalpha: "m", english: "mim", firstur: "مـ", firsten: "?", secondur: "ـ‍م‍ـ", seconden: "?", thirdur: "ـ‍م", thirden: "?", gridcordinates: "c6 r4" },
+    ل: { hindi: "ल", englishalpha: "l", english: "lām", firstur: "لـ", firsten: "?", secondur: "ـلـ", seconden: "?", thirdur: "ـل", thirden: "?", gridcordinates: "c5 r4" },
+
+  };
+
+  function createList(parent, array) {
+    //     for(let key in array){
+    //        console.log(array[key]);
+    //  }
+    console.log(array);
+  }
+
+  function getRandomInt(max) {
+    return Math.floor(Math.random() * Math.floor(max));
+  }
+  function generateCard() {
+    const cardContainer = document.getElementById('urdu-container');
+    Object.entries(data).forEach(item =>
+      cardContainer.innerHTML += `<div class="element other-nonmetal ${item[1].gridcordinates}">
+        <input class="activate" type="radio" name="elements">
+        <input class="deactivate" type="radio" name="elements">
+        <div class="overlay"></div>
+        <div class="square">
+          <div class="model">
+           
+          </div>
+          <div class="atomic-number">${item[1].hindi}</div>
+          <div class="label">
+            <div class="symbol">${item[0]}</div>
+            <div class="name">${item[1].english}</div>
+          </div>
+          <div class="atomic-mass-left-upper">${item[1].thirdur}</div>
+          <div class="atomic-mass-left">${item[1].thirden}</div>
+          <div class="atomic-mass-center-upper">${item[1].secondur}</div>
+          <div class="atomic-mass">${item[1].seconden}</div>
+          <div class="atomic-mass-right-upper">${item[1].firstur}</div>
+          <div class="atomic-mass-right">${item[1].firsten}</div>
+          <ul class="atomic-weight">
+            <li>${item[1].english}</li>
+          </ul>
+        </div>
+      </div>`
+      //    console.log(`${item[0]} 
+      //    ${item[1].hindi} 
+      //    ${item[1].english}
+      //    ${item[1].firstur}
+      //    ${item[1].firsten}
+      //    ${item[1].secondur}
+      //    ${item[1].seconden}
+      //    ${item[1].thirdur}
+      //    ${item[1].thirden}`)
+    );
+  }
+
+  function usingGeneratorToChunkArrayForGrid(){
+  
+let ObjToArray=Object.entries(data);
+// console.log(f.length);
+// console.log([...chunks(ObjToArray, 10)])
+return [...chunks(ObjToArray, 10)];
+  }
+// genertor function to chunk the array
+  function* chunks(arr, n) {
+  for (let i = 0; i < arr.length; i += n) {
+    yield arr.slice(i, i + n);
+  }
+}
+
+  $(document).ready(function () {
+    // const cardContainer = document.getElementById('cardcontainer');
+    generateCard();
+  });
+</script>
