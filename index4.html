@@ -33,6 +33,8 @@
     <input class="category-cancel" type="radio" id="cancel" name="categories"/>
     <input class="category-toggle" type="radio" id="noble-gasses" name="categories"/>
     <input class="category-cancel" type="radio" id="cancel" name="categories"/>
+    <input class="category-toggle" type="radio" id="aa-gs" name="categories"/>
+    <input class="category-cancel" type="radio" id="cancel" name="categories"/>
     <input class="category-toggle" type="radio" id="unknown" name="categories"/>
     <input class="category-cancel" type="radio" id="cancel" name="categories"/>
     <div class="urdu-table" id="urdu-container">
@@ -246,6 +248,7 @@
           <label class="metalloid" for="heavy-toye">Heavy with toye</label>
           <label class="other-nonmetal" for="choti-he-group">choti he group</label>
           <label class="noble-gas" for="noble-gasses">Mala</label>
+          <label class="aa-g" for="aa-gs">aag</label>
           <label class="unknown" for="unknown">Unknown</label>
         </div>
       </div>
@@ -384,6 +387,9 @@
   
   .noble-gas {
     color: #759fff;
+  } 
+  .aa-g {
+    color: #7465EA;
   }
   
   .unknown {
@@ -399,6 +405,7 @@
 #heavy-toye:checked ~ .urdu-table .element:not(.metalloid),
 #choti-he-group:checked ~ .urdu-table .element:not(.other-nonmetal),
 #noble-gasses:checked ~ .urdu-table .element:not(.noble-gas),
+#aa-gs:checked ~ .urdu-table .element:not(.aa-g),
 #unknown:checked ~ .urdu-table .element:not(.unknown),
 #straight-lines:checked ~ .urdu-table .placeholder,
 #Baap:checked ~ .urdu-table .placeholder,
@@ -409,6 +416,7 @@
 #heavy-toye:checked ~ .urdu-table .placeholder,
 #choti-he-group:checked ~ .urdu-table .placeholder,
 #noble-gasses:checked ~ .urdu-table .placeholder,
+#aa-gs:checked ~ .urdu-table .placeholder,
 #unknown:checked ~ .urdu-table .placeholder {
   opacity: 0.15;
   pointer-events: none;
@@ -423,6 +431,7 @@
 #heavy-toye:checked ~ .urdu-table .key label:not(.metalloid),
 #choti-he-group:checked ~ .urdu-table .key label:not(.other-nonmetal),
 #noble-gasses:checked ~ .urdu-table .key label:not(.noble-gas),
+#aa-gs:checked ~ .urdu-table .key label:not(.aa-g),
 #unknown:checked ~ .urdu-table .key label:not(.unknown) {
   opacity: 0.65;
 }
@@ -463,8 +472,8 @@
     ض: { hindi: "ज़", englishalpha: "J", english: "zwad", firstur: "ضرب", firsten: "zarb", secondur: "قبضہ", seconden: "kabza", thirdur: "حوض", thirden: "hauz", gridcordinates: "c3 r1",grouped:"jgroup" },
     ط: { hindi: "तोए", englishalpha: "toye", english: "toye", firstur: "طوطا/طیارہ", firsten: "tayara/tota", secondur: "بطخ", seconden: "btkh", thirdur: "خط", thirden: "khat", gridcordinates: "c2 r2",grouped:"metalloid" },
     ظ: { hindi: "जोए", englishalpha: "zoye", english: "zoye", firstur: "ظلم", firsten: "zulm", secondur: "نظم", seconden: "nazm", thirdur: "حظ/لفظ", thirden: "lafz/haz", gridcordinates: "c2 r2",grouped:"jgroup" },
-    ع: { hindi: "ऐ", englishalpha: "ayn", english: "ae", firstur: "عورت", firsten: "aurat", secondur: "ـعـ/جمعہ", seconden: "jumah/middle", thirdur: "جمع", thirden: "jama", gridcordinates: "c2 r2",grouped:"aag" },
-    غ: { hindi: "ग", englishalpha: "ghain", english: "gh", firstur: "غار", firsten: "gar", secondur: "مغرور", seconden: "magrur", thirdur: "باغ/بیغ", thirden: "teg/baag", gridcordinates: "c8 r1", grouped:"aag"},
+    ع: { hindi: "ऐ", englishalpha: "ayn", english: "ae", firstur: "عورت", firsten: "aurat", secondur: "ـعـ/جمعہ", seconden: "jumah/middle", thirdur: "جمع", thirden: "jama", gridcordinates: "c2 r2",grouped:"aa-g" },
+    غ: { hindi: "ग", englishalpha: "ghain", english: "gh", firstur: "غار", firsten: "gar", secondur: "مغرور", seconden: "magrur", thirdur: "باغ/بیغ", thirden: "teg/baag", gridcordinates: "c8 r1", grouped:"aa-g"},
     ف: { hindi: "फ़", englishalpha: "fey", english: "fa", firstur: "فوج", firsten: "fauz", secondur: "سفید", seconden: "safed", thirdur: "ببرف", thirden: "baraf", gridcordinates: "c8 r1", grouped:"fek"},
     ق: { hindi: "क़", englishalpha: "qaf", english: "qaf", firstur: "قلم", firsten: "kalm", secondur: "لُوقا", seconden: "luke", thirdur: "سبق", thirden: "sabk", gridcordinates: "c8 r1", grouped:"fek"},
     ک: { hindi: "क", englishalpha: "K", english: "Kaaf", firstur: "کان", firsten: "nak", secondur: "ہیکت", seconden: "takiya", thirdur: "ناک", thirden: "kaan", gridcordinates: "c1 r1",grouped:"actinoid" },
