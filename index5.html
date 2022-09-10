@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Periodic Table of Elements - HTML/CSS</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel="stylesheet" href="./perodic-table.css">
+
+</head>
+
+<body>
+  <!-- partial:index.partial.html -->
+  <!-- ELEMENT MIXIN TEMPLATE-->
+  <!-- PLACEHOLDER MIXIN TEMPLATE-->
+  
+  <div class="container">
+  
+    <div class="feature">
+      <div class="item item--1">   <div class="label">
+        <p class="symbol">ژ</p>
+        <p class="name">z</p>
+      </div>
+
+      <div class="top-left">
+        <p>TOp L</p>
+      </div>
+       <div class="top-right">
+        <p>TOp R</p>
+      </div>
+      <div class="bottom-left">
+        <p>B L</p>
+        <p>B L</p>
+      </div>
+        <div class="bottom-right">
+        <p>B R</p>
+        <p>B R</p>
+      </div>
+      <div class="bottom-middle">
+        <p>B M</p>
+        <p>B M</p>
+      </div>
+    
+    </div>
+      <div class="item item--2">box2</div>
+      <div class="item item--3">box3</div>
+      <div class="item item--4">box4</div>
+      <div class="item item--5">box5</div>
+      <div class="item item--6">box6</div>
+      <div class="item item--1">box1</div>
+      <div class="item item--2">box2</div>
+      <div class="item item--3">box3</div>
+      <div class="item item--4">box4</div>
+      <div class="item item--5">box5</div>
+      <div class="item item--6">box6</div>
+      <div class="item item--1">box1</div>
+      <div class="item item--2">box2</div>
+      <div class="item item--3">box3</div>
+      <div class="item item--4">box4</div>
+      <div class="item item--5">box5</div>
+      <div class="item item--6">box6</div>
+      <div class="item item--1">box1</div>
+      <div class="item item--2">box2</div>
+      <div class="item item--3">box3</div>
+      <div class="item item--4">box4</div>
+      <div class="item item--5">box5</div>
+      <div class="item item--6">box6</div>
+      
+    </div>
+    
+  </div>
+  
+  <script src="./script.js"></script>
+
+  <!-- jQuery CDN - Slim version (=without AJAX) -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+
+</body>
+
+</html>
+<style>
+ * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+html, body {
+  background-color: lightgray;
+  height: 100%;
+  width: 100vw;
+}
+
+.container {
+  min-height: 100%;
+  width: 100%;
+  padding: 5rem;
+  background-color: inherit;
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-content: center;
+  align-items: center;
+}
+
+.feature {
+  display: grid;
+  padding: 1rem;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  column-gap: 0.5rem;
+}
+
+.item {
+  position:relative;
+  margin: 0.5rem;
+  padding: 6rem;
+  color: white;
+  font-size: 2.5rem;
+  font-family: sans-serif;
+  text-transform: uppercase;
+  border-radius: 0.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.25);
+  transition: all 0.2s;
+}
+
+.top-left {
+  position:absolute;
+    border-color:green;
+    top:0;
+    left:0;    
+}
+.top-right {
+  position:absolute;
+    border-color:green;
+    top:0;
+    right:0;   
+}
+.bottom-left {
+  position:absolute;
+    border-color:green;
+    bottom:0;
+    left:0; 
+}
+.bottom-right {
+  position:absolute;
+    border-color:green;
+    bottom:0;
+    right:0;
+}
+.bottom-middle {
+  position:absolute;
+    border-color:green;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    text-align: center;
+}
+
+.item--1 {
+  background-color: blue;
+  /*  grid-row: 1 / 3;
+   grid-column: 2 / 4; */
+}
+.item--2 {
+  background-color: purple;
+}
+.item--3 {
+  background-color: red;
+}
+.item--4 {
+  background-color: green;
+}
+.item--5 {
+  background-color: teal;
+}
+.item--6 {
+  background-color: navy;
+}
+.item:hover {
+  background-color: lightgray;
+  color: gray;
+  transform: translate(0, -0.3rem);
+  box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.5);
+}
+</style>
+<script>
+  var data = {
+    //alif byap
+    ا: { hindi: "अ", englishalpha: "a", english: "Alif", firstur: "اب", firsten: "ba", secondur: "باب", seconden: "bab", thirdur: "لا/بابا", thirden: "baba/la", gridcordinates: "c10 r1",grouped:'alkali-metal' },
+    ب: { hindi: "ब", englishalpha: "b", english: "Bey", firstur: "بب", firsten: "bb", secondur: "ببب", seconden: "bbb", thirdur: "اب", thirden: "ba", gridcordinates: "c9 r1",grouped:"alkaline-earth-metal" },
+    پ: { hindi: "प", englishalpha: "p", english: "Pe", firstur: "بب", firsten: "bb", secondur: "ببب", seconden: "bbb", thirdur: "اب", thirden: "pa", gridcordinates: "c7 r1" ,grouped:"alkaline-earth-metal"},
+    ت: { hindi: "त", englishalpha: "T", english: "Tey", firstur: "بت", firsten: "bt", secondur: "بتب", seconden: "btb", thirdur: "یا", thirden: "ta", gridcordinates: "c5 r1",grouped:"lanthanoid" },
+    ٹ: { hindi: "ट", englishalpha: "ṭ", english: "ṭ", firstur: "ٹا", firsten: "?", secondur: "بٹب", seconden: "?", thirdur: "بٹ", thirden: "?", gridcordinates: "c1 r2",grouped:"metalloid" },
+    ث: { hindi: "स", englishalpha: "S", english: "say", firstur: "بث", firsten: "sb", secondur: "بثب", seconden: "bsb", thirdur: "یا", thirden: "sa", gridcordinates: "c4 r1",grouped:"lanthanoid" },
+    ج: { hindi: "ज", englishalpha: "J", english: "Jeem", firstur: "اناج", firsten: "anaj", secondur: "انجب", seconden: "bajna", thirdur: "اج", thirden: "ja", gridcordinates: "c7 r2",grouped:"transition-metal" },
+    چ: { hindi: "च", englishalpha: "ch", english: "Chay", firstur: "بیچ", firsten: "bich", secondur: "بچت", seconden: "bacht", thirdur: "اچ", thirden: "cha", gridcordinates: "c6 r2",grouped:"transition-metal" },
+    ح: { hindi: "ह", englishalpha: "H", english: "Hay", firstur: "ریح", firsten: "riih", secondur: "بحب", seconden: "bahab", thirdur: "اح", thirden: "ha", gridcordinates: "c9 r2",grouped:"transition-metal" },
+    خ: { hindi: "ख", englishalpha: "KH/X", english: "KHay", firstur: "خیرات", firsten: "tarikh", secondur: "رخآ", seconden: "akhir", thirdur: "اخ", thirden: "kha", gridcordinates: "c8 r2",grouped:"transition-metal" },
+    د: { hindi: "द", englishalpha: "D", english: "daal", firstur: "دب", firsten: "bad", secondur: "دادا", seconden: "dada", thirdur: "رد", thirden: "dar", gridcordinates: "c5 r2",grouped:"post-transition-metal" },
+    ڈ: { hindi: "ड", englishalpha: "ddal", english: "dd", firstur: "ڈا", firsten: "?", secondur: "بڈب", seconden: "?", thirdur: "بڈ", thirden: "?", gridcordinates: "c10 r3",grouped:"metalloid" },
+    ذ: { hindi: "ज़", englishalpha: "z", english: "Zaal", firstur: "ذائقہ", firsten: "Zaiqa", secondur: "غذا", seconden: "aza", thirdur: "محاذ", thirden: "mohaz", gridcordinates: "c3 r2",grouped:"jgroup" },
+    ر: { hindi: "र", englishalpha: "R", english: "Ray", firstur: "روا", firsten: "oor", secondur: "روا", seconden: "oor", thirdur: "زار", thirden: "raj", gridcordinates: "c3 r2",grouped:"post-transition-metal" },
+    ڑ: { hindi: "ड़", englishalpha: "Aṛ", english: "ṛ", firstur: "ڑا", firsten: "?", secondur: "بڑب", seconden: "?", thirdur: "بڑ", thirden: "?", gridcordinates: "c9 r3",grouped:"metalloid" },
+    ز: { hindi: "ज़", englishalpha: "zay", english: "z", firstur: "زمین", firsten: "zameen", secondur: "آزادی", seconden: "azadi", thirdur: "تیز", thirden: "tez", gridcordinates: "c9 r3",grouped:"jgroup" },
+    ژ: { hindi: "झ़", englishalpha: "ze", english: "z", firstur: "ژالہ باری", firsten: "Saalah Baari", secondur: "اژدھا", seconden: "azhdhaa", thirdur: "?", thirden: "?", gridcordinates: "c9 r3",grouped:"jgroup" },
+    س: { hindi: "स", englishalpha: "S", english: "seen", firstur: "سب", firsten: "bs", secondur: "بسب", seconden: "bsb", thirdur: "اس", thirden: "sa", gridcordinates: "c2 r1",grouped:"lanthanoid" },
+    ش: { hindi: "श", englishalpha: "Sh", english: "sHeen", firstur: "بش", firsten: "shb", secondur: "اشب", seconden: "bsha", thirdur: "یا", thirden: "sha", gridcordinates: "c3 r1",grouped:"lanthanoid" },
+    ص: { hindi: "श", englishalpha: "Sh", english: "Swad", firstur: "صُبح", firsten: "subha", secondur: "حصہ", seconden: "hisa", thirdur: "شخص", thirden: "Shakhs", gridcordinates: "c3 r1",grouped:"sa-ja" },
+    ض: { hindi: "ज़", englishalpha: "J", english: "zwad", firstur: "ضرب", firsten: "zarb", secondur: "قبضہ", seconden: "kabza", thirdur: "حوض", thirden: "hauz", gridcordinates: "c3 r1",grouped:"sa-ja jgroup" },
+    ط: { hindi: "तोए", englishalpha: "toye", english: "toye", firstur: "طوطا/طیارہ", firsten: "tayara/tota", secondur: "بطخ", seconden: "btkh", thirdur: "خط", thirden: "khat", gridcordinates: "c2 r2",grouped:"ta-z" },
+    ظ: { hindi: "जोए", englishalpha: "zoye", english: "zoye", firstur: "ظلم", firsten: "zulm", secondur: "نظم", seconden: "nazm", thirdur: "حظ/لفظ", thirden: "lafz/haz", gridcordinates: "c2 r2",grouped:"ta-z jgroup" },
+    ع: { hindi: "ऐ", englishalpha: "ayn", english: "ae", firstur: "عورت", firsten: "aurat", secondur: "ـعـ/جمعہ", seconden: "jumah/middle", thirdur: "جمع", thirden: "jama", gridcordinates: "c2 r2",grouped:"aa-g" },
+    غ: { hindi: "ग", englishalpha: "ghain", english: "gh", firstur: "غار", firsten: "gar", secondur: "مغرور", seconden: "magrur", thirdur: "باغ/بیغ", thirden: "teg/baag", gridcordinates: "c8 r1", grouped:"aa-g"},
+    ف: { hindi: "फ़", englishalpha: "fey", english: "fa", firstur: "فوج", firsten: "fauz", secondur: "سفید", seconden: "safed", thirdur: "ببرف", thirden: "baraf", gridcordinates: "c8 r1", grouped:"fe-k"},
+    ق: { hindi: "क़", englishalpha: "qaf", english: "qaf", firstur: "قلم", firsten: "kalm", secondur: "لُوقا", seconden: "luke", thirdur: "سبق", thirden: "sabk", gridcordinates: "c8 r1", grouped:"fe-k"},
+    ک: { hindi: "क", englishalpha: "K", english: "Kaaf", firstur: "کان", firsten: "nak", secondur: "ہیکت", seconden: "takiya", thirdur: "ناک", thirden: "kaan", gridcordinates: "c1 r1",grouped:"actinoid" },
+    گ: { hindi: "ग", englishalpha: "g", english: "Gaaf", firstur: "ناگ", firsten: "naag", secondur: "نگان", seconden: "nagin", thirdur: "اناگ", thirden: "gana", gridcordinates: "c10 r2",grouped:"actinoid" },
+    ی: { hindi: "ग", englishalpha: "gayn", english: "gh", firstur: "بب", firsten: "bb", secondur: "ببب", seconden: "bbb", thirdur: "اب", thirden: "ba", gridcordinates: "c8 r1", grouped:"alkaline-earth-metal"},
+    ل: { hindi: "ल", englishalpha: "l", english: "lām", firstur: "لـ", firsten: "?", secondur: "ـلـ", seconden: "?", thirdur: "ـل", thirden: "?", gridcordinates: "c5 r4",grouped:"noble-gas" },
+    م: { hindi: "म", englishalpha: "m", english: "mim", firstur: "مـ", firsten: "?", secondur: "ـ‍م‍ـ", seconden: "?", thirdur: "ـ‍م", thirden: "?", gridcordinates: "c6 r4",grouped:"noble-gas" },
+ //nitish
+    ن: { hindi: "न", englishalpha: "n", english: "Noon", firstur: "بب", firsten: "bb", secondur: "ببب", seconden: "bbb", thirdur: "اب", thirden: "ba", gridcordinates: "c6 r1",grouped:"lanthanoid" },
+    //kaga
+    //hockey khelo janch 
+    //diwar
+    و: { hindi: "व/ओ", englishalpha: "V/oo", english: "VAO", firstur: "ور", firsten: "roo", secondur: "روا", seconden: "oor", thirdur: "راو", thirden: "vaar", gridcordinates: "c4 r2",grouped:"post-transition-metal" },
+    ہ: { hindi: "ह", englishalpha: "h", english: "gol/choti he", firstur: "ہا", firsten: "ha", secondur: "کہا", seconden: "kha", thirdur: "رہ/بچہ", thirden: "bacha/rha", gridcordinates: "c4 r2",grouped:"other-nonmetal" },
+    ھ: { hindi: "ह", englishalpha: "H", english: "do-cashmī hē", firstur: "?", firsten: "?", secondur: "ـھـ", seconden: "?", thirdur: "ـھ", thirden: "?", gridcordinates: "c7 r3",grouped:"other-nonmetal" },
+    ء: { hindi: "ह", englishalpha: "H", english: "hamza", firstur: "ؤآ", firsten: "aaoo", secondur: "دائر", seconden: "Daair", thirdur: "?", thirden: "?", gridcordinates: "c8 r3",grouped:"other-nonmetal" },
+    ی: { hindi: "य", englishalpha: "ye", english: "choti yeh", firstur: "بب", firsten: "bb", secondur: "ببب", seconden: "bbb", thirdur: "اب", thirden: "ba", gridcordinates: "c8 r1", grouped:"alkaline-earth-metal"},
+    ے: { hindi: "ए", englishalpha: "ye", english: "badi yeh", firstur: "بب", firsten: "bb", secondur: "ببب", seconden: "bbb", thirdur: "اب", thirden: "ba", gridcordinates: "c8 r1", grouped:"alkaline-earth-metal"},
+   
+    //toye
+    //toye+te
+    //toye+dal h द
+    //toye+rey h र
+
+    //h and dochasmi he ka jado
+    // क+ dochasmi he
+    کھ: { hindi: "ख", englishalpha: "KH", english: "KhA", firstur: "کھـ", firsten: "?", secondur: "ـکھـ", seconden: "?", thirdur: "ـکھ", thirden: "?", gridcordinates: "c6 r3",grouped:"other-nonmetal" },
+    // ग+ dochasmi he
+    گھ: { hindi: "घ", englishalpha: "gh", english: "ghA", firstur: "گھـ", firsten: "?", secondur: "ـگھـ", seconden: "?", thirdur: "ـگھ", thirden: "?", gridcordinates: "c5 r3",grouped:"other-nonmetal" },
+    // च+ dochasmi he
+    جھ: { hindi: "झ", englishalpha: "jh", english: "jh", firstur: "جھـ", firsten: "?", secondur: "ـجھـ", seconden: "?", thirdur: "ـجھ", thirden: "?", gridcordinates: "c4 r3",grouped:"other-nonmetal" },
+    // ज+ dochasmi he
+    چھ: { hindi: "छ", englishalpha: "ch", english: "Cha", firstur: "چھـ", firsten: "?", secondur: "ـچھـ", seconden: "?", thirdur: "ـچھ", thirden: "?", gridcordinates: "c3 r3",grouped:"other-nonmetal" },
+
+
+    //ट+ dochasmi he
+    ٹھ: { hindi: "ठ", englishalpha: "ṭh", english: "ṭh", firstur: "ٹھـ", firsten: "?", secondur: "ـٹھـ", seconden: "?", thirdur: "ـٹھ", thirden: "?", gridcordinates: "c2 r3",grouped:"other-nonmetal" },
+    //ड+ dochasmi he
+    ڈھ: { hindi: "ढ", englishalpha: "ḍh", english: "ḍh", firstur: "ڈھ", firsten: "?", secondur: "ڈھ", seconden: "?", thirdur: "ڈھ", thirden: "?", gridcordinates: "c1 r3",grouped:"other-nonmetal" },
+
+    // त+ dochasmi he
+    تھ: { hindi: "थ", englishalpha: "th", english: "th", firstur: "تھـ", firsten: "?", secondur: "ـتھـ", seconden: "?", thirdur: "ـتھ", thirden: "?", gridcordinates: "c10 r4",grouped:"other-nonmetal" },
+    // द+ dochasmi he
+    دھ: { hindi: "ध", englishalpha: "dh", english: "dh", firstur: "دھ", firsten: "?", secondur: "دھ", seconden: "?", thirdur: "دھ", thirden: "?", gridcordinates: "c9 r4",grouped:"other-nonmetal" },
+    // प+ dochasmi he
+    پھ: { hindi: "फ", englishalpha: "ph", english: "ph", firstur: "پھـ", firsten: "?", secondur: "ـپھـ", seconden: "?", thirdur: "ـپھ", thirden: "?", gridcordinates: "c8 r4",grouped:"other-nonmetal" },
+    // ब+ dochasmi he
+    بھ: { hindi: "भ", englishalpha: "bh", english: "bh", firstur: "بھـ", firsten: "?", secondur: "ـبھـ", seconden: "?", thirdur: "ـبھ", thirden: "?", gridcordinates: "c7 r4",grouped:"other-nonmetal" },
+
+
+
+    //ma la
+   
+  };
+
+  function createList(parent, array) {
+    //     for(let key in array){
+    //        console.log(array[key]);
+    //  }
+    console.log(array);
+  }
+
+  function getRandomInt(max) {
+    return Math.floor(Math.random() * Math.floor(max));
+  }
+  function generateCard() {
+    const cardContainer = document.getElementById('urdu-container');
+    let grid=usingGeneratorToChunkArrayForGrid();
+    grid.forEach( function(childArray,parentIndex, the_parent_array) {
+      let x_prime = childArray.length;
+  childArray.forEach(function(item,childIndex,the_child_array){
+  // console.log("i",item);
+  // console.log("parentIndex",parentIndex+1);
+  // console.log("childIndex",childIndex+1);   
+  // console.log(`c${x_prime-childIndex}  r${parentIndex+1}`);
+        // console.log("reverse",x_prime-childIndex);
+        cardContainer.innerHTML += `<div class="element ${item[1].grouped} c${x_prime-childIndex}  r${parentIndex+2}">
+        <input class="activate" type="radio" name="elements">
+        <input class="deactivate" type="radio" name="elements">
+        <div class="overlay"></div>
+        <div class="square">
+          <div class="model">
+           
+          </div>
+          <div class="atomic-number">${item[1].hindi}</div>
+          <div class="label">
+            <div class="symbol">${item[0]}</div>
+            <div class="name">${item[1].english}</div>
+          </div>
+          <div class="atomic-mass-left-upper">${item[1].thirdur}</div>
+          <div class="atomic-mass-left">${item[1].thirden}</div>
+          <div class="atomic-mass-center-upper">${item[1].secondur}</div>
+          <div class="atomic-mass">${item[1].seconden}</div>
+          <div class="atomic-mass-right-upper">${item[1].firstur}</div>
+          <div class="atomic-mass-right">${item[1].firsten}</div>
+          <ul class="atomic-weight">
+            <li>${item[1].english}</li>
+          </ul>
+        </div>
+      </div>`
+
+  });
+ });
+    
+  }
+
+  function usingGeneratorToChunkArrayForGrid(){
+  
+let ObjToArray=Object.entries(data);
+return [...chunks(ObjToArray, 10)];
+  }
+// genertor function to chunk the array
+  function* chunks(arr, n) {
+  for (let i = 0; i < arr.length; i += n) {
+    yield arr.slice(i, i + n);
+  }
+}
+
+  $(document).ready(function () {
+    // const cardContainer = document.getElementById('cardcontainer');
+    generateCard();
+  });
+</script>
