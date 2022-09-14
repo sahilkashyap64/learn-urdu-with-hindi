@@ -750,14 +750,14 @@ and (max-device-width : 1024px)  { /* tablet, landscape iPad, lo-res laptops and
 
 <section class="grid-demo">
 
-      <h2 class="section-title"><span>Grid Demo</span></h2>
+      <h2 class="section-title"><span>Urdu Search</span></h2>
 
       <div class="controls cf">
         <div class="control search">
           <div class="control-icon">
             <i class="material-icons">&#xE8B6;</i>
           </div>
-          <input class="control-field search-field form-control " type="text" name="search" placeholder="Search..." />
+          <input class="control-field search-field form-control " type="text" name="search" placeholder="Search(use english)" />
         </div>
         <div class="control filter">
           <div class="control-icon">
@@ -1121,7 +1121,7 @@ grouped.push(ObjToArray[i][1]['grouped']);
     var itemElem = document.createElement('div');
     let bottom=`<p>a</p><p>b</p>`;
     var itemTemplate = '' +
-        '<div class="item h' + height + ' w' + width + ' ' + color + '" data-id="' + id + '" data-color="' + ObjToArray[i][1]['grouped'] + '" data-title="' + ObjToArray[i][0] + '">' +
+        '<div class="item h' + height + ' w' + width + ' ' + color + '" data-id="' + id + '" data-color="' + ObjToArray[i][1]['grouped'] + '" data-title="' + ObjToArray[i][1]['english'] + '">' +
           '<div class="item-content">' +
             '<div class="card">' +
               '<div class="top-left">' + ObjToArray[i][1]['hindi'] + '</div>' +
