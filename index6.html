@@ -685,6 +685,61 @@ section h4 {
     padding-left: 40px;
     z-index: 1;
 }
+
+
+@media (min-width:320px)  { /* smartphones, portrait iPhone, portrait 480x320 phones (Android) */ }
+@media only screen 
+and (min-device-width: 375px) 
+and (max-device-width: 812px) 
+and (-webkit-min-device-pixel-ratio: 3)  { /* smartphones, Android phones, landscape iPhone */ 
+      .item.h2 {
+  height: 420px;
+  line-height: 420px;
+}
+.item.w2 {
+  width: 420px;
+}
+    }
+    @media only screen and (min-width: 768px) and (max-width: 1024px)  { /* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */ 
+    
+      .item.h2 {
+  height: 320px;
+  line-height: 320px;
+}
+.item.w2 {
+  width: 320px;
+}
+    }
+    @media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px)  { /* tablet, landscape iPad, lo-res laptops ands desktops */ 
+       
+      .item.h2 {
+  height: 300px;
+  line-height: 300px;
+}
+.item.w2 {
+  width: 300px;
+}
+}
+    @media (min-width:1025px) { /* big landscape tablets, laptops, and desktops */ 
+      .item.h2 {
+  height: 220px;
+  line-height: 220px;
+}
+.item.w2 {
+  width: 220px;
+}
+}
+    @media (min-width:1281px) { /* hi-res laptops and desktops */ 
+      .item.h2 {
+  height: 220px;
+  line-height: 220px;
+}
+.item.w2 {
+  width: 220px;
+}
+    }
  </style>
 
 </head>
@@ -759,7 +814,7 @@ section h4 {
 <!-- partial -->
   <script src='https://cdnjs.cloudflare.com/ajax/libs/velocity/1.5.0/velocity.min.js'></script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js'></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/muuri/0.4.0/muuri.min.js'></script>
+<script src='https://cdn.jsdelivr.net/npm/muuri@0.9.5/dist/muuri.min.js'></script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
 <script>
   document.addEventListener('DOMContentLoaded', function () {
