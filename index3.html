@@ -219,9 +219,19 @@ color: #f4511e;
   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 </section> -->
+<section class="mb-5 text-center">
+ <div class="container-fluid">
+    
+    <div class=" table-responsive" id="urdu-letter-all">
 
-<section class="mb-5 text-center" id="xx">
-  <h3 class="mb-4">All the letters</h3>
+
+</div>
+
+  </div>
+</section>
+<!-- <section class="mb-5 text-center" id="xx">
+  <h3 class="mb-4">All the letters </h3>
+  <p>We'll use mneomics to remember these</p>
   <div class="container">
     <div class="row">
       <div class="col-md-6 mx-auto">
@@ -231,7 +241,7 @@ color: #f4511e;
     </div>
   </div>
 
-</section>
+</section> -->
 <section class="mb-5 text-center" id="0">
 
   <button id="myBtn">Read in hindi</button>
@@ -844,6 +854,140 @@ color: #f4511e;
 </html>
 <script>
 
+
+
+   var alphabetsTable = {
+    //alif byap
+    ا: { hindi: "अ", englishalpha: "a", english: "Alif", firstur: "اب", firsten: "ba", secondur: "باب", seconden: "bab", thirdur: "لا/بابا", thirden: "baba/la", gridcordinates: "c10 r1",grouped:'straight-line',mnemoicposition:1 },
+    ب: { hindi: "ब", englishalpha: "b", english: "Bey", firstur: "بب", firsten: "bb", secondur: "ببب", seconden: "bbb", thirdur: "اب", thirden: "ba", gridcordinates: "c9 r1",grouped:"baap",mnemoicposition:2 },
+    پ: { hindi: "प", englishalpha: "p", english: "Pe", firstur: "بب", firsten: "bb", secondur: "ببب", seconden: "bbb", thirdur: "اب", thirden: "pa", gridcordinates: "c7 r1" ,grouped:"baap",mnemoicposition:5},
+    ت: { hindi: "त", englishalpha: "T", english: "Tey", firstur: "بت", firsten: "bt", secondur: "بتب", seconden: "btb", thirdur: "یا", thirden: "ta", gridcordinates: "c5 r1",grouped:"nitish",mnemoicposition:6 },
+    ٹ: { hindi: "ट", englishalpha: "ṭ", english: "ṭ", firstur: "ٹا", firsten: "?", secondur: "بٹب", seconden: "?", thirdur: "بٹ", thirden: "?", gridcordinates: "c1 r2",grouped:"heavy-sounds",mnemoicposition:19 },
+    ث: { hindi: "स", englishalpha: "S", english: "say", firstur: "بث", firsten: "sb", secondur: "بثب", seconden: "bsb", thirdur: "یا", thirden: "sa", gridcordinates: "c4 r1",grouped:"nitish" ,mnemoicposition:7},
+    ج: { hindi: "ज", englishalpha: "J", english: "Jeem", firstur: "اناج", firsten: "anaj", secondur: "انجب", seconden: "bajna", thirdur: "اج", thirden: "ja", gridcordinates: "c7 r2",grouped:"hockey-khelo-janch",mnemoicposition:12 },
+    چ: { hindi: "च", englishalpha: "ch", english: "Chay", firstur: "بیچ", firsten: "bich", secondur: "بچت", seconden: "bacht", thirdur: "اچ", thirden: "cha", gridcordinates: "c6 r2",grouped:"hockey-khelo-janch",mnemoicposition:13 },
+    ح: { hindi: "ह", englishalpha: "H", english: "Hay", firstur: "ریح", firsten: "riih", secondur: "بحب", seconden: "bahab", thirdur: "اح", thirden: "ha", gridcordinates: "c9 r2",grouped:"hockey-khelo-janch",mnemoicposition:10 },
+    خ: { hindi: "ख", englishalpha: "KH/X", english: "KHay", firstur: "خیرات", firsten: "tarikh", secondur: "رخآ", seconden: "akhir", thirdur: "اخ", thirden: "kha", gridcordinates: "c8 r2",grouped:"hockey-khelo-janch" ,mnemoicposition:11},
+    د: { hindi: "द", englishalpha: "D", english: "daal", firstur: "دب", firsten: "bad", secondur: "دادا", seconden: "dada", thirdur: "رد", thirden: "dar", gridcordinates: "c5 r2",grouped:"diwar",mnemoicposition:14 },
+    ڈ: { hindi: "ड", englishalpha: "ddal", english: "dd", firstur: "ڈا", firsten: "?", secondur: "بڈب", seconden: "?", thirdur: "بڈ", thirden: "?", gridcordinates: "c10 r3",grouped:"heavy-sounds",mnemoicposition:20 },
+    ذ: { hindi: "ज़", englishalpha: "z", english: "Zaal", firstur: "ذائقہ", firsten: "Zaiqa", secondur: "غذا", seconden: "aza", thirdur: "محاذ", thirden: "mohaz", gridcordinates: "c3 r2",grouped:"jgroup" ,mnemoicposition:45},
+    ر: { hindi: "र", englishalpha: "R", english: "Ray", firstur: "روا", firsten: "oor", secondur: "روا", seconden: "oor", thirdur: "زار", thirden: "raj", gridcordinates: "c3 r2",grouped:"diwar" ,mnemoicposition:16},
+    ڑ: { hindi: "ड़", englishalpha: "Aṛ", english: "ṛ", firstur: "ڑا", firsten: "?", secondur: "بڑب", seconden: "?", thirdur: "بڑ", thirden: "?", gridcordinates: "c9 r3",grouped:"heavy-sounds" ,mnemoicposition:20},
+    ز: { hindi: "ज़", englishalpha: "zay", english: "z", firstur: "زمین", firsten: "zameen", secondur: "آزادی", seconden: "azadi", thirdur: "تیز", thirden: "tez", gridcordinates: "c9 r3",grouped:"jgroup",mnemoicposition:43 },
+    ژ: { hindi: "झ़", englishalpha: "ze", english: "z", firstur: "ژالہ باری", firsten: "Saalah Baari", secondur: "اژدھا", seconden: "azhdhaa", thirdur: "?", thirden: "?", gridcordinates: "c9 r3",grouped:"jgroup",mnemoicposition:44 },
+    س: { hindi: "स", englishalpha: "S", english: "seen", firstur: "سب", firsten: "bs", secondur: "بسب", seconden: "bsb", thirdur: "اس", thirden: "sa", gridcordinates: "c2 r1",grouped:"nitish",mnemoicposition:9 },
+    ش: { hindi: "श", englishalpha: "Sh", english: "sHeen", firstur: "بش", firsten: "shb", secondur: "اشب", seconden: "bsha", thirdur: "یا", thirden: "sha", gridcordinates: "c3 r1",grouped:"nitish",mnemoicposition:8 },
+    ص: { hindi: "श", englishalpha: "Sh", english: "Swad", firstur: "صُبح", firsten: "subha", secondur: "حصہ", seconden: "hisa", thirdur: "شخص", thirden: "Shakhs", gridcordinates: "c3 r1",grouped:"sa-ja",mnemoicposition:41 },
+    ض: { hindi: "ज़", englishalpha: "J", english: "zwad", firstur: "ضرب", firsten: "zarb", secondur: "قبضہ", seconden: "kabza", thirdur: "حوض", thirden: "hauz", gridcordinates: "c3 r1",grouped:"sa-ja",mnemoicposition:42 },
+    ط: { hindi: "तोए", englishalpha: "toye", english: "toye", firstur: "طوطا/طیارہ", firsten: "tayara/tota", secondur: "بطخ", seconden: "btkh", thirdur: "خط", thirden: "khat", gridcordinates: "c2 r2",grouped:"ta-z",mnemoicposition:35 },
+    ظ: { hindi: "जोए", englishalpha: "zoye", english: "zoye", firstur: "ظلم", firsten: "zulm", secondur: "نظم", seconden: "nazm", thirdur: "حظ/لفظ", thirden: "lafz/haz", gridcordinates: "c2 r2",grouped:"ta-z jgroup",mnemoicposition:36 },
+    ع: { hindi: "ऐ", englishalpha: "ayn", english: "ae", firstur: "عورت", firsten: "aurat", secondur: "ـعـ/جمعہ", seconden: "jumah/middle", thirdur: "جمع", thirden: "jama", gridcordinates: "c2 r2",grouped:"aa-g" ,mnemoicposition:37},
+    غ: { hindi: "ग", englishalpha: "ghain", english: "gh", firstur: "غار", firsten: "gar", secondur: "مغرور", seconden: "magrur", thirdur: "باغ/بیغ", thirden: "teg/baag", gridcordinates: "c8 r1", grouped:"aa-g",mnemoicposition:38},
+    ف: { hindi: "फ़", englishalpha: "fey", english: "fa", firstur: "فوج", firsten: "fauz", secondur: "سفید", seconden: "safed", thirdur: "ببرف", thirden: "baraf", gridcordinates: "c8 r1", grouped:"fe-k",mnemoicposition:39},
+    ق: { hindi: "क़", englishalpha: "qaf", english: "qaf", firstur: "قلم", firsten: "kalm", secondur: "لُوقا", seconden: "luke", thirdur: "سبق", thirden: "sabk", gridcordinates: "c8 r1", grouped:"fe-k",mnemoicposition:40},
+    ک: { hindi: "क", englishalpha: "K", english: "Kaaf", firstur: "کان", firsten: "nak", secondur: "ہیکت", seconden: "takiya", thirdur: "ناک", thirden: "kaan", gridcordinates: "c1 r1",grouped:"ka-ga",mnemoicposition:17 },
+    گ: { hindi: "ग", englishalpha: "g", english: "Gaaf", firstur: "ناگ", firsten: "naag", secondur: "نگان", seconden: "nagin", thirdur: "اناگ", thirden: "gana", gridcordinates: "c10 r2",grouped:"ka-ga",mnemoicposition:18 },
+    ل: { hindi: "ल", englishalpha: "l", english: "lām", firstur: "لـ", firsten: "?", secondur: "ـلـ", seconden: "?", thirdur: "ـل", thirden: "?", gridcordinates: "c5 r4",grouped:"mala",mnemoicposition:33 },
+    م: { hindi: "म", englishalpha: "m", english: "mim", firstur: "مـ", firsten: "?", secondur: "ـ‍م‍ـ", seconden: "?", thirdur: "ـ‍م", thirden: "?", gridcordinates: "c6 r4",grouped:"mala",mnemoicposition:32 },
+ //nitish
+    ن: { hindi: "न", englishalpha: "n", english: "Noon", firstur: "بب", firsten: "bb", secondur: "ببب", seconden: "bbb", thirdur: "اب", thirden: "ba", gridcordinates: "c6 r1",grouped:"nitish",mnemoicposition:5 },
+    //kaga
+    //hockey khelo janch 
+    //diwar
+    و: { hindi: "व/ओ", englishalpha: "V/oo", english: "VAO", firstur: "ور", firsten: "roo", secondur: "روا", seconden: "oor", thirdur: "راو", thirden: "vaar", gridcordinates: "c4 r2",grouped:"diwar",mnemoicposition:15 },
+    ہ: { hindi: "ह", englishalpha: "h", english: "gol/choti he", firstur: "ہا", firsten: "ha", secondur: "کہا", seconden: "kha", thirdur: "رہ/بچہ", thirden: "bacha/rha", gridcordinates: "c4 r2",grouped:"h-group",mnemoicposition:34 },
+    ھ: { hindi: "ह", englishalpha: "H", english: "do-cashmī hē", firstur: "?", firsten: "?", secondur: "ـھـ", seconden: "?", thirdur: "ـھ", thirden: "?", gridcordinates: "c7 r3",grouped:"h-group",mnemoicposition:21 },
+    ء: { hindi: "ह", englishalpha: "H", english: "hamza", firstur: "ؤآ", firsten: "aaoo", secondur: "دائر", seconden: "Daair", thirdur: "?", thirden: "?", gridcordinates: "c8 r3",grouped:"h-group" },
+    ی: { hindi: "य", englishalpha: "ye", english: "choti yeh", firstur: "بب", firsten: "bb", secondur: "ببب", seconden: "bbb", thirdur: "اب", thirden: "ba", gridcordinates: "c8 r1", grouped:"baap",mnemoicposition:3},
+    ے: { hindi: "ए", englishalpha: "ye", english: "badi yeh", firstur: "بب", firsten: "bb", secondur: "ببب", seconden: "bbb", thirdur: "اب", thirden: "ba", gridcordinates: "c8 r1", grouped:"baap",mnemoicposition:4},
+   
+    // //toye
+    // //toye+te
+    // //toye+dal h द
+    // //toye+rey h र
+
+    // //h and dochasmi he ka jado
+    // // क+ dochasmi he
+    // کھ: { hindi: "ख", englishalpha: "KH", english: "KhA", firstur: "کھـ", firsten: "?", secondur: "ـکھـ", seconden: "?", thirdur: "ـکھ", thirden: "?", gridcordinates: "c6 r3",grouped:"h-group",mnemoicposition:22 },
+    // // ग+ dochasmi he
+    // گھ: { hindi: "घ", englishalpha: "gh", english: "ghA", firstur: "گھـ", firsten: "?", secondur: "ـگھـ", seconden: "?", thirdur: "ـگھ", thirden: "?", gridcordinates: "c5 r3",grouped:"h-group",mnemoicposition:23 },
+    // // च+ dochasmi he
+    // جھ: { hindi: "झ", englishalpha: "jh", english: "jh", firstur: "جھـ", firsten: "?", secondur: "ـجھـ", seconden: "?", thirdur: "ـجھ", thirden: "?", gridcordinates: "c4 r3",grouped:"h-group" ,mnemoicposition:24},
+    // // ज+ dochasmi he
+    // چھ: { hindi: "छ", englishalpha: "ch", english: "Cha", firstur: "چھـ", firsten: "?", secondur: "ـچھـ", seconden: "?", thirdur: "ـچھ", thirden: "?", gridcordinates: "c3 r3",grouped:"h-group",mnemoicposition:25 },
+
+
+    // //ट+ dochasmi he
+    // ٹھ: { hindi: "ठ", englishalpha: "ṭh", english: "ṭh", firstur: "ٹھـ", firsten: "?", secondur: "ـٹھـ", seconden: "?", thirdur: "ـٹھ", thirden: "?", gridcordinates: "c2 r3",grouped:"h-group" ,mnemoicposition:26},
+    // //ड+ dochasmi he
+    // ڈھ: { hindi: "ढ", englishalpha: "ḍh", english: "ḍh", firstur: "ڈھ", firsten: "?", secondur: "ڈھ", seconden: "?", thirdur: "ڈھ", thirden: "?", gridcordinates: "c1 r3",grouped:"h-group",mnemoicposition:27 },
+
+    // // त+ dochasmi he
+    // تھ: { hindi: "थ", englishalpha: "th", english: "th", firstur: "تھـ", firsten: "?", secondur: "ـتھـ", seconden: "?", thirdur: "ـتھ", thirden: "?", gridcordinates: "c10 r4",grouped:"h-group",mnemoicposition:28 },
+    // // द+ dochasmi he
+    // دھ: { hindi: "ध", englishalpha: "dh", english: "dh", firstur: "دھ", firsten: "?", secondur: "دھ", seconden: "?", thirdur: "دھ", thirden: "?", gridcordinates: "c9 r4",grouped:"h-group",mnemoicposition:29 },
+    // // प+ dochasmi he
+    // پھ: { hindi: "फ", englishalpha: "ph", english: "ph", firstur: "پھـ", firsten: "?", secondur: "ـپھـ", seconden: "?", thirdur: "ـپھ", thirden: "?", gridcordinates: "c8 r4",grouped:"h-group" ,mnemoicposition:30},
+    // // ब+ dochasmi he
+    // بھ: { hindi: "भ", englishalpha: "bh", english: "bh", firstur: "بھـ", firsten: "?", secondur: "ـبھـ", seconden: "?", thirdur: "ـبھ", thirden: "?", gridcordinates: "c7 r4",grouped:"h-group" ,mnemoicposition:31},
+
+
+
+    //ma la
+   
+  };
+  function usingGeneratorToChunkArrayForGrid(){
+  
+  let ObjToArray=Object.entries(alphabetsTable);
+  return [...chunks(ObjToArray, 10)];
+    }
+  // genertor function to chunk the array
+    function* chunks(arr, n) {
+    for (let i = 0; i < arr.length; i += n) {
+      yield arr.slice(i, i + n);
+    }
+  }
+
+
+function getCells(data, type) {
+  console.log("getCells",data);
+    return data.map(cell => `<${type} class="col">
+    <span>${cell[0]}</span>
+    <p>${cell[1]['hindi']}</p>
+    <span >${cell[1]['english']}</span>
+    </${type}>`).join('');
+  }
+function createBody(data) {
+  console.log("createBody",data);
+  // console.log("createBody getCells",data);
+    return data.map(row => `<tr class="d-flex">${getCells(row, 'td')}</tr>`).join('');
+  }
+
+
+function createTable(data) {
+
+    // Destructure the headings (first row) from
+    // all the rows
+    const [ ...rows] = data;
+console.log("rows",rows)
+    // Return some HTML that uses `getCells` to create
+    // some headings, but also to create the rows
+    // in the tbody.
+    
+    return `  
+    <table class="table " dir="rtl">
+
+      <thead class="thead-dark"> <tr class="text-center"><th colspan="${rows[0].length}">All the letters
+        
+  <p>We'll use mneomics to remember these</p></th></tr></thead>
+      <tbody>${createBody(rows)}</tbody>
+    </table>
+    
+  `;
+  }
+
+  document.querySelector('#urdu-letter-all').insertAdjacentHTML('beforeend', createTable(usingGeneratorToChunkArrayForGrid()));
+  
   document.addEventListener("DOMContentLoaded", () => {
     let intro1 = document.getElementById('intro1');
     let intro2 = document.getElementById('intro2');
