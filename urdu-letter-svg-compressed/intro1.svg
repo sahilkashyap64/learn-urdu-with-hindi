@@ -1,1 +1,19 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="379" height="373" xmlns:v="https://vecta.io/nano"><style><![CDATA[.B{font-family:Virgil, Segoe UI Emoji}.C{font-size:20px}.D{fill:#000}.E{direction:ltr}]]></style><defs><style>@font-face{font-family:"Virgil";src:url("../Virgil.woff2")}</style></defs><path fill="#fff" d="M0 0h379v373H0z"/><path d="M9.74 9.11c100.32 4.14 202.3 4.24 359.2 1.18M10.28 9.97c118.19-1.98 236.62-.98 358.59-.56m-1.14-.15l.53 352.98m1.11-352.4l.22 352.53m-1.61.91c-102.48-1.83-203.61-1.77-357.6-.69m358.13.53c-102.28-.47-205.89-1.19-358.67.16m-.27 0l.25-354.4m-.13 354.64l.8-353.88" stroke="#000" fill="none" stroke-linecap="round"/><text y="54" style="white-space:pre" x="107" class="B C D E">3 rules of urdu</text><g transform="matrix(1 0 0 1 48 105)" class="B C D E"><text y="18" style="white-space:pre" x="0">1. Urdu is read from right to</text><text y="43" style="white-space:pre" x="0">left.</text><text y="93" style="white-space:pre" x="0">2. One Urdu character </text><text y="118" style="white-space:pre" x="0">usually has 3 shapes</text><text y="143" style="white-space:pre" x="0">( intial, middle, final )</text><text y="193" style="white-space:pre" x="0">3. Sometimes some vowels </text><text y="218" style="white-space:pre" x="0">are skipped</text></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="379" height="373"
+    xmlns:v="https://vecta.io/nano">
+    <style><![CDATA[.B{font-family:Virgil, Segoe UI Emoji}.C{font-size:20px}.D{fill:#000}.E{direction:ltr}]]></style>
+    <defs>
+        <style>@font-face{font-family:"Virgil";src:url("../Virgil.woff2")}</style>
+    </defs>
+    <path fill="#fff" d="M0 0h379v373H0z"/>
+    <path d="M9.74 9.11c100.32 4.14 202.3 4.24 359.2 1.18M10.28 9.97c118.19-1.98 236.62-.98 358.59-.56m-1.14-.15l.53 352.98m1.11-352.4l.22 352.53m-1.61.91c-102.48-1.83-203.61-1.77-357.6-.69m358.13.53c-102.28-.47-205.89-1.19-358.67.16m-.27 0l.25-354.4m-.13 354.64l.8-353.88" stroke="#000" fill="none" stroke-linecap="round"/>
+    <text y="54" style="white-space:pre" x="107" class="B C D E">3 rules of urdu</text>
+    <g transform="matrix(1 0 0 1 48 105)" class="B C D E">
+        <text y="18" style="white-space:pre" x="0">1. Urdu is read from right to</text>
+        <text y="43" style="white-space:pre" x="0">left.</text>
+        <text y="93" style="white-space:pre" x="0">2. One Urdu character </text>
+        <text y="118" style="white-space:pre" x="0">usually has 3 shapes</text>
+        <text y="143" style="white-space:pre" x="0">( intial, middle, final )</text>
+        <text y="193" style="white-space:pre" x="0">3. Sometimes some vowels </text>
+        <text y="218" style="white-space:pre" x="0">are skipped</text>
+    </g>
+</svg>

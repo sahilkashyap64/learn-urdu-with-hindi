@@ -5,12 +5,9 @@
     <style>
       @font-face {
         font-family: "Virgil";
-        src: url("https://excalidraw.com/Virgil.woff2");
+        src: url("../Virgil.woff2");;
       }
-      @font-face {
-        font-family: "Cascadia";
-        src: url("https://excalidraw.com/Cascadia.woff2");
-      }
+      
     </style>
   </defs>
   <rect x="0" y="0" width="379" height="373" fill="#ffffff"></rect><g stroke-linecap="round" transform="translate(10 10) rotate(0 179.5 176.5)"><path d="M0 0 C128.48 0, 256.97 0, 359 0 M0 0 C93.65 0, 187.29 0, 359 0 M359 0 C359 99.59, 359 199.17, 359 353 M359 0 C359 88.33, 359 176.66, 359 353 M359 353 C242.66 353, 126.32 353, 0 353 M359 353 C253.73 353, 148.45 353, 0 353 M0 353 C0 217.94, 0 82.87, 0 0 M0 353 C0 227.79, 0 102.57, 0 0" stroke="#000000" stroke-width="1" fill="none"></path></g><g transform="translate(137 36) rotate(0 51 13.5)"><text x="0" y="20" font-family="Virgil, Segoe UI Emoji" font-size="20px" fill="#000000" text-anchor="start" style="white-space: pre;" direction="ltr">कैसे याद रखें</text></g><g transform="translate(83.5 132) rotate(0 95.5 40.5)"><text x="95.5" y="20" font-family="Virgil, Segoe UI Emoji" font-size="20px" fill="#000000" text-anchor="middle" style="white-space: pre;" direction="ltr">कागा का अर्थ है कौवा,</text><text x="95.5" y="47" font-family="Virgil, Segoe UI Emoji" font-size="20px" fill="#000000" text-anchor="middle" style="white-space: pre;" direction="ltr">काफ और गाफ,</text><text x="95.5" y="74" font-family="Virgil, Segoe UI Emoji" font-size="20px" fill="#000000" text-anchor="middle" style="white-space: pre;" direction="ltr">पक्षियों की तरह दिखते हैं</text></g><g transform="translate(88.46923865212261 65.45355527922857) rotate(0 105.5 11)"><text x="0" y="16" font-family="Virgil, Segoe UI Emoji" font-size="16px" fill="#e67700" text-anchor="start" style="white-space: pre;" direction="ltr">कागा: एक पक्षी की तरह दिखता है</text></g></svg>
