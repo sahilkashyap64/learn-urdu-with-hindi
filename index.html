@@ -1,655 +1,1290 @@
+
 <!DOCTYPE html>
-<!-- saved from url=(0050)https://getbootstrap.com/docs/4.0/examples/cover/# -->
-<html lang="en">
+<html>
 
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="Learn urdu characters quick using mnemonics">
-  <meta name="author" content="">
-  <link rel="icon" href="https://getbootstrap.com/docs/4.0/assets/img/favicons/favicon.ico">
+    <title>Learn Urdu letters</title>
 
-  <title>Learn Urdu letters</title>
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <!-- Our Custom CSS -->
+    <link rel="stylesheet" href="style2.css">
+    <!-- Scrollbar Custom CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
 
-  <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/cover/">
-
-  <!-- Bootstrap core CSS -->
-  <link href="./bootstrap.min.css" rel="stylesheet">
-
-  <!-- Custom styles for this template -->
-  <link href="./cover.css" rel="stylesheet">
-  <style>
-    @font-face {
-      font-family: "Virgil";
-      src: url("./Virgil.woff2");
-      font-display: swap;
-    }
-
-    body {
-      font-family: 'Virgil', sans-serif;
-    }
-  </style>
+    <!-- Font Awesome JS -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+<style>
+  body {position: relative}
+  .nav-link.active {
+background-color: white; 
+color: #f4511e;           
+}
+</style>
 </head>
 
-<body class="text-center vsc-initialized" cz-shortcut-listen="true">
+<body data-spy="scroll" data-target="#sidebar" data-offset="1">
 
-  <div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
-    <header class="masthead mb-auto">
-      <div class="inner">
-        <h3 class="masthead-brand"><a href="./index.html">Urdu</a></h3>
-        <nav class="nav nav-masthead justify-content-center">
-          <a class="nav-link active" href="./index.html">Home</a>
-          <a class="nav-link" href="./practice.html">Practice</a>
-          <a class="nav-link" href="./credits.html">Credits</a>
+    <div class="wrapper">
+        <!-- Sidebar  -->
+        <nav id="sidebar" class="fixed-top">
+            <div class="sidebar-header">
+                <h3>Urdu</h3>
+            </div>
+
+            <ul class="list-unstyled components">
+              <li class="text-center">
+                <span>Dark mode</span>
+                <div class="w-100 d-flex justify-content-center"> <label class="custom-control teleport-switch">
+                  <span class="teleport-switch-control-description">Off</span>
+                  <input type="checkbox" class="teleport-switch-control-input">
+                  <span class="teleport-switch-control-indicator"></span>
+                  <span class="teleport-switch-control-description">On</span>
+                  </label></div>
+               
+                </li>
+                <!-- <li class="active">
+                    <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Home</a>
+                    <ul class="collapse list-unstyled" id="homeSubmenu">
+                        <li>
+                            <a href="#">Home 1</a>
+                        </li>
+                        <li>
+                            <a href="#">Home 2</a>
+                        </li>
+                        <li>
+                            <a href="#">Home 3</a>
+                        </li>
+                    </ul>
+                </li> -->
+                <li class="nav-item ">
+                    <a class="nav-link active" href="#0">Intro</a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link" href="#straight-line">Alif</a>
+                </li><li>
+                  <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Ba-ya-p & nitish</a>
+                  <ul class="collapse list-unstyled" id="pageSubmenu">
+                      
+                    <li class="nav-item">
+                        <a class="nav-link" href="#baap">Baap</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#nitish">nitish</a>
+                    </li>
+                    
+                  </ul>
+              </li><li>
+                  <a href="#pageSubmenu2" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Hockey Khelo Janch</a>
+                  <ul class="collapse list-unstyled" id="pageSubmenu2">
+                      
+                    <li class="nav-item">
+                        <a class="nav-link" href="#31">Hockey Khelo</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#32">Janch</a>
+                    </li>
+                    
+                  </ul>
+              </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link" href="#diwar">Diwar</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#ka-ga">Kaga</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#heavy-sounds">Magic wand ط</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#7">Do chasmi he</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#mala">Mala</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#h-group">Gol h and more H sounds</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#ta-z">Taj</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#aa-g">Aag</a>
+                </li><li class="nav-item">
+                    <a class="nav-link" href="#fe-k">Fek</a>
+                </li></li><li class="nav-item">
+                    <a class="nav-link" href="#sa-ja">Saja</a>
+                </li><li class="nav-item">
+                    <a class="nav-link" href="#jgroup">All J Sound</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#15">Directive signs(vowels)</a>
+                </li><li class="nav-item">
+                    <a class="nav-link" href="#16">Special Marks</a>
+                </li>
+            </ul>
+
+            <!-- <ul class="list-unstyled CTAs">
+                <li>
+                    <a href="https://bootstrapious.com/tutorial/files/sidebar.zip" class="download">Download source</a>
+                </li>
+                <li>
+                    <a href="https://bootstrapious.com/p/bootstrap-sidebar" class="article">Back to article</a>
+                </li>
+            </ul> -->
         </nav>
-      </div>
-    </header>
 
-    <main role="main" class="inner cover border border-white mt-5 mb-5">
-      <h1 class="cover-heading mt-4">How to remember
-        Urdu Letters?</h1>
-      <p class="lead"> Use <span class="trail">mnemonics</span>.</p>
-      <!-- <p class="lead">
-          <a href="https://getbootstrap.com/docs/4.0/examples/cover/#" class="btn btn-lg btn-secondary">Learn more</a>
-        </p> -->
-    </main>
-    <section class="mb-5">
-
-      <button id="myBtn">Read in hindi</button>
-      <h3 class="mb-4">Intro <sub>basic rules </sub></h3>
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-sm">
-            <object id="intro1" data="./urdu-letter-svg/intro1.svg" alt="intro1" style="width:100%; height: 100%;"
-              type="image/svg+xml"></object>
-          </div>
-          <div class="col-sm">
-
-            <object id="intro2" data="./urdu-letter-svg/intro2.svg" alt="intro2" style="width:100%; height: 100%;"
-              type="image/svg+xml"></object>
-          </div>
-          <div class="col-sm">
-
-            <object id="intro3" data="./urdu-letter-svg/intro3.svg" alt="intro3" style="width:100%; height: 100%;"
-              type="image/svg+xml"></object>
-
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="mb-5">
-      <h3 class="mb-4">Alif <sub>a straight line</sub> </h3>
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-sm-4">
-            <object data="./urdu-letter-svg/a.svg" alt="Alif" style="width:100%; height: 100%;"
-              type="image/svg+xml"></object>
-          </div>
-          <div class="col-sm-4">
-            <object data="./urdu-letter-svg/alif-mad-a.svg" alt="Alif mad a" style="width:100%; height: 100%;"
-              type="image/svg+xml"></object>
-          </div>
-        </div>
-      </div>
-
-    </section>
-    <section class="mb-5">
-      <h3 class="mb-4">Ba-ya-p(baap) <sub>dots <span id="hills">below</span> the line</sub></h3>
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-sm">
-            <object data="./urdu-letter-svg/b.svg" alt="Bey" style="width:100%; height: 100%;"
-              type="image/svg+xml"></object>
-          </div>
-          <div class="col-sm">
-
-            <object data="./urdu-letter-svg/y.svg" alt="yay" style="width:100%; height: 100%;"
-              type="image/svg+xml"></object>
-          </div>
-          <div class="col-sm">
-
-            <object data="./urdu-letter-svg/p.svg" alt="pay" style="width:100%; height: 100%;"
-              type="image/svg+xml"></object>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="mb-5">
-      <h3 class="mb-4">Ni-ti-s-sh(Nitish) <sub>dots <span id="yahats">above</span> the line</sub></h3>
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-sm">
-            <object data="./urdu-letter-svg/n.svg" alt="Bey" style="width:100%; height: 100%;"
-              type="image/svg+xml"></object>
-          </div>
-          <div class="col-sm">
-
-            <object data="./urdu-letter-svg/t.svg" alt="tay" style="width:100%; height: 100%;"
-              type="image/svg+xml"></object>
-          </div>
-          <div class="col-sm">
-
-            <object data="./urdu-letter-svg/say.svg" alt="say" style="width:100%; height: 100%;"
-              type="image/svg+xml"></object>
-          </div>
-        </div>
-        <p class="mb-4 mt-4">Some more "S", it is just a curved line</p>
-        <div class="row">
-          <div class="col-sm-4">
-
-            <object data="./urdu-letter-svg/sheen.svg" alt="sheen" style="width:100%; height: 100%;"
-              type="image/svg+xml"></object>
-          </div>
-          <div class="col-sm-4">
-
-            <object data="./urdu-letter-svg/seen.svg" alt="seen" style="width:100%; height: 100%;"
-              type="image/svg+xml"></object>
-          </div>
-          <div class="col-sm-4">
-
-            <object id="intro-baap-nitish" data="./urdu-letter-svg/intro-baap-nitish.svg" alt="intro baap and nitish mnemonic"
-              style="width:100%; height: 100%;" type="image/svg+xml"></object>
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-    <section class="mb-5">
-      <h3 class="mb-4"><strong>H</strong>ockey <strong>Kh</strong>elo <strong>janch</strong> karo <span>(shape of hockey cuz it is attached with alif)</span> </h3>
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-sm">
-
-            <object id="intro-hockey-khelo-janch-karo" data="./urdu-letter-svg/intro-hockey-khelo-janch-karo.svg" alt="intro-hockey-khelo-janch-karo"
-              style="width:100%; height: 100%;" type="image/svg+xml"></object>
-          </div>
-          <div class="col-sm">
-            <object data="./urdu-letter-svg/hay.svg" alt="hay" style="width:100%; height: 100%;"
-              type="image/svg+xml"></object>
-          </div>
-          <div class="col-sm">
-
-            <object data="./urdu-letter-svg/khay.svg" alt="khay" style="width:100%; height: 100%;"
-              type="image/svg+xml"></object>
-          </div>
-
-        </div>
-        <p class="mb-4 mt-4"><strong>janch</strong> karo</p>
-        <div class="row">
-          <div class="col-sm-4">
-
-            <object data="./urdu-letter-svg/jeem.svg" alt="jeem" style="width:100%; height: 100%;"
-              type="image/svg+xml"></object>
-          </div>
-          <div class="col-sm-4">
-
-            <object data="./urdu-letter-svg/chay.svg" alt="chay" style="width:100%; height: 100%;"
-              type="image/svg+xml"></object>
-          </div>
-        </div>
-
-      </div>
-      <!-- <h1>Fun <span id="someday">Someday</span> Ideas</h1> -->
-
-      <!-- <ul>
-    <li>Bike the <span id="trail">McKenzie Trail</span></li>
-    <li>Eat at that rooftop bar in Redmond</li>
-    <li>Lake of the Woods in Klamath Falls</li>
-    <li>Stay in <span id="yahats">Yahats</span></li>
-    <li>Weekend at Suttle Lodge</li>
-    <li>Go visit the <span id="hills">Painted Hills</span>
-  </ul> -->
-    </section>
-    <section>Diwar
-
-      <h3 class="mb-4"><strong>Di</strong>-<strong>Wa</strong>-<strong>R</strong> </h3>
-      <div class="container-fluid">
-
-        <div class="row">
-          <div class="col-sm-4">
-
-            <object id="intro-diwar" data="./urdu-letter-svg/intro-diwar.svg" alt="intro-diwar" style="width:100%; height: 100%;"
-              type="image/svg+xml"></object>
-          </div>
-        </div>
-
-        <div class="row pt-5">
-          <div class="col-sm">
-            <object data="./urdu-letter-svg/dal.svg" alt="dal" style="width:100%; height: 100%;"
-              type="image/svg+xml"></object>
-          </div>
-          <div class="col-sm">
-
-            <object data="./urdu-letter-svg/vao.svg" alt="vao" style="width:100%; height: 100%;"
-              type="image/svg+xml"></object>
-          </div>
-          <div class="col-sm">
-
-            <object data="./urdu-letter-svg/ray.svg" alt="ray" style="width:100%; height: 100%;"
-              type="image/svg+xml"></object>
-          </div>
-        </div>
-
-      </div>
-    </section>
-    <section>Kaga
-      <h3 class="mb-4"><strong>Ka</strong> <strong>ga</strong> </h3>
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-sm">
-            <object id="intro-kaga" data="./urdu-letter-svg/intro-kaga.svg" alt="intro-kaga" style="width:100%; height: 100%;"
-              type="image/svg+xml"></object>
-          </div>
-          <div class="col-sm">
-            <object data="./urdu-letter-svg/kaaf.svg" alt="kaaf" style="width:100%; height: 100%;"
-              type="image/svg+xml"></object>
-          </div>
-          <div class="col-sm">
-
-            <object data="./urdu-letter-svg/gaaf.svg" alt="gaaf" style="width:100%; height: 100%;"
-              type="image/svg+xml"></object>
-          </div>
-
-        </div>
-
-      </div>
-    </section>
-    <section>magic wand b
-      <h3 class="mb-4"><strong>b</strong> <strong>on the letter we learned already</strong> </h3>
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-sm-4">
-
-            <object id="intro-heavy-letter-using-toye" data="./urdu-letter-svg/intro-heavy-letter-using-toye.svg" alt="intro-heavy-letter-using-toye"
-              style="width:100%; height: 100%;" type="image/svg+xml"></object>
-          </div>
-        </div>
-        <div class="row pt-5">
-          <div class="col-sm">
-            <object data="./urdu-letter-svg/ttay.svg" alt="ttay" style="width:100%; height: 100%;"
-              type="image/svg+xml"></object>
-          </div>
-          <div class="col-sm">
-
-            <object data="./urdu-letter-svg/ddal.svg" alt="ddal" style="width:100%; height: 100%;"
-              type="image/svg+xml"></object>
-          </div>
-          <div class="col-sm">
-
-            <object data="./urdu-letter-svg/AR.svg" alt="Aray" style="width:100%; height: 100%;"
-              type="image/svg+xml"></object>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <section>
-      <h3 class="mb-4">Do chasmi he </h3>
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-sm">
-
-            <object id="intro-do-chasmi-h" data="./urdu-letter-svg/intro-do-chasmi-h.svg" alt="intro-do-chasmi-h"
-              style="width:100%; height: 100%;" type="image/svg+xml"></object>
-          </div>
-          <div class="col-sm">
-            <object data="./urdu-letter-svg/do-chasmi-he.svg" alt="do-chasmi-he" style="width:100%; height: 100%;"
-              type="image/svg+xml"></object>
-          </div>
-
-          <div class="col-sm">
-
-            <!-- <object data="./urdu-letter-svg/ray.svg" alt="ray" style="width:100%; height: 100%;" type="image/svg+xml" ></object> -->
-          </div>
-        </div>
-
-      </div>
-    </section>
-    <section>
-      <h3 class="mb-4">do chasmi he + letter we already learned</h3>
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-sm">
-            <object data="./urdu-letter-svg/kha.svg" alt="kha" style="width:100%; height: 100%;"
-              type="image/svg+xml"></object>
-          </div>
-          <div class="col-sm">
-
-            <object data="./urdu-letter-svg/gha.svg" alt="gha" style="width:100%; height: 100%;"
-              type="image/svg+xml"></object>
-          </div>
-          <div class="col-sm">
-
-            <!-- <object data="./urdu-letter-svg/gha.svg" alt="gha" style="width:100%; height: 100%;" type="image/svg+xml" ></object> -->
-          </div>
-
-        </div>
-        <div class="row">
-
-          <div class="col-sm">
-
-            <object data="./urdu-letter-svg/cha.svg" alt="cha" style="width:100%; height: 100%;"
-              type="image/svg+xml"></object>
-          </div>
-          <div class="col-sm">
-
-            <object data="./urdu-letter-svg/jha.svg" alt="jha" style="width:100%; height: 100%;"
-              type="image/svg+xml"></object>
-          </div>
-          <div class="col-sm">
-
-            <!-- <object data="./urdu-letter-svg/jha.svg" alt="jha" style="width:100%; height: 100%;" type="image/svg+xml" ></object> -->
-          </div>
-        </div>
-        <div class="row">
-
-          <div class="col-sm">
-
-            <object data="./urdu-letter-svg/bha.svg" alt="bha" style="width:100%; height: 100%;"
-              type="image/svg+xml"></object>
-          </div>
-          <div class="col-sm">
-
-            <object data="./urdu-letter-svg/ph.svg" alt="pha" style="width:100%; height: 100%;"
-              type="image/svg+xml"></object>
-          </div>
-          <div class="col-sm">
-
-            <!-- <object data="./urdu-letter-svg/jha.svg" alt="jha" style="width:100%; height: 100%;" type="image/svg+xml" ></object> -->
-          </div>
-        </div>
-        <div class="row">
-
-          <div class="col-sm">
-
-            <object data="./urdu-letter-svg/tha.svg" alt="tha" style="width:100%; height: 100%;"
-              type="image/svg+xml"></object>
-          </div>
-          <div class="col-sm">
-
-            <object data="./urdu-letter-svg/thaa.svg" alt="thaa" style="width:100%; height: 100%;"
-              type="image/svg+xml"></object>
-          </div>
-          <div class="col-sm">
-
-            <!-- <object data="./urdu-letter-svg/jha.svg" alt="jha" style="width:100%; height: 100%;" type="image/svg+xml" ></object> -->
-          </div>
-        </div>
-        <div class="row">
-
-          <div class="col-sm">
-
-            <object data="./urdu-letter-svg/dha.svg" alt="tha" style="width:100%; height: 100%;"
-              type="image/svg+xml"></object>
-          </div>
-          <div class="col-sm">
-
-            <object data="./urdu-letter-svg/dha2.svg" alt="thaa" style="width:100%; height: 100%;"
-              type="image/svg+xml"></object>
-          </div>
-          <div class="col-sm">
-
-            <!-- <object data="./urdu-letter-svg/jha.svg" alt="jha" style="width:100%; height: 100%;" type="image/svg+xml" ></object> -->
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <section>
-      <h3 class="mb-4">Mala (means Garland) </h3>
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-sm">
-
-            <object id="intro-lam-mim" data="./urdu-letter-svg/intro-lam-mim.svg" alt="intro-lam-mim" style="width:100%; height: 100%;"
-              type="image/svg+xml"></object>
-          </div>
-          <div class="col-sm">
-            <object data="./urdu-letter-svg/mim.svg" alt="mim" style="width:100%; height: 100%;"
-              type="image/svg+xml"></object>
-          </div>
-          <div class="col-sm">
-
-            <object data="./urdu-letter-svg/lam.svg" alt="lam" style="width:100%; height: 100%;"
-              type="image/svg+xml"></object>
-          </div>
-
-        </div>
-
-      </div>
-    </section>
-    <section>H letters
-      we already have learnt the do-chasmi he and the hockey stick
-      lets learn about the gol he
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-sm">
-            <object data="./urdu-letter-svg/chotihe.svg" alt="choti he or gol he" style="width:100%; height: 100%;"
-              type="image/svg+xml"></object>
-          </div>
-          <div class="col-sm">
-
-            <object id="all-hays" data="./urdu-letter-svg/all-hays.svg" alt="all hays" style="width:100%; height: 100%;"
-              type="image/svg+xml"></object>
-          </div>
-          <div class="col-sm">
-
-            <!-- <object data="./urdu-letter-svg/ray.svg" alt="ray" style="width:100%; height: 100%;" type="image/svg+xml" ></object> -->
-          </div>
-        </div>
-
-      </div>
-    </section>
-    <section>vowel
-      <h3 class="mb-4"><strong>diractics marks</strong> <strong>on the letter</strong> </h3>
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-sm">
-            <object data="./urdu-letter-svg/zer.svg" alt="zer" style="width:100%; height: 100%;"
-              type="image/svg+xml"></object>
-          </div>
-          <div class="col-sm">
-
-            <object data="./urdu-letter-svg/zabar.svg" alt="zabar" style="width:100%; height: 100%;"
-              type="image/svg+xml"></object>
-          </div>
-          <div class="col-sm">
-
-            <object data="./urdu-letter-svg/pesh.svg" alt="pesh" style="width:100%; height: 100%;"
-              type="image/svg+xml"></object>
-          </div>
-        </div>
-
-      </div>
-    </section>
-    <section>vowel and special mark
-      <h3 class="mb-4"><strong>some special marks</strong> <strong>on the letter</strong> </h3>
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-sm">
-
-            <object data="./urdu-letter-svg/ulta-pesh.svg" alt="pesh" style="width:100%; height: 100%;"
-              type="image/svg+xml"></object>
-          </div>
-          <div class="col-sm">
-            <object data="./urdu-letter-svg/tashdeed.svg" alt="tashdeed" style="width:100%; height: 100%;"
-              type="image/svg+xml"></object>
-          </div>
-          <div class="col-sm">
-
-            <object data="./urdu-letter-svg/jazm.svg" alt="jazm" style="width:100%; height: 100%;"
-              type="image/svg+xml"></object>
-          </div>
-
-        </div>
-        <div class="row pt-5">
-          <div class="col-sm">
-
-            <object id="intro-humza-1" data="./urdu-letter-svg/intro-humza-1.svg" alt="humza part 1" style="width:100%; height: 100%;"
-              type="image/svg+xml"></object>
-          </div>
-          <div class="col-sm">
-
-            <object id="intro-humza-2" data="./urdu-letter-svg/intro-humza-2.svg" alt="humza part 2" style="width:100%; height: 100%;"
-              type="image/svg+xml"></object>
-          </div>
-          <div class="col-sm"> <object data="./urdu-letter-svg/humza.svg" alt="humza" style="width:100%; height: 100%;"
-              type="image/svg+xml"></object>
-          </div>
-        </div>
-
-      </div>
-    </section>
-    <section>taj
-      <h3 class="mb-4"><strong>ta</strong> <strong>z</strong> </h3>
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-sm">
-            <object data="./urdu-letter-svg/toye.svg" alt="kaaf" style="width:100%; height: 100%;"
-              type="image/svg+xml"></object>
-          </div>
-          <div class="col-sm">
-
-            <object data="./urdu-letter-svg/zoye.svg" alt="gaaf" style="width:100%; height: 100%;"
-              type="image/svg+xml"></object>
-          </div>
-          <div class="col-sm">
-
-            <!-- <object data="./urdu-letter-svg/ray.svg" alt="ray" style="width:100%; height: 100%;" type="image/svg+xml" ></object> -->
-          </div>
-        </div>
-
-      </div>
-    </section>
-    <section>aag
-      <h3 class="mb-4"><strong>aa</strong> <strong>g</strong> </h3>
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-sm">
-            <object data="./urdu-letter-svg/ayn.svg" alt="ayn" style="width:100%; height: 100%;"
-              type="image/svg+xml"></object>
-          </div>
-          <div class="col-sm">
-
-            <object data="./urdu-letter-svg/ghain.svg" alt="ghain" style="width:100%; height: 100%;"
-              type="image/svg+xml"></object>
-          </div>
-          <div class="col-sm">
-
-            <!-- <object data="./urdu-letter-svg/ray.svg" alt="ray" style="width:100%; height: 100%;" type="image/svg+xml" ></object> -->
-          </div>
-        </div>
-
-      </div>
-    </section>
-    <section>fek
-      <h3 class="mb-4"><strong>f</strong> <strong>q</strong> </h3>
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-sm">
-            <object data="./urdu-letter-svg/fey.svg" alt="fey" style="width:100%; height: 100%;"
-              type="image/svg+xml"></object>
-          </div>
-          <div class="col-sm">
-
-            <object data="./urdu-letter-svg/badi-kaaf.svg" alt="badi-kaaf" style="width:100%; height: 100%;"
-              type="image/svg+xml"></object>
-          </div>
-          <div class="col-sm">
-
-            <!-- <object data="./urdu-letter-svg/ray.svg" alt="ray" style="width:100%; height: 100%;" type="image/svg+xml" ></object> -->
-          </div>
-        </div>
-
-      </div>
-    </section>
-    <section>saja
-      <h3 class="mb-4"><strong>sa</strong> <strong>ja</strong> </h3>
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-sm">
-            <object data="./urdu-letter-svg/swaad.svg" alt="swaad" style="width:100%; height: 100%;"
-              type="image/svg+xml"></object>
-          </div>
-          <div class="col-sm">
-
-            <object data="./urdu-letter-svg/zwaad.svg" alt="zwaad" style="width:100%; height: 100%;"
-              type="image/svg+xml"></object>
-          </div>
-          <div class="col-sm">
-
-            <!-- <object data="./urdu-letter-svg/ray.svg" alt="ray" style="width:100%; height: 100%;" type="image/svg+xml" ></object> -->
-          </div>
-        </div>
-
-      </div>
-    </section>
-    <section>taj ki aag fek saja</section>
-
-    <section>some more j sounds
-      <h3 class="mb-4"><strong>sa</strong> <strong>ja</strong> </h3>
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-sm">
-            <object data="./urdu-letter-svg/zay.svg" alt="zay" style="width:100%; height: 100%;"
-              type="image/svg+xml"></object>
-          </div>
-          <div class="col-sm">
-
-            <object data="./urdu-letter-svg/zhay.svg" alt="zhay" style="width:100%; height: 100%;"
-              type="image/svg+xml"></object>
-          </div>
-          <div class="col-sm">
-
-            <object data="./urdu-letter-svg/zaal.svg" alt="zaal" style="width:100%; height: 100%;"
-              type="image/svg+xml"></object>
-          </div>
-        </div>
-
-        <h3 class="mb-4">All <strong>J</strong> sounds </h3>
-        <div class="row">
-
-          <div class="col-sm-4">
-
-            <object id="all-j" data="./urdu-letter-svg/all-j.svg" alt="all j sounds" style="width:100%; height: 100%;"
-              type="image/svg+xml"></object>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
+        <!-- Page Content  -->
+        <div id="content">
+
+            <nav class="navbar navbar-expand-lg  sticky-top">
+                <div class="container-fluid">
+
+                    <button type="button" id="sidebarCollapse" class="btn btn-info">
+                        <i class="fas fa-align-left"></i>
+                        <span>Toggle Sidebar</span>
+                    </button>
+                    <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fas fa-align-justify"></i>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="nav navbar-nav ml-auto">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="./index4.html">Mnemonics</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./index.html">Old layout</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./practice.html">Practice</a>
+                            </li>
+                            <!-- <li class="nav-item">
+                                <a class="nav-link" href="#">Page</a>
+                            </li> -->
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+<!-- <section id="0"> <h2>Section 0</h2>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</section>
+           
+            <div class="line"></div>
+
+
+
+
+<section id="1">            <h2>Section 1</h2>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</section>
+<div class="line"></div>
+
+<section id="2">            <h2>Section 2</h2>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+ <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</section>
+<div class="line"></div>
+<section id="3">    <h2>Section 3</h2>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+ <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</section> -->
+<section class="mb-5 text-center">
+ <div class="container-fluid">
     
+    <div class=" table-responsive" id="urdu-letter-all">
+
+
+</div>
+
+  </div>
+</section>
+<!-- <section class="mb-5 text-center" id="xx">
+  <h3 class="mb-4">All the letters </h3>
+  <p>We'll use mneomics to remember these</p>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 mx-auto">
+        <object data="./urdu-letter-svg/Urdu-alphabet-en-hi-final.svg" alt="Bey" style="width:100%; height: 100%;"
+          type="image/svg+xml"></object>
+      </div>
+    </div>
   </div>
 
+</section> -->
+<section class="mb-5 text-center" id="0">
 
-  <!-- Bootstrap core JavaScript
-    ================================================== -->
-  <!-- Placed at the end of the document so the pages load faster -->
-  <script src="./jquery-3.2.1.slim.min.js"
-    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-    crossorigin="anonymous"></script>
-  <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
-  <script src="./popper.min.js"></script>
-  <script src="./bootstrap.min.js"></script>
+  <button id="myBtn">Read in hindi</button>
+  <h3 class="mb-4">Intro <sub>basic rules </sub></h3>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm">
+        <object id="intro1" data="./urdu-letter-svg/intro1.svg" alt="intro1" style="width:100%; height: 100%;"
+          type="image/svg+xml"></object>
+      </div>
+      <div class="col-sm">
 
-  <script type="module" src="./script.js"></script>
+        <object id="intro2" data="./urdu-letter-svg/intro2.svg" alt="intro2" style="width:100%; height: 100%;"
+          type="image/svg+xml"></object>
+      </div>
+      <div class="col-sm">
 
+        <object id="intro3" data="./urdu-letter-svg/intro3.svg" alt="intro3" style="width:100%; height: 100%;"
+          type="image/svg+xml"></object>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="line"></div>
+<section class="mb-5 text-center" id="straight-line">
+  <h3 class="mb-4">Alif <sub>a straight line</sub> </h3>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-4">
+        <object data="./urdu-letter-svg/a.svg" alt="Alif" style="width:100%; height: 100%;"
+          type="image/svg+xml"></object>
+      </div>
+      <div class="col-sm-4">
+        <object data="./urdu-letter-svg/alif-mad-a.svg" alt="Alif mad a" style="width:100%; height: 100%;"
+          type="image/svg+xml"></object>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<div class="line"></div>
+<section class="mb-5 text-center" id="baap">
+  <h3 class="mb-4">Ba-ya-p(baap) <sub>dots <span id="hills">below</span> the line</sub></h3>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm">
+        <object data="./urdu-letter-svg/b.svg" alt="Bey" style="width:100%; height: 100%;"
+          type="image/svg+xml"></object>
+      </div>
+      <div class="col-sm">
+
+        <object data="./urdu-letter-svg/y.svg" alt="yay" style="width:100%; height: 100%;"
+          type="image/svg+xml"></object>
+      </div>
+      <div class="col-sm">
+
+        <object data="./urdu-letter-svg/p.svg" alt="pay" style="width:100%; height: 100%;"
+          type="image/svg+xml"></object>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="mb-5 text-center" id="nitish">
+  <h3 class="mb-4">Ni-ti-s-sh(Nitish) <sub>dots <span id="yahats">above</span> the line</sub></h3>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm">
+        <object data="./urdu-letter-svg/n.svg" alt="Bey" style="width:100%; height: 100%;"
+          type="image/svg+xml"></object>
+      </div>
+      <div class="col-sm">
+
+        <object data="./urdu-letter-svg/t.svg" alt="tay" style="width:100%; height: 100%;"
+          type="image/svg+xml"></object>
+      </div>
+      <div class="col-sm">
+
+        <object data="./urdu-letter-svg/say.svg" alt="say" style="width:100%; height: 100%;"
+          type="image/svg+xml"></object>
+      </div>
+    </div>
+    <p class="mb-4 mt-4">Some more "S", it is just a curved line</p>
+    <div class="row">
+      <div class="col-sm-4">
+
+        <object data="./urdu-letter-svg/sheen.svg" alt="sheen" style="width:100%; height: 100%;"
+          type="image/svg+xml"></object>
+      </div>
+      <div class="col-sm-4">
+
+        <object data="./urdu-letter-svg/seen.svg" alt="seen" style="width:100%; height: 100%;"
+          type="image/svg+xml"></object>
+      </div>
+      <div class="col-sm-4">
+
+        <object id="intro-baap-nitish" data="./urdu-letter-svg/intro-baap-nitish.svg" alt="intro baap and nitish mnemonic"
+          style="width:100%; height: 100%;" type="image/svg+xml"></object>
+      </div>
+
+    </div>
+    <details>
+      <summary style="font-size: 150%;">Tap for Practice</summary>
+      <div>
+        <p>
+          <button class="btn btn-dark" data-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Get me the question</button>
+          <button class="btn btn-dark" type="button" data-toggle="collapse" data-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2">Answers</button>
+        </p>
+        <div class="row">
+            <div class="collapse multi-collapse col-sm-4" id="multiCollapseExample1">
+              
+
+                <object data="./urdu-letter-svg/baap-nitish-question.svg" alt="baap-nitish-question-practice" style="width:100%; height: 100%;"
+                  type="image/svg+xml"></object>
+              
+            </div>
+          
+            <div class="collapse multi-collapse col-sm-4" id="multiCollapseExample2">
+              
+
+                <object data="./urdu-letter-svg/baap-nitish-question-answered.svg" alt="baap-nitish-question-practice-answered" style="width:100%; height: 100%;"
+                  type="image/svg+xml"></object>
+              
+            </div>
+         
+        </div>
+      </div> </details>
+    
+
+  </div>
+
+</section>
+
+<div class="line"></div>
+<section class="mb-5 text-center" id="31">
+  <h3 class="mb-4"><strong>H</strong>ockey <strong>Kh</strong>elo <strong>janch</strong> karo <span>(shape of hockey cuz it is attached with alif)</span> </h3>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm">
+
+        <object id="intro-hockey-khelo-janch-karo" data="./urdu-letter-svg/intro-hockey-khelo-janch-karo.svg" alt="intro-hockey-khelo-janch-karo"
+          style="width:100%; height: 100%;" type="image/svg+xml"></object>
+      </div>
+      <div class="col-sm">
+        <object data="./urdu-letter-svg/hay.svg" alt="hay" style="width:100%; height: 100%;"
+          type="image/svg+xml"></object>
+      </div>
+      <div class="col-sm">
+
+        <object data="./urdu-letter-svg/khay.svg" alt="khay" style="width:100%; height: 100%;"
+          type="image/svg+xml"></object>
+      </div>
+
+    </div>
+    <p class="mb-4 mt-4" id="32"><strong>janch</strong> karo</p>
+    <div class="row">
+      <div class="col-sm-4">
+
+        <object data="./urdu-letter-svg/jeem.svg" alt="jeem" style="width:100%; height: 100%;"
+          type="image/svg+xml"></object>
+      </div>
+      <div class="col-sm-4">
+
+        <object data="./urdu-letter-svg/chay.svg" alt="chay" style="width:100%; height: 100%;"
+          type="image/svg+xml"></object>
+      </div>
+    </div>
+    <details>
+      <summary style="font-size: 150%;">Tap for Practice</summary>
+      <div>
+        <p>
+          <button class="btn btn-dark" data-toggle="collapse" href="#multiCollapseExample3" role="button" aria-expanded="false" aria-controls="multiCollapseExample3">Get me the question</button>
+          <button class="btn btn-dark" type="button" data-toggle="collapse" data-target="#multiCollapseExample4" aria-expanded="false" aria-controls="multiCollapseExample4">Answers</button>
+        </p>
+        <div class="row">
+            <div class="collapse multi-collapse col-sm-4" id="multiCollapseExample3">
+              
+
+                <object data="./urdu-letter-svg/hockey-khelo-janch-question.svg" alt="hockey-khelo-janch-question-practice" style="width:100%; height: 100%;"
+                  type="image/svg+xml"></object>
+              
+            </div>
+          
+            <div class="collapse multi-collapse col-sm-4" id="multiCollapseExample4">
+              
+
+                <object data="./urdu-letter-svg/hockey-khelo-janch-answered.svg" alt="hockey-khelo-janch-question-practice-answered" style="width:100%; height: 100%;"
+                  type="image/svg+xml"></object>
+              
+            </div>
+         
+        </div>
+      </div></details>
+  </div>
+</section>
+
+<div class="line"></div>
+<section class="mb-5 text-center" id="diwar">
+
+  <h3 class="mb-4"><strong>Di</strong>-<strong>Wa</strong>-<strong>R</strong> </h3>
+  <div class="container">
+
+    <div class="row">
+      <div class="col-sm-4">
+
+        <object id="intro-diwar" data="./urdu-letter-svg/intro-diwar.svg" alt="intro-diwar" style="width:100%; height: 100%;"
+          type="image/svg+xml"></object>
+      </div>
+    </div>
+
+    <div class="row pt-5">
+      <div class="col-sm">
+        <object data="./urdu-letter-svg/dal.svg" alt="dal" style="width:100%; height: 100%;"
+          type="image/svg+xml"></object>
+      </div>
+      <div class="col-sm">
+
+        <object data="./urdu-letter-svg/vao.svg" alt="vao" style="width:100%; height: 100%;"
+          type="image/svg+xml"></object>
+      </div>
+      <div class="col-sm">
+
+        <object data="./urdu-letter-svg/ray.svg" alt="ray" style="width:100%; height: 100%;"
+          type="image/svg+xml"></object>
+      </div>
+    </div>
+
+    <details>
+      <summary style="font-size: 150%;">Tap for Practice</summary>
+      <div>
+        <p>
+          <button class="btn btn-dark" data-toggle="collapse" href="#multiCollapseExample5" role="button" aria-expanded="false" aria-controls="multiCollapseExample5">Get me the question</button>
+          <button class="btn btn-dark" type="button" data-toggle="collapse" data-target="#multiCollapseExample6" aria-expanded="false" aria-controls="multiCollapseExample6">Answers</button>
+        </p>
+        <div class="row">
+            <div class="collapse multi-collapse col-sm-4" id="multiCollapseExample5">
+              
+
+                <object data="./urdu-letter-svg/diwar-question.svg" alt="diwar-question-practice" style="width:100%; height: 100%;"
+                  type="image/svg+xml"></object>
+              
+            </div>
+          
+            <div class="collapse multi-collapse col-sm-4" id="multiCollapseExample6">
+              
+
+                <object data="./urdu-letter-svg/diwar-answer.svg" alt="diwar-question-practice-answered" style="width:100%; height: 100%;"
+                  type="image/svg+xml"></object>
+              
+            </div>
+         
+        </div>
+      </div></details>
+  </div>
+</section>
+<section class="mb-5 text-center" id="ka-ga">
+  <h3 class="mb-4"><strong>Ka</strong> <strong>ga</strong> </h3>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm">
+        <object id="intro-kaga" data="./urdu-letter-svg/intro-kaga.svg" alt="intro-kaga" style="width:100%; height: 100%;"
+          type="image/svg+xml"></object>
+      </div>
+      <div class="col-sm">
+        <object data="./urdu-letter-svg/kaaf.svg" alt="kaaf" style="width:100%; height: 100%;"
+          type="image/svg+xml"></object>
+      </div>
+      <div class="col-sm">
+
+        <object data="./urdu-letter-svg/gaaf.svg" alt="gaaf" style="width:100%; height: 100%;"
+          type="image/svg+xml"></object>
+      </div>
+
+    </div>
+
+    <details>
+      <summary style="font-size: 150%;">Tap for Practice</summary>
+      <div>
+        <p>
+          <button class="btn btn-dark" data-toggle="collapse" href="#multiCollapseExample7" role="button" aria-expanded="false" aria-controls="multiCollapseExample7">Get me the question</button>
+          <button class="btn btn-dark" type="button" data-toggle="collapse" data-target="#multiCollapseExample8" aria-expanded="false" aria-controls="multiCollapseExample8">Answers</button>
+        </p>
+        <div class="row">
+            <div class="collapse multi-collapse col-sm-4" id="multiCollapseExample7">
+              
+
+                <object data="./urdu-letter-svg/kaga-question.svg" alt="kaga-question-practice" style="width:100%; height: 100%;"
+                  type="image/svg+xml"></object>
+              
+            </div>
+          
+            <div class="collapse multi-collapse col-sm-4" id="multiCollapseExample8">
+              
+
+                <object data="./urdu-letter-svg/kaga-answer.svg" alt="kaga-question-practice-answered" style="width:100%; height: 100%;"
+                  type="image/svg+xml"></object>
+              
+            </div>
+         
+        </div>
+      </div></details>
+
+      <p>Lets recap</p>
+      <div class="row">
+        <div class="col-sm">
+          
+          <object data="./urdu-letter-svg/baap-nitish-hockey-khelo-janch-revise.svg" alt="baap-nitish-hockey-khelo-janch-revise" style="width:100%; height: 100%;"
+            type="image/svg+xml"></object>
+        </div>
+        <div class="col-sm">
+  
+          <object data="./urdu-letter-svg/baap-nitish-hockey-khelo-janch-question.svg" alt="baap-nitish-hockey-khelo-janch-question" style="width:100%; height: 100%;"
+            type="image/svg+xml"></object>
+        </div>
+        <div class="col-sm">
+          <details>
+            <summary> Tap for the Answers</summary>
+            <object data="./urdu-letter-svg/baap-nitish-hockey-khelo-janch-answer.svg" alt="baap-nitish-hockey-khelo-janch-answer" style="width:100%; height: 100%;"
+            type="image/svg+xml"></object>
+          </details>
+          <!-- <object data="./urdu-letter-svg/baap-nitish-hockey-khelo-janch-answer.svg" alt="baap-nitish-hockey-khelo-janch-answer" style="width:100%; height: 100%;"
+            type="image/svg+xml"></object> -->
+        </div>
+      </div>
+  </div>
+</section>
+<section class="mb-5 text-center" id="heavy-sounds">
+  <h3 class="mb-4">magic wand <strong>ط</strong> on the letter we<strong> learned already</strong> </h3>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-4">
+
+        <object id="intro-heavy-letter-using-toye" data="./urdu-letter-svg/intro-heavy-letter-using-toye.svg" alt="intro-heavy-letter-using-toye"
+          style="width:100%; height: 100%;" type="image/svg+xml"></object>
+      </div>
+    </div>
+    <div class="row pt-5">
+      <div class="col-sm">
+        <object data="./urdu-letter-svg/ttay.svg" alt="ttay" style="width:100%; height: 100%;"
+          type="image/svg+xml"></object>
+      </div>
+      <div class="col-sm">
+
+        <object data="./urdu-letter-svg/ddal.svg" alt="ddal" style="width:100%; height: 100%;"
+          type="image/svg+xml"></object>
+      </div>
+      <div class="col-sm">
+
+        <object data="./urdu-letter-svg/AR.svg" alt="Aray" style="width:100%; height: 100%;"
+          type="image/svg+xml"></object>
+      </div>
+    </div>
+
+    <details>
+      <summary style="font-size: 150%;">Tap for Practice</summary>
+      <div>
+        <p>
+          <button class="btn btn-dark" data-toggle="collapse" href="#multiCollapseExample9" role="button" aria-expanded="false" aria-controls="multiCollapseExample9">Get me the question</button>
+          <button class="btn btn-dark" type="button" data-toggle="collapse" data-target="#multiCollapseExample10" aria-expanded="false" aria-controls="multiCollapseExample10">Answers</button>
+        </p>
+        <div class="row">
+            <div class="collapse multi-collapse col-sm-4" id="multiCollapseExample9">
+              
+
+                <object data="./urdu-letter-svg/heavy-letter-b-question.svg" alt="heavy-letter-b-question-practice" style="width:100%; height: 100%;"
+                  type="image/svg+xml"></object>
+              
+            </div>
+          
+            <div class="collapse multi-collapse col-sm-4" id="multiCollapseExample10">
+              
+
+                <object data="./urdu-letter-svg/heavy-letter-b-answer.svg" alt="heavy-letter-b-answer-practice-answered" style="width:100%; height: 100%;"
+                  type="image/svg+xml"></object>
+              
+            </div>
+         
+        </div>
+      </div> </details>
+  </div>
+</section>
+
+<section class="mb-5 text-center">
+  <h3 class="mb-4">Do chasmi he </h3>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm">
+
+        <object id="intro-do-chasmi-h" data="./urdu-letter-svg/intro-do-chasmi-h.svg" alt="intro-do-chasmi-h"
+          style="width:100%; height: 100%;" type="image/svg+xml"></object>
+      </div>
+      <div class="col-sm">
+        <object data="./urdu-letter-svg/do-chasmi-he.svg" alt="do-chasmi-he" style="width:100%; height: 100%;"
+          type="image/svg+xml"></object>
+      </div>
+
+      <div class="col-sm">
+
+        <!-- <object data="./urdu-letter-svg/ray.svg" alt="ray" style="width:100%; height: 100%;" type="image/svg+xml" ></object> -->
+      </div>
+    </div>
+
+  </div>
+</section>
+<section class="mb-5 text-center" id="7">
+  <h3 class="mb-4">do chasmi he + letter we already learned</h3>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm">
+        <object data="./urdu-letter-svg/kha.svg" alt="kha" style="width:100%; height: 100%;"
+          type="image/svg+xml"></object>
+      </div>
+      <div class="col-sm">
+
+        <object data="./urdu-letter-svg/gha.svg" alt="gha" style="width:100%; height: 100%;"
+          type="image/svg+xml"></object>
+      </div>
+      <div class="col-sm">
+
+        <!-- <object data="./urdu-letter-svg/gha.svg" alt="gha" style="width:100%; height: 100%;" type="image/svg+xml" ></object> -->
+      </div>
+
+    </div>
+    <div class="row">
+
+      <div class="col-sm">
+
+        <object data="./urdu-letter-svg/cha.svg" alt="cha" style="width:100%; height: 100%;"
+          type="image/svg+xml"></object>
+      </div>
+      <div class="col-sm">
+
+        <object data="./urdu-letter-svg/jha.svg" alt="jha" style="width:100%; height: 100%;"
+          type="image/svg+xml"></object>
+      </div>
+      <div class="col-sm">
+
+        <!-- <object data="./urdu-letter-svg/jha.svg" alt="jha" style="width:100%; height: 100%;" type="image/svg+xml" ></object> -->
+      </div>
+    </div>
+    <div class="row">
+
+      <div class="col-sm">
+
+        <object data="./urdu-letter-svg/bha.svg" alt="bha" style="width:100%; height: 100%;"
+          type="image/svg+xml"></object>
+      </div>
+      <div class="col-sm">
+
+        <object data="./urdu-letter-svg/ph.svg" alt="pha" style="width:100%; height: 100%;"
+          type="image/svg+xml"></object>
+      </div>
+      <div class="col-sm">
+
+        <!-- <object data="./urdu-letter-svg/jha.svg" alt="jha" style="width:100%; height: 100%;" type="image/svg+xml" ></object> -->
+      </div>
+    </div>
+    <div class="row">
+
+      <div class="col-sm">
+
+        <object data="./urdu-letter-svg/tha.svg" alt="tha" style="width:100%; height: 100%;"
+          type="image/svg+xml"></object>
+      </div>
+      <div class="col-sm">
+
+        <object data="./urdu-letter-svg/thaa.svg" alt="thaa" style="width:100%; height: 100%;"
+          type="image/svg+xml"></object>
+      </div>
+      <div class="col-sm">
+
+        <!-- <object data="./urdu-letter-svg/jha.svg" alt="jha" style="width:100%; height: 100%;" type="image/svg+xml" ></object> -->
+      </div>
+    </div>
+    <div class="row">
+
+      <div class="col-sm">
+
+        <object data="./urdu-letter-svg/dha.svg" alt="tha" style="width:100%; height: 100%;"
+          type="image/svg+xml"></object>
+      </div>
+      <div class="col-sm">
+
+        <object data="./urdu-letter-svg/dha2.svg" alt="thaa" style="width:100%; height: 100%;"
+          type="image/svg+xml"></object>
+      </div>
+      <div class="col-sm">
+
+        <!-- <object data="./urdu-letter-svg/jha.svg" alt="jha" style="width:100%; height: 100%;" type="image/svg+xml" ></object> -->
+      </div>
+    </div>
+    <details>
+      <summary style="font-size: 150%;">Tap for Practice</summary>
+      <div>
+        <p>
+          <button class="btn btn-dark" data-toggle="collapse" href="#multiCollapseExample11" role="button" aria-expanded="false" aria-controls="multiCollapseExample11">Get me the question</button>
+          <button class="btn btn-dark" type="button" data-toggle="collapse" data-target="#multiCollapseExample12" aria-expanded="false" aria-controls="multiCollapseExample12">Answers</button>
+        </p>
+        <div class="row">
+            <div class="collapse multi-collapse col-sm-4" id="multiCollapseExample11">
+              
+
+                <object data="./urdu-letter-svg/do-chasmi-he-question.svg" alt="do-chasmi-he-question-practice" style="width:100%; height: 100%;"
+                  type="image/svg+xml"></object>
+              
+            </div>
+          
+            <div class="collapse multi-collapse col-sm-4" id="multiCollapseExample12">
+              
+
+                <object data="./urdu-letter-svg/do-chasmi-he-answer.svg" alt="do-chasmi-he-answer-practice-answered" style="width:100%; height: 100%;"
+                  type="image/svg+xml"></object>
+              
+            </div>
+         
+        </div>
+      </div> </details>
+  </div>
+</section>
+
+<section class="mb-5 text-center" id="mala">
+  <h3 class="mb-4">Mala (means Garland) </h3>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm">
+
+        <object id="intro-lam-mim" data="./urdu-letter-svg/intro-lam-mim.svg" alt="intro-lam-mim" style="width:100%; height: 100%;"
+          type="image/svg+xml"></object>
+      </div>
+      <div class="col-sm">
+        <object data="./urdu-letter-svg/mim.svg" alt="mim" style="width:100%; height: 100%;"
+          type="image/svg+xml"></object>
+      </div>
+      <div class="col-sm">
+
+        <object data="./urdu-letter-svg/lam.svg" alt="lam" style="width:100%; height: 100%;"
+          type="image/svg+xml"></object>
+      </div>
+
+    </div>
+    <details>
+      <summary style="font-size: 150%;">Tap for Practice</summary>
+      <div>
+        <p>
+          <button class="btn btn-dark" data-toggle="collapse" href="#multiCollapseExample13" role="button" aria-expanded="false" aria-controls="multiCollapseExample13">Get me the question</button>
+          <button class="btn btn-dark" type="button" data-toggle="collapse" data-target="#multiCollapseExample14" aria-expanded="false" aria-controls="multiCollapseExample14">Answers</button>
+        </p>
+        <div class="row">
+            <div class="collapse multi-collapse col-sm-4" id="multiCollapseExample13">
+              
+
+                <object data="./urdu-letter-svg/mala-question-practice.svg" alt="mala-question-practice" style="width:100%; height: 100%;"
+                  type="image/svg+xml"></object>
+              
+            </div>
+          
+            <div class="collapse multi-collapse col-sm-4" id="multiCollapseExample14">
+              
+
+                <object data="./urdu-letter-svg/mala-question-answered.svg" alt="mala-answer-practice-answered" style="width:100%; height: 100%;"
+                  type="image/svg+xml"></object>
+              
+            </div>
+         
+        </div>
+      </div> </details>
+  </div>
+</section>
+
+<section class="mb-5 text-center" id="h-group">
+  <h3 class="mb-4">H letters
+    we already have learnt the do-chasmi he and the hockey stick
+    lets learn about the gol he</h3>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-sm">
+        <object data="./urdu-letter-svg/chotihe.svg" alt="choti he or gol he" style="width:100%; height: 100%;"
+          type="image/svg+xml"></object>
+      </div>
+      <div class="col-sm">
+
+        <object id="all-hays" data="./urdu-letter-svg/all-hays.svg" alt="all hays" style="width:100%; height: 100%;"
+          type="image/svg+xml"></object>
+      </div>
+      <div class="col-sm">
+
+        <!-- <object data="./urdu-letter-svg/ray.svg" alt="ray" style="width:100%; height: 100%;" type="image/svg+xml" ></object> -->
+      </div>
+    </div>
+    <details>
+      <summary style="font-size: 150%;">Tap for Practice</summary>
+      <div>
+        <p>
+          <button class="btn btn-dark" data-toggle="collapse" href="#multiCollapseExample15" role="button" aria-expanded="false" aria-controls="multiCollapseExample15">Get me the question</button>
+          <button class="btn btn-dark" type="button" data-toggle="collapse" data-target="#multiCollapseExample16" aria-expanded="false" aria-controls="multiCollapseExample16">Answers</button>
+        </p>
+        <div class="row">
+            <div class="collapse multi-collapse col-sm-4" id="multiCollapseExample15">
+              
+
+                <object data="./urdu-letter-svg/gol-he-question-practice.svg" alt="gol-he-question-practice" style="width:100%; height: 100%;"
+                  type="image/svg+xml"></object>
+              
+            </div>
+          
+            <div class="collapse multi-collapse col-sm-4" id="multiCollapseExample16">
+              
+
+                <object data="./urdu-letter-svg/gol-he-answer-practice.svg" alt="gol-he-answer-practice-answered" style="width:100%; height: 100%;"
+                  type="image/svg+xml"></object>
+              
+            </div>
+         
+        </div>
+      </div> </details>
+  </div>
+</section>
+<section class="mb-5 text-center" id="ta-z">
+  <h3 class="mb-4">taj <strong>ta</strong> <strong>z</strong> </h3>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm">
+        <object data="./urdu-letter-svg/toye.svg" alt="kaaf" style="width:100%; height: 100%;"
+          type="image/svg+xml"></object>
+      </div>
+      <div class="col-sm">
+
+        <object data="./urdu-letter-svg/zoye.svg" alt="gaaf" style="width:100%; height: 100%;"
+          type="image/svg+xml"></object>
+      </div>
+      <div class="col-sm">
+
+        <!-- <object data="./urdu-letter-svg/ray.svg" alt="ray" style="width:100%; height: 100%;" type="image/svg+xml" ></object> -->
+      </div>
+    </div>
+
+  </div>
+</section>
+<section class="mb-5 text-center" id="aa-g">
+  <h3 class="mb-4">aag<strong>aa</strong> <strong>g</strong> </h3>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm">
+        <object data="./urdu-letter-svg/ayn.svg" alt="ayn" style="width:100%; height: 100%;"
+          type="image/svg+xml"></object>
+      </div>
+      <div class="col-sm">
+
+        <object data="./urdu-letter-svg/ghain.svg" alt="ghain" style="width:100%; height: 100%;"
+          type="image/svg+xml"></object>
+      </div>
+      <div class="col-sm">
+
+        <!-- <object data="./urdu-letter-svg/ray.svg" alt="ray" style="width:100%; height: 100%;" type="image/svg+xml" ></object> -->
+      </div>
+    </div>
+
+  </div>
+</section>
+<section class="mb-5 text-center" id="fe-k">
+  <h3 class="mb-4">fek<strong>f</strong> <strong>q</strong> </h3>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm">
+        <object data="./urdu-letter-svg/fey.svg" alt="fey" style="width:100%; height: 100%;"
+          type="image/svg+xml"></object>
+      </div>
+      <div class="col-sm">
+
+        <object data="./urdu-letter-svg/badi-kaaf.svg" alt="badi-kaaf" style="width:100%; height: 100%;"
+          type="image/svg+xml"></object>
+      </div>
+      <div class="col-sm">
+
+        <!-- <object data="./urdu-letter-svg/ray.svg" alt="ray" style="width:100%; height: 100%;" type="image/svg+xml" ></object> -->
+      </div>
+    </div>
+
+  </div>
+</section>
+<section class="mb-5 text-center" id="sa-ja">
+  <h3 class="mb-4">saja <strong>sa</strong> <strong>ja</strong> </h3>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm">
+        <object data="./urdu-letter-svg/swaad.svg" alt="swaad" style="width:100%; height: 100%;"
+          type="image/svg+xml"></object>
+      </div>
+      <div class="col-sm">
+
+        <object data="./urdu-letter-svg/zwaad.svg" alt="zwaad" style="width:100%; height: 100%;"
+          type="image/svg+xml"></object>
+      </div>
+      <div class="col-sm">
+
+        <object data="./urdu-letter-svg/how-to-remember-taz-ki-aag.svg" alt="how-to-remember-taz-ki-aag" style="width:100%; height: 100%;" type="image/svg+xml" ></object>
+      </div>
+    </div>
+
+    <details>
+      <summary style="font-size: 150%;">Tap for Practice</summary>
+      <div>
+        <p>
+          <button class="btn btn-dark" data-toggle="collapse" href="#multiCollapseExample17" role="button" aria-expanded="false" aria-controls="multiCollapseExample17">Get me the question</button>
+          <button class="btn btn-dark" type="button" data-toggle="collapse" data-target="#multiCollapseExample18" aria-expanded="false" aria-controls="multiCollapseExample18">Answers</button>
+        </p>
+        <div class="row">
+            <div class="collapse multi-collapse col-sm-4" id="multiCollapseExample17">
+              
+
+                <object data="./urdu-letter-svg/taj-aag-fek-saja-question.svg" alt="taj-aag-fek-saja-question-practice" style="width:100%; height: 100%;"
+                  type="image/svg+xml"></object>
+              
+            </div>
+          
+            <div class="collapse multi-collapse col-sm-4" id="multiCollapseExample18">
+              
+
+                <object data="./urdu-letter-svg/taj-aag-fek-saja-answer.svg" alt="taj-aag-fek-saj-practice-answered" style="width:100%; height: 100%;"
+                  type="image/svg+xml"></object>
+              
+            </div>
+         
+        </div>
+      </div> </details>
+  </div>
+</section>
+
+<section class="mb-5 text-center" id="jgroup">
+  <h3 class="mb-4">More J/Z sounds </h3>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm">
+        <object data="./urdu-letter-svg/zay.svg" alt="zay" style="width:100%; height: 100%;"
+          type="image/svg+xml"></object>
+      </div>
+      <div class="col-sm">
+
+        <object data="./urdu-letter-svg/zhay.svg" alt="zhay" style="width:100%; height: 100%;"
+          type="image/svg+xml"></object>
+      </div>
+      <div class="col-sm">
+
+        <object data="./urdu-letter-svg/zaal.svg" alt="zaal" style="width:100%; height: 100%;"
+          type="image/svg+xml"></object>
+      </div>
+    </div>
+
+    <h3 class="mb-4" id="15">All <strong>J</strong> sounds </h3>
+    <div class="row">
+
+      <div class="col-sm-4">
+
+        <object id="all-j" data="./urdu-letter-svg/all-j.svg" alt="all j sounds" style="width:100%; height: 100%;"
+          type="image/svg+xml"></object>
+      </div>
+    </div>
+
+  </div>
+</section>
+<section class="mb-5 text-center" id="16">
+  <h3 class="mb-4">vowel and special mark<strong>some special marks</strong> <strong>on the letter</strong> </h3>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm">
+        <object data="./urdu-letter-svg/zer.svg" alt="zer" style="width:100%; height: 100%;"
+          type="image/svg+xml"></object>
+      </div>
+      <div class="col-sm">
+
+        <object data="./urdu-letter-svg/zabar.svg" alt="zabar" style="width:100%; height: 100%;"
+          type="image/svg+xml"></object>
+      </div>
+      <div class="col-sm">
+
+        <object data="./urdu-letter-svg/pesh.svg" alt="pesh" style="width:100%; height: 100%;"
+          type="image/svg+xml"></object>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="mb-5 text-center" id="17">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm">
+
+        <object data="./urdu-letter-svg/ulta-pesh.svg" alt="ulta-pesh" style="width:100%; height: 100%;"
+          type="image/svg+xml"></object>
+      </div>
+      <div class="col-sm">
+        <object data="./urdu-letter-svg/tashdeed.svg" alt="tashdeed" style="width:100%; height: 100%;"
+          type="image/svg+xml"></object>
+      </div>
+      <div class="col-sm">
+
+        <object data="./urdu-letter-svg/jazm.svg" alt="jazm" style="width:100%; height: 100%;"
+          type="image/svg+xml"></object>
+      </div>
+
+    </div>
+    <p class="mb-4 mt-4">more symbols</p>
+    <div class="row">
+      <div class="col-sm-4">
+
+        <object data="./urdu-letter-svg/tanvin.svg" alt="tanvin" style="width:100%; height: 100%;"
+          type="image/svg+xml"></object>
+      </div>
+       <div class="col-sm-4">
+
+        <object data="./urdu-letter-svg/more-symbols.svg" alt="more-symbols" style="width:100%; height: 100%;"
+          type="image/svg+xml"></object>
+      </div>
+      <div class="col-sm-4">
+
+        <object data="./urdu-letter-svg/zer-pesh-zabar-same-word.svg" alt="zer-pesh-zabar-same-word" style="width:100%; height: 100%;"
+          type="image/svg+xml"></object>
+      </div>
+     
+
+    </div>
+
+    <details>
+      <summary style="font-size: 150%;">Tap for Practice</summary>
+      <div>
+        <p>
+          <button class="btn btn-dark" data-toggle="collapse" href="#multiCollapseExample19" role="button" aria-expanded="false" aria-controls="multiCollapseExample19">Usuage of diacriatcs</button>
+        </p>
+        <div class="row">
+            <div class="collapse multi-collapse col-sm-4" id="multiCollapseExample19">
+              
+
+                <object data="./urdu-letter-svg/diacritics-usuage.svg" alt="diacritics-usuage" style="width:100%; height: 100%;"
+                  type="image/svg+xml"></object>
+              
+            </div>
+          
+         
+        </div>
+      </div> </details>
+  </div>
+
+  
+</section>
+<section class="mb-5 text-center" id="humza">
+  <h3 class="mb-4">Humza </h3>
+  <div class="container">
+    <div class="row pt-5">
+      <div class="col-sm">
+
+        <object id="intro-humza-1" data="./urdu-letter-svg/intro-humza-1.svg" alt="humza part 1" style="width:100%; height: 100%;"
+          type="image/svg+xml"></object>
+      </div>
+      <div class="col-sm">
+
+        <object id="intro-humza-2" data="./urdu-letter-svg/intro-humza-2.svg" alt="humza part 2" style="width:100%; height: 100%;"
+          type="image/svg+xml"></object>
+      </div>
+      <div class="col-sm"> <object data="./urdu-letter-svg/intro-humza-3.svg" alt="humza part 3" style="width:100%; height: 100%;"
+          type="image/svg+xml"></object>
+      </div>
+    </div>
+    <p class="mb-4 mt-4">Humza has no sound of its own</p>
+    <div class="row">
+      <div class="col-sm-4">
+
+        <object data="./urdu-letter-svg/humza.svg" alt="humza" style="width:100%; height: 100%;"
+          type="image/svg+xml"></object>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+        </div>
+    </div>
+
+    <!-- jQuery CDN - Slim version (=without AJAX) -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <!-- Popper.JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+    <!-- jQuery Custom Scroller CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            $("#sidebar").mCustomScrollbar({
+                theme: "minimal"
+            });
+
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar, #content').toggleClass('active');
+                $('.collapse.in').toggleClass('in');
+                $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+            });
+        });
+    </script>
 </body>
 
 </html>
-<style>
-  object {
-    filter: invert(93%) hue-rotate(180deg);
-  }
-</style>
 <script>
 
+
+
+   var alphabetsTable = {
+    //alif byap
+    ا: { hindi: "अ", englishalpha: "a", english: "Alif", firstur: "اب", firsten: "ba", secondur: "باب", seconden: "bab", thirdur: "لا/بابا", thirden: "baba/la", gridcordinates: "c10 r1",grouped:'straight-line',mnemoicposition:1 },
+    ب: { hindi: "ब", englishalpha: "b", english: "Bey", firstur: "بب", firsten: "bb", secondur: "ببب", seconden: "bbb", thirdur: "اب", thirden: "ba", gridcordinates: "c9 r1",grouped:"baap",mnemoicposition:2 },
+    پ: { hindi: "प", englishalpha: "p", english: "Pe", firstur: "بب", firsten: "bb", secondur: "ببب", seconden: "bbb", thirdur: "اب", thirden: "pa", gridcordinates: "c7 r1" ,grouped:"baap",mnemoicposition:5},
+    ت: { hindi: "त", englishalpha: "T", english: "Tey", firstur: "بت", firsten: "bt", secondur: "بتب", seconden: "btb", thirdur: "یا", thirden: "ta", gridcordinates: "c5 r1",grouped:"nitish",mnemoicposition:6 },
+    ٹ: { hindi: "ट", englishalpha: "ṭ", english: "ṭ", firstur: "ٹا", firsten: "?", secondur: "بٹب", seconden: "?", thirdur: "بٹ", thirden: "?", gridcordinates: "c1 r2",grouped:"heavy-sounds",mnemoicposition:19 },
+    ث: { hindi: "स", englishalpha: "S", english: "say", firstur: "بث", firsten: "sb", secondur: "بثب", seconden: "bsb", thirdur: "یا", thirden: "sa", gridcordinates: "c4 r1",grouped:"nitish" ,mnemoicposition:7},
+    ج: { hindi: "ज", englishalpha: "J", english: "Jeem", firstur: "اناج", firsten: "anaj", secondur: "انجب", seconden: "bajna", thirdur: "اج", thirden: "ja", gridcordinates: "c7 r2",grouped:"hockey-khelo-janch",mnemoicposition:12 },
+    چ: { hindi: "च", englishalpha: "ch", english: "Chay", firstur: "بیچ", firsten: "bich", secondur: "بچت", seconden: "bacht", thirdur: "اچ", thirden: "cha", gridcordinates: "c6 r2",grouped:"hockey-khelo-janch",mnemoicposition:13 },
+    ح: { hindi: "ह", englishalpha: "H", english: "Hay", firstur: "ریح", firsten: "riih", secondur: "بحب", seconden: "bahab", thirdur: "اح", thirden: "ha", gridcordinates: "c9 r2",grouped:"hockey-khelo-janch",mnemoicposition:10 },
+    خ: { hindi: "ख", englishalpha: "KH/X", english: "KHay", firstur: "خیرات", firsten: "tarikh", secondur: "رخآ", seconden: "akhir", thirdur: "اخ", thirden: "kha", gridcordinates: "c8 r2",grouped:"hockey-khelo-janch" ,mnemoicposition:11},
+    د: { hindi: "द", englishalpha: "D", english: "daal", firstur: "دب", firsten: "bad", secondur: "دادا", seconden: "dada", thirdur: "رد", thirden: "dar", gridcordinates: "c5 r2",grouped:"diwar",mnemoicposition:14 },
+    ڈ: { hindi: "ड", englishalpha: "ddal", english: "dd", firstur: "ڈا", firsten: "?", secondur: "بڈب", seconden: "?", thirdur: "بڈ", thirden: "?", gridcordinates: "c10 r3",grouped:"heavy-sounds",mnemoicposition:20 },
+    ذ: { hindi: "ज़", englishalpha: "z", english: "Zaal", firstur: "ذائقہ", firsten: "Zaiqa", secondur: "غذا", seconden: "aza", thirdur: "محاذ", thirden: "mohaz", gridcordinates: "c3 r2",grouped:"jgroup" ,mnemoicposition:45},
+    ر: { hindi: "र", englishalpha: "R", english: "Ray", firstur: "روا", firsten: "oor", secondur: "روا", seconden: "oor", thirdur: "زار", thirden: "raj", gridcordinates: "c3 r2",grouped:"diwar" ,mnemoicposition:16},
+    ڑ: { hindi: "ड़", englishalpha: "Aṛ", english: "ṛ", firstur: "ڑا", firsten: "?", secondur: "بڑب", seconden: "?", thirdur: "بڑ", thirden: "?", gridcordinates: "c9 r3",grouped:"heavy-sounds" ,mnemoicposition:20},
+    ز: { hindi: "ज़", englishalpha: "zay", english: "z", firstur: "زمین", firsten: "zameen", secondur: "آزادی", seconden: "azadi", thirdur: "تیز", thirden: "tez", gridcordinates: "c9 r3",grouped:"jgroup",mnemoicposition:43 },
+    ژ: { hindi: "झ़", englishalpha: "ze", english: "z", firstur: "ژالہ باری", firsten: "Saalah Baari", secondur: "اژدھا", seconden: "azhdhaa", thirdur: "?", thirden: "?", gridcordinates: "c9 r3",grouped:"jgroup",mnemoicposition:44 },
+    س: { hindi: "स", englishalpha: "S", english: "seen", firstur: "سب", firsten: "bs", secondur: "بسب", seconden: "bsb", thirdur: "اس", thirden: "sa", gridcordinates: "c2 r1",grouped:"nitish",mnemoicposition:9 },
+    ش: { hindi: "श", englishalpha: "Sh", english: "sHeen", firstur: "بش", firsten: "shb", secondur: "اشب", seconden: "bsha", thirdur: "یا", thirden: "sha", gridcordinates: "c3 r1",grouped:"nitish",mnemoicposition:8 },
+    ص: { hindi: "श", englishalpha: "Sh", english: "Swad", firstur: "صُبح", firsten: "subha", secondur: "حصہ", seconden: "hisa", thirdur: "شخص", thirden: "Shakhs", gridcordinates: "c3 r1",grouped:"sa-ja",mnemoicposition:41 },
+    ض: { hindi: "ज़", englishalpha: "J", english: "zwad", firstur: "ضرب", firsten: "zarb", secondur: "قبضہ", seconden: "kabza", thirdur: "حوض", thirden: "hauz", gridcordinates: "c3 r1",grouped:"sa-ja",mnemoicposition:42 },
+    ط: { hindi: "तोए", englishalpha: "toye", english: "toye", firstur: "طوطا/طیارہ", firsten: "tayara/tota", secondur: "بطخ", seconden: "btkh", thirdur: "خط", thirden: "khat", gridcordinates: "c2 r2",grouped:"ta-z",mnemoicposition:35 },
+    ظ: { hindi: "जोए", englishalpha: "zoye", english: "zoye", firstur: "ظلم", firsten: "zulm", secondur: "نظم", seconden: "nazm", thirdur: "حظ/لفظ", thirden: "lafz/haz", gridcordinates: "c2 r2",grouped:"ta-z jgroup",mnemoicposition:36 },
+    ع: { hindi: "ऐ", englishalpha: "ayn", english: "ae", firstur: "عورت", firsten: "aurat", secondur: "ـعـ/جمعہ", seconden: "jumah/middle", thirdur: "جمع", thirden: "jama", gridcordinates: "c2 r2",grouped:"aa-g" ,mnemoicposition:37},
+    غ: { hindi: "ग", englishalpha: "ghain", english: "gh", firstur: "غار", firsten: "gar", secondur: "مغرور", seconden: "magrur", thirdur: "باغ/بیغ", thirden: "teg/baag", gridcordinates: "c8 r1", grouped:"aa-g",mnemoicposition:38},
+    ف: { hindi: "फ़", englishalpha: "fey", english: "fa", firstur: "فوج", firsten: "fauz", secondur: "سفید", seconden: "safed", thirdur: "ببرف", thirden: "baraf", gridcordinates: "c8 r1", grouped:"fe-k",mnemoicposition:39},
+    ق: { hindi: "क़", englishalpha: "qaf", english: "qaf", firstur: "قلم", firsten: "kalm", secondur: "لُوقا", seconden: "luke", thirdur: "سبق", thirden: "sabk", gridcordinates: "c8 r1", grouped:"fe-k",mnemoicposition:40},
+    ک: { hindi: "क", englishalpha: "K", english: "Kaaf", firstur: "کان", firsten: "nak", secondur: "ہیکت", seconden: "takiya", thirdur: "ناک", thirden: "kaan", gridcordinates: "c1 r1",grouped:"ka-ga",mnemoicposition:17 },
+    گ: { hindi: "ग", englishalpha: "g", english: "Gaaf", firstur: "ناگ", firsten: "naag", secondur: "نگان", seconden: "nagin", thirdur: "اناگ", thirden: "gana", gridcordinates: "c10 r2",grouped:"ka-ga",mnemoicposition:18 },
+    ل: { hindi: "ल", englishalpha: "l", english: "lām", firstur: "لـ", firsten: "?", secondur: "ـلـ", seconden: "?", thirdur: "ـل", thirden: "?", gridcordinates: "c5 r4",grouped:"mala",mnemoicposition:33 },
+    م: { hindi: "म", englishalpha: "m", english: "mim", firstur: "مـ", firsten: "?", secondur: "ـ‍م‍ـ", seconden: "?", thirdur: "ـ‍م", thirden: "?", gridcordinates: "c6 r4",grouped:"mala",mnemoicposition:32 },
+ //nitish
+    ن: { hindi: "न", englishalpha: "n", english: "Noon", firstur: "بب", firsten: "bb", secondur: "ببب", seconden: "bbb", thirdur: "اب", thirden: "ba", gridcordinates: "c6 r1",grouped:"nitish",mnemoicposition:5 },
+    //kaga
+    //hockey khelo janch 
+    //diwar
+    و: { hindi: "व/ओ", englishalpha: "V/oo", english: "VAO", firstur: "ور", firsten: "roo", secondur: "روا", seconden: "oor", thirdur: "راو", thirden: "vaar", gridcordinates: "c4 r2",grouped:"diwar",mnemoicposition:15 },
+    ہ: { hindi: "ह", englishalpha: "h", english: "gol/choti he", firstur: "ہا", firsten: "ha", secondur: "کہا", seconden: "kha", thirdur: "رہ/بچہ", thirden: "bacha/rha", gridcordinates: "c4 r2",grouped:"h-group",mnemoicposition:34 },
+    ھ: { hindi: "ह", englishalpha: "H", english: "do-cashmī hē", firstur: "?", firsten: "?", secondur: "ـھـ", seconden: "?", thirdur: "ـھ", thirden: "?", gridcordinates: "c7 r3",grouped:"h-group",mnemoicposition:21 },
+    ء: { hindi: "ह", englishalpha: "H", english: "hamza", firstur: "ؤآ", firsten: "aaoo", secondur: "دائر", seconden: "Daair", thirdur: "?", thirden: "?", gridcordinates: "c8 r3",grouped:"h-group" },
+    ی: { hindi: "य", englishalpha: "ye", english: "choti yeh", firstur: "بب", firsten: "bb", secondur: "ببب", seconden: "bbb", thirdur: "اب", thirden: "ba", gridcordinates: "c8 r1", grouped:"baap",mnemoicposition:3},
+    ے: { hindi: "ए", englishalpha: "ye", english: "badi yeh", firstur: "بب", firsten: "bb", secondur: "ببب", seconden: "bbb", thirdur: "اب", thirden: "ba", gridcordinates: "c8 r1", grouped:"baap",mnemoicposition:4},
+   
+    // //toye
+    // //toye+te
+    // //toye+dal h द
+    // //toye+rey h र
+
+    // //h and dochasmi he ka jado
+    // // क+ dochasmi he
+    // کھ: { hindi: "ख", englishalpha: "KH", english: "KhA", firstur: "کھـ", firsten: "?", secondur: "ـکھـ", seconden: "?", thirdur: "ـکھ", thirden: "?", gridcordinates: "c6 r3",grouped:"h-group",mnemoicposition:22 },
+    // // ग+ dochasmi he
+    // گھ: { hindi: "घ", englishalpha: "gh", english: "ghA", firstur: "گھـ", firsten: "?", secondur: "ـگھـ", seconden: "?", thirdur: "ـگھ", thirden: "?", gridcordinates: "c5 r3",grouped:"h-group",mnemoicposition:23 },
+    // // च+ dochasmi he
+    // جھ: { hindi: "झ", englishalpha: "jh", english: "jh", firstur: "جھـ", firsten: "?", secondur: "ـجھـ", seconden: "?", thirdur: "ـجھ", thirden: "?", gridcordinates: "c4 r3",grouped:"h-group" ,mnemoicposition:24},
+    // // ज+ dochasmi he
+    // چھ: { hindi: "छ", englishalpha: "ch", english: "Cha", firstur: "چھـ", firsten: "?", secondur: "ـچھـ", seconden: "?", thirdur: "ـچھ", thirden: "?", gridcordinates: "c3 r3",grouped:"h-group",mnemoicposition:25 },
+
+
+    // //ट+ dochasmi he
+    // ٹھ: { hindi: "ठ", englishalpha: "ṭh", english: "ṭh", firstur: "ٹھـ", firsten: "?", secondur: "ـٹھـ", seconden: "?", thirdur: "ـٹھ", thirden: "?", gridcordinates: "c2 r3",grouped:"h-group" ,mnemoicposition:26},
+    // //ड+ dochasmi he
+    // ڈھ: { hindi: "ढ", englishalpha: "ḍh", english: "ḍh", firstur: "ڈھ", firsten: "?", secondur: "ڈھ", seconden: "?", thirdur: "ڈھ", thirden: "?", gridcordinates: "c1 r3",grouped:"h-group",mnemoicposition:27 },
+
+    // // त+ dochasmi he
+    // تھ: { hindi: "थ", englishalpha: "th", english: "th", firstur: "تھـ", firsten: "?", secondur: "ـتھـ", seconden: "?", thirdur: "ـتھ", thirden: "?", gridcordinates: "c10 r4",grouped:"h-group",mnemoicposition:28 },
+    // // द+ dochasmi he
+    // دھ: { hindi: "ध", englishalpha: "dh", english: "dh", firstur: "دھ", firsten: "?", secondur: "دھ", seconden: "?", thirdur: "دھ", thirden: "?", gridcordinates: "c9 r4",grouped:"h-group",mnemoicposition:29 },
+    // // प+ dochasmi he
+    // پھ: { hindi: "फ", englishalpha: "ph", english: "ph", firstur: "پھـ", firsten: "?", secondur: "ـپھـ", seconden: "?", thirdur: "ـپھ", thirden: "?", gridcordinates: "c8 r4",grouped:"h-group" ,mnemoicposition:30},
+    // // ब+ dochasmi he
+    // بھ: { hindi: "भ", englishalpha: "bh", english: "bh", firstur: "بھـ", firsten: "?", secondur: "ـبھـ", seconden: "?", thirdur: "ـبھ", thirden: "?", gridcordinates: "c7 r4",grouped:"h-group" ,mnemoicposition:31},
+
+
+
+    //ma la
+   
+  };
+  function usingGeneratorToChunkArrayForGrid(){
+  
+  let ObjToArray=Object.entries(alphabetsTable);
+  return [...chunks(ObjToArray, 10)];
+    }
+  // genertor function to chunk the array
+    function* chunks(arr, n) {
+    for (let i = 0; i < arr.length; i += n) {
+      yield arr.slice(i, i + n);
+    }
+  }
+
+
+function getCells(data, type) {
+  console.log("getCells",data);
+    return data.map(cell => `<${type} class="col"><a href="#${cell[1]['grouped']}">
+    <span>${cell[0]}</span>
+    <p>${cell[1]['hindi']}</p>
+    <span >${cell[1]['english']}</span></a>
+    </${type}>`).join('');
+  }
+function createBody(data) {
+  console.log("createBody",data);
+  // console.log("createBody getCells",data);
+    return data.map(row => `<tr class="d-flex">${getCells(row, 'td')}</tr>`).join('');
+  }
+
+
+function createTable(data) {
+
+    // Destructure the headings (first row) from
+    // all the rows
+    const [ ...rows] = data;
+console.log("rows",rows)
+    // Return some HTML that uses `getCells` to create
+    // some headings, but also to create the rows
+    // in the tbody.
+    
+    return `  
+    <table class="table " dir="rtl">
+
+      <thead class="thead-dark"> <tr class="text-center"><th colspan="${rows[0].length}">All the letters
+        
+  <p>We'll use mneomics to remember these</p></th></tr></thead>
+      <tbody>${createBody(rows)}</tbody>
+    </table>
+    
+  `;
+  }
+
+  document.querySelector('#urdu-letter-all').insertAdjacentHTML('beforeend', createTable(usingGeneratorToChunkArrayForGrid()));
+  
   document.addEventListener("DOMContentLoaded", () => {
     let intro1 = document.getElementById('intro1');
     let intro2 = document.getElementById('intro2');
@@ -687,5 +1322,81 @@
     all_hays.data = path+"all-hays-hi.svg"
     all_j.data = path+"all-j-hi.svg"
   });
+
+  const cbDarkMode = document.getElementsByClassName('teleport-switch-control-input')[0];
+    cbDarkMode.addEventListener('change', function(){
+      // let element=document.querySelector("#sidebar");
+      // let navbar=document.querySelector("#content > nav");
+      let content=document.querySelector("#content");
+      
+      // console.log("element",element);
+      // element.classList.toggle("navbar-dark");
+      // navbar.classList.toggle("navbar-dark");
+      // element.classList.toggle("bg-dark");
+      // navbar.classList.toggle("bg-dark");
+      content.classList.toggle("dark-mode");
+    });
   });
   </script>
+<!-- https://bootstrapious.com/p/bootstrap-sidebar -->
+
+<style>
+   .dark-mode{
+    filter: invert(100%) hue-rotate(180deg);
+  }
+  .custom-control.teleport-switch {
+  --color: #4cd964;
+  padding-left: 0; }
+  .custom-control.teleport-switch .teleport-switch-control-input {
+  display: none; }
+  .custom-control.teleport-switch .teleport-switch-control-input:checked ~ .teleport-switch-control-indicator {
+  border-color: var(--color); }
+  .custom-control.teleport-switch .teleport-switch-control-input:checked ~ .teleport-switch-control-indicator::after {
+  left: -14px; }
+  .custom-control.teleport-switch .teleport-switch-control-input:checked ~ .teleport-switch-control-indicator::before {
+  right: 2px;
+  background-color: var(--color); }
+  .custom-control.teleport-switch .teleport-switch-control-input:disabled ~ .teleport-switch-control-indicator {
+  opacity: .4; }
+  .custom-control.teleport-switch .teleport-switch-control-indicator {
+  display: inline-block;
+  position: relative;
+  margin: 0 10px;
+  top: 4px;
+  width: 32px;
+  height: 20px;
+  background: #fff;
+  border-radius: 16px;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
+  border: 2px solid #ccc;
+  overflow: hidden; }
+  .custom-control.teleport-switch .teleport-switch-control-indicator::after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
+  top: 2px;
+  left: 2px;
+  background: #ccc; }
+  .custom-control.teleport-switch .teleport-switch-control-indicator::before {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
+  top: 2px;
+  right: -14px;
+  background: #ccc; }
+  
+  </style>
