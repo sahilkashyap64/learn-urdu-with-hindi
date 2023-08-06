@@ -3,6 +3,8 @@
   <!-- svg-source:excalidraw -->
 
   <defs>
+  <link href="../styleSvg.css" type="text/css" rel="stylesheet" 
+          xmlns="http://www.w3.org/1999/xhtml"/>
     <style>
       @font-face {
         font-family: "Virgil";
@@ -17,7 +19,7 @@
   </g>
   <g stroke-linecap="round">
     <g transform="translate(100 184) rotate(271.193489423982 83.5 0)">
-      <path d="M0 0 C27.83 0, 139.17 0, 167 0 M0 0 C27.83 0, 139.17 0, 167 0" stroke="#000000" stroke-width="1" fill="none"></path>
+      <path class="path" d="M0 0 C27.83 0, 139.17 0, 167 0 M0 0 C27.83 0, 139.17 0, 167 0" stroke="#000000" stroke-width="1" fill="none"></path>
     </g>
   </g>
   <g transform="translate(49 39) rotate(0 8 13.5)">

@@ -1,0 +1,29 @@
+/* svg Animation */
+.path {
+    stroke-dasharray: 10;
+    stroke-dashoffset: -100;
+  /*   animation: dash 5s linear forwards; */
+    animation: dash 5s linear backwards infinite;
+  }
+  
+  @keyframes dash {
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
+  
+  
+  .circle {
+      fill:none;
+      stroke:#FEC558;
+      animation: circle_stroke 2s ease-in forwards infinite;
+          } 
+  
+      @keyframes circle_stroke {
+      0% {
+      fill:none;
+      }
+      100% {
+      fill:orange;
+        }
+      }    
