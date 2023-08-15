@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
     <!-- Our Custom CSS -->
     <link rel="stylesheet" href="style2.css">
+    <!-- Our Custom Sass CSS -->
+    <link rel="stylesheet" href="/styles/css/style.css">
     <!-- Scrollbar Custom CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
 
@@ -243,27 +245,63 @@ color: #f4511e;
 
 </section> -->
 <section class="mb-5 text-center" id="0">
-
+  <div class="container mb-3 mt-3">
+    <button class="btn btn-primary btn-grid">Grid View(Lite mode)</button>
+    <button class="btn btn-danger btn-list">List View(Detailed mode)</button>
+    
+  </div>
   <button id="myBtn">Read in hindi</button>
   <h3 class="mb-4">Intro <sub>basic rules </sub></h3>
-  <div class="container">
+  <div class="container grid-container">
     <div class="row">
-      <div class="col-sm">
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card">
+          
         <object id="intro1" data="./urdu-letter-svg/intro1.svg" alt="intro1" style="width:100%; height: 100%;"
-          type="image/svg+xml"></object>
+        type="image/svg+xml"></object>
+          <div class="card-body d-none">
+            <h5 class="card-title">3 rules of urdu</h5>
+            <p class="card-text">1. Urdu is read from right to left</p>
+            <p class="card-text">2. One Urdu character(isolated) 
+              usually has 3 shapes(positional 
+              variants)
+              </p><p class="card-text">3. Sometimes some sounds(vowels) 
+                are skipped(known as Abjad)
+                intial,middle,final
+              </p>
+          </div>
+        </div>
       </div>
-      <div class="col-sm">
-
-        <object id="intro2" data="./urdu-letter-svg/intro2.svg" alt="intro2" style="width:100%; height: 100%;"
-          type="image/svg+xml"></object>
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card">
+          <object id="intro2" data="./urdu-letter-svg/intro2.svg" alt="intro2" style="width:100%; height: 100%;"
+            type="image/svg+xml"></object>
+          <div class="card-body d-none">
+            <h5 class="card-title">Three shapes of letter Bey(ب)</h5>
+            <p class="card-text"> Based on where they are in the word, their shape changes.</p>
+            <p class="card-text"> These shapes(starting from Right to left) can be intial,middle and last.</p>
+          </div>
+        </div>
       </div>
-      <div class="col-sm">
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card">
+          <object id="intro3" data="./urdu-letter-svg/intro3.svg" alt="intro3" style="width:100%; height: 100%;"
+            type="image/svg+xml"></object>
+          <div class="card-body d-none">
+            <h5 class="card-title">Some more rules</h5>
+            
 
-        <object id="intro3" data="./urdu-letter-svg/intro3.svg" alt="intro3" style="width:100%; height: 100%;"
-          type="image/svg+xml"></object>
 
+            <p class="card-text">1. Urdu is like cursive, each
+              letter is connected with last.</p><p class="card-text">2. Nakash and Nastaliq font 
+                are used </p><p class="card-text">3. We're going to use nakash,
+                  it is somewhat easier to pick </p><p class="card-text">Nastaliq font is used in major
+                    publications. Online nakash is widely adopted</p>
+          </div>
+        </div>
       </div>
     </div>
+    
   </div>
 </section>
 
@@ -1135,6 +1173,24 @@ color: #f4511e;
     <script type="text/javascript">
         $(document).ready(function () {
 
+
+          function showList(e) {
+  var $gridCont = $('.grid-container');
+  var $cardBody = $('.card-body');
+  e.preventDefault();
+  $gridCont.hasClass('list-view') ? $gridCont.removeClass('list-view') : $gridCont.addClass('list-view');
+  $cardBody.hasClass('d-none') ? $cardBody.removeClass('d-none') : $cardBody.addClass('d-none');
+}
+function gridList(e) {
+  var $gridCont = $('.grid-container');
+  var $cardBody = $('.card-body');
+  e.preventDefault();
+  $gridCont.removeClass('list-view');
+   $cardBody.addClass('d-none');
+}
+
+$(document).on('click', '.btn-grid', gridList);
+$(document).on('click', '.btn-list', showList);
             $("#sidebar").mCustomScrollbar({
                 theme: "minimal"
             });
@@ -1286,6 +1342,17 @@ console.log("rows",rows)
   document.querySelector('#urdu-letter-all').insertAdjacentHTML('beforeend', createTable(usingGeneratorToChunkArrayForGrid()));
   
   document.addEventListener("DOMContentLoaded", () => {
+    
+    const ccBtn = document.querySelector('.comic_cc');
+const comic = document.querySelector('.comic')
+
+let ccBtnOn = false;
+
+ccBtn.addEventListener("click", (event) => {
+  console.log("comic");
+	ccBtnOn ? comic.classList.remove('cc') : comic.classList.add('cc');
+	ccBtnOn = !ccBtnOn
+})
     let intro1 = document.getElementById('intro1');
     let intro2 = document.getElementById('intro2');
     let intro3 = document.getElementById('intro3');
